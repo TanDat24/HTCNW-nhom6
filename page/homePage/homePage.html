@@ -55,7 +55,7 @@
                                 <a class="nav-link" href="#">Trang chủ</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Lưu chú</a>
+                                <a class="nav-link" href="#">Lưu trú</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Cơ sở vật chất</a>
@@ -77,9 +77,41 @@
                 </nav>
             </div>
         </header>
+        <div class="search-area">
+            <div class="container full">
+                <div class="full d-flex justify-content-between align-items-center">
+                    <div class="search-item">
+                        <label for="place" class="text-light">Địa điểm</label>
+                        <input type="text" id="place" class="form-control" placeholder="Thành phố, khách sạn...">
+                    </div>
+                    <div class="search-item">
+                        <label for="dd1" class="text-light">Ngày nhận phòng</label>
+                        <input type="date" id="dd1" class="form-control" placeholder="">
+                    </div>
+                    <div class="search-item">
+                        <label for="dd2" class="text-light">Ngày trả phòng</label>
+                        <input type="date" id="dd2" class="form-control">
+                    </div>
+                    <div class="search-item">
+                        <label for="people" class="text-light">Số người</label>
+                        <input type="text" id="people" class="form-control" placeholder="1 phòng - 2 người">
+                    </div>
+                    <button type="submit" class="button-submit">Tìm ngay</button>
+                </div>
+            </div>
+        </div>
         <div class="container custom-body">
             <div class="row">
-                <div class="col"></div>
+                <div class="col">
+                    <div class="row">
+                        <div class="body-main-pic d-flex flex-column justify-content-center">
+                            <div class="body-main-pic-item text-light main-pic-mini">Thuận tiện & nhanh chóng</div>
+                            <div class="body-main-pic-item text-light main-pic-large">Chọn phòng theo mong muốn của bạn ở bất cứ đâu</div>
+                            <button class="body-main-pic-item text-light main-pic-button" type="button">Đặt ngay</button>
+                            <div class="body-main-pic-item text-light main-pic-mini">Thanh toán trực tuyến, an tâm nhận phòng, hoàn tiền bất kỳ lúc nào</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <footer class="custom-footer">
