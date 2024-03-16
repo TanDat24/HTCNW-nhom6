@@ -3,22 +3,24 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link
-            rel="stylesheet"
-            href="../../style/bootstrap-4.0.0-dist/css/bootstrap.css"
-        />
-        <link
-            rel="stylesheet"
-            href="../../style/bootstrap-4.0.0-dist/css/bootstrap.min.css"
-        />
-        <script src="../../style/bootstrap-4.0.0-dist/js/bootstrap.js"></script>
-        <script src="../../style/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
 
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+
+        <!-- Popper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
         <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
         />
-
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        
         <link rel="stylesheet" href="../../GlobalStyle.css" />
         <link rel="stylesheet" href="./homePage.css" />
         <title>Document</title>
@@ -112,6 +114,47 @@
                         </div>
                     </div>
                 </div>
+            </div><br>
+            <div class="row block-content scroll">
+                <h4>Khám phá các vùng miền Việt Nam cùng các chi nhánh của chúng tôi</h4><br><br>
+                <div class="place w-100 d-flex" id="scrollbar">
+                    <button id="btn-left" onclick="ClickLeft()" hidden>
+                        <span class="material-symbols-outlined">
+                            arrow_back_ios
+                        </span>
+                    </button>
+                    <a class="place-item d-flex flex-column align-items-center" href="#">
+                        <img src="../../img/hcmcity.png">
+                        <h5><b>Hồ Chí Minh</b></h5>
+                        <div>12 chi nhánh</div>
+                    </a>
+                    <a class="place-item d-flex flex-column align-items-center" href="#">
+                        <img src="../../img/hanoi.png">
+                        <h5><b>Hà Nội</b></h5>
+                        <div>9 chi nhánh</div>
+                    </a>
+                    <a class="place-item d-flex flex-column align-items-center" href="#">
+                        <img src="../../img/dalat.png">
+                        <h5><b>Đà Lạt</b></h5>
+                        <div>8 chi nhánh</div>
+                    </a>
+                    <a class="place-item d-flex flex-column align-items-center" href="#">
+                        <img src="../../img/vungtau.png">
+                        <h5><b>Vũng Tàu</b></h5>
+                        <div>4 chi nhánh</div>
+                    </a>
+                    <a class="place-item d-flex flex-column align-items-center" href="#">
+                        <img src="../../img/phuquoc.png">
+                        <h5><b>Phú Quốc</b></h5>
+                        <div>3 chi nhánh</div>
+                    </a>
+                    <button id="btn-right" onclick="ClickRight()">
+                        <span class="material-symbols-outlined">
+                            arrow_forward_ios
+                        </span>
+                    </button>
+                </div>
+                
             </div>
         </div>
         <footer class="custom-footer">
@@ -158,4 +201,47 @@
             </div>
         </footer>
     </body>
+    <script>
+        var lastScrollLeft = 0;
+        var scrollAmount = 10;
+        var element = document.getElementById('scrollbar');
+
+        function ClickLeft(){
+            var element = document.getElementById('scrollbar');
+            element.scrollLeft += scrollAmount;
+            console.log(element.scrollLeft);
+        }
+
+        function ClickRight(){
+            var element = document.getElementById('scrollbar');
+            element.scrollLeft += scrollAmount;
+            console.log(element.scrollLeft);
+        }
+
+        // Thêm sự kiện "scroll" vào element
+        element.addEventListener('scroll', function() {
+
+            var scrollLeft = element.scrollLeft;
+            var scrollWidth = element.scrollWidth;
+            var clientWidth = element.clientWidth;
+            var btnLeft = document.getElementById('btn-left');
+            var btnRight = document.getElementById('btn-right');
+
+            // Kiểm tra nếu lướt chạm vách trái
+            if (scrollLeft === 0) {              
+                btnLeft.setAttribute('hidden', 'true');
+            }
+        
+            // Kiểm tra nếu lướt chạm vách phải
+            else if (scrollLeft + clientWidth === scrollWidth) {          
+                btnRight.setAttribute('hidden', 'true');
+            }
+
+            else{
+                btnLeft.removeAttribute('hidden', 'true');
+                btnRight.removeAttribute('hidden', 'true');
+            }
+        });
+
+    </script>
 </html>
