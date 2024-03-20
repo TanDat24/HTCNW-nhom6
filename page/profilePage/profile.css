@@ -1,0 +1,318 @@
+.money {
+    margin: 0 40px 0 90px;
+}
+.custom-tabs {
+    max-height: 555px;
+    border-left: 3px solid #979797;
+    border-right: 3px solid #979797;
+    border-bottom: 3px solid #979797;
+    margin-top: 50px 0;
+    margin: 62px 0;
+    border-radius: 8px;
+    box-shadow: 5px 5px 3px #c5c5c5;
+    padding: 0;
+}
+
+.custom-tabs .tabs .infor {
+    font-weight: bold;
+    font-size: 20px;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 78px;
+    border-top: 3px solid #979797;
+}
+.custom-tabs .tabs a ul {
+    list-style-type: circle;
+}
+.custom-tabs .tabs a:hover {
+    background-color: #f1f1f1;
+    color: var(--primary-color);
+}
+.custom-tabs .tabs a.active {
+    background-color: transparent;
+    color: var(--primary-color);
+}
+.custom-icon {
+    font-size: 28px;
+}
+.custom-list ol {
+    list-style: circle;
+    font-size: 18px;
+    padding-left: 70px;
+}
+.custom-list ol li {
+    padding: 10px 0;
+    color: #004aba;
+    cursor: pointer;
+    width: 200px;
+}
+.custom-list ol li:hover {
+    background-color: #f1f1f1;
+}
+
+.custom-container-tabs {
+    margin: 62px 0;
+    border: 3px solid #979797;
+    margin-top: 50px 0;
+    margin: 62px 0;
+    border-radius: 8px;
+    box-shadow: 5px 5px 3px #c5c5c5;
+}
+.custom-container-tabs h5 {
+    height: 78px;
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+.box-name {
+    height: 80px;
+    background-color: var(--primary-color);
+    box-shadow: 5px 5px 3px #c5c5c5;
+    border: 1px solid #b2b2b2;
+}
+.custom-container-tabs .box-name {
+    display: flex;
+    justify-content: space-between;
+}
+.custom-name {
+    color: var(--text-while-color);
+}
+.custom-menu {
+    padding: 0.5rem 1rem;
+}
+.custom-menu:hover {
+    text-decoration: none;
+}
+.box-name img {
+    width: 60px;
+    height: 60px;
+    box-shadow: 3px 3px 3px #383838;
+    border-radius: 50%;
+}
+.avatar-and-name {
+    display: flex;
+    width: 305px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.box-name button {
+    margin: 18px;
+    background-color: transparent;
+    border: none;
+    color: var(--text-while-color);
+}
+.box-name button:hover {
+    background-color: #0056d6;
+    color: var(--text-while-color);
+    margin: 18px;
+}
+.link-noi {
+    color: #154c9e;
+}
+.link-noi:hover {
+    text-decoration: none;
+}
+.box-mail,
+.box-phone,
+.box-birth-day,
+.box-cont,
+.box-addr,
+.box-bank,
+.box-pwd {
+    height: 80px;
+    border: 1px solid #e2e2e2;
+    box-shadow: 5px 5px 3px #c5c5c5;
+    padding: 17px 0 0 36px;
+    margin-top: 26px;
+    color: #585858;
+    font-size: 17px;
+    margin-bottom: 16px;
+}
+.box-mail b {
+    color: #585858;
+    font-size: 18px;
+}
+.box-mail p {
+    font-size: 17px;
+    color: var(--text-color);
+}
+.box-mail-btn {
+    display: flex;
+}
+.box-mail-btn button {
+    margin-left: 28px;
+    width: 90px;
+    height: 22px;
+    border: none;
+    background-color: #87ff7d;
+    color: #fff;
+    border-radius: 6px;
+    font-size: 14px;
+}
+.box-phone-btn,
+.box-birth-day-btn,
+.box-cont-btn,
+.box-addr-btn,
+.box-pwd-btn {
+    display: flex;
+    justify-content: space-between;
+}
+.box-phone-btn button,
+.box-birth-day-btn button,
+.box-cont-btn button,
+.box-addr-btn button,
+.box-pwd button {
+    background-color: transparent;
+    height: 30px;
+    border: navajowhite;
+    color: #434343;
+    text-align: center;
+    padding: 0px 25px 0 20px;
+    font-size: 16px;
+    margin-right: 4px;
+}
+.box-bank {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+.box-bank b {
+    width: 200px;
+}
+.box-bank p {
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+.radio-box {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 24px;
+}
+.radio-box input {
+    transform: scale(1.5);
+}
+.box-bank-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+.box-bank-btn button {
+    background-color: transparent;
+    border: none;
+    margin-left: 96px;
+}
+.box1 {
+    height: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box1 input {
+    margin-right: 10px;
+}
+.box1 label {
+    text-align: center;
+    font-size: 18px;
+    margin: 0;
+}
+/* button check */
+.switch {
+    --button-width: 3.5em;
+    --button-height: 2em;
+    --toggle-diameter: 1.5em;
+    --button-toggle-offset: calc(
+        (var(--button-height) - var(--toggle-diameter)) / 2
+    );
+    --toggle-shadow-offset: 10px;
+    --toggle-wider: 3em;
+    --color-grey: #cccccc;
+    --color-green: #0056d6;
+}
+
+.slider {
+    display: inline-block;
+    width: var(--button-width);
+    height: var(--button-height);
+    background-color: var(--color-grey);
+    border-radius: calc(var(--button-height) / 2);
+    position: relative;
+    transition: 0.3s all ease-in-out;
+}
+
+.slider::after {
+    content: "";
+    display: inline-block;
+    width: var(--toggle-diameter);
+    height: var(--toggle-diameter);
+    background-color: #fff;
+    border-radius: calc(var(--toggle-diameter) / 2);
+    position: absolute;
+    top: var(--button-toggle-offset);
+    transform: translateX(var(--button-toggle-offset));
+    box-shadow: var(--toggle-shadow-offset) 0
+        calc(var(--toggle-shadow-offset) * 4) rgba(0, 0, 0, 0.1);
+    transition: 0.3s all ease-in-out;
+}
+
+.switch input[type="checkbox"]:checked + .slider {
+    background-color: var(--color-green);
+}
+
+.switch input[type="checkbox"]:checked + .slider::after {
+    transform: translateX(
+        calc(
+            var(--button-width) - var(--toggle-diameter) -
+                var(--button-toggle-offset)
+        )
+    );
+    box-shadow: calc(var(--toggle-shadow-offset) * -1) 0
+        calc(var(--toggle-shadow-offset) * 4) rgba(0, 0, 0, 0.1);
+}
+
+.switch input[type="checkbox"] {
+    display: none;
+}
+
+.switch input[type="checkbox"]:active + .slider::after {
+    width: var(--toggle-wider);
+}
+
+.switch input[type="checkbox"]:checked:active + .slider::after {
+    transform: translateX(
+        calc(
+            var(--button-width) - var(--toggle-wider) -
+                var(--button-toggle-offset)
+        )
+    );
+}
+.box-chek {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 78px;
+}
+.box-chek p {
+    font-size: 19px;
+    margin: 0;
+}
+.box-chek label {
+    margin: 0;
+}
+.box-pwd {
+    display: flex;
+}
+.box-pwd b {
+    width: 32%;
+}
+.box-pwd p {
+    font-size: 12px;
+    margin: 0;
+    padding: 0 17px;
+}
