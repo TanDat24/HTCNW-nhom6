@@ -1,5 +1,5 @@
 .custom-body {
-    height: 1000px;
+    height: auto;
 }
 .search-area{
     width: 100%;
@@ -68,13 +68,12 @@
 }
 
 .place{
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
+    overflow-x: scroll;
     scroll-snap-align: start;
     scroll-snap-stop: always;
+    scroll-behavior: smooth;
     gap: 20px;
     overflow: scroll;
-    scrollbar-width: 0;
 }
 
 .place-item{
@@ -108,4 +107,40 @@
     border: none;
     border-radius: 30px;
     padding: 5px;
+}
+
+.deal-block{
+    
+}
+
+.carousel-item{
+    position: relative;
+}
+
+.carousel-content{
+    color: white;
+    position: absolute;
+    top: 0;
+    margin: 40px;
+    margin-left: 200px;
+}
+
+.carousel-content h2{
+    font-size: 46px;
+    font-weight: bold;
+}
+
+.carousel-content span{
+    font-size: 48px;
+    font-weight: bold;
+    color: rgb(251, 255, 0);
+    -webkit-text-stroke: 2px rgb(255, 0, 0);
+}
+
+.carousel-content button{
+    background-color: #003B95;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 20px;
 }
