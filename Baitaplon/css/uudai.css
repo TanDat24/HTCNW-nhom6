@@ -1,0 +1,37 @@
+.row{
+    width: 100%;
+    display: flex;
+    padding-bottom: 20px;
+}
+.col{
+    width: 30%;
+    border: 1px solid black;
+    margin-right: 15px;
+    border-radius: 10px;
+}
+.noidung{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.tenuudai{
+    padding: 0;
+    margin: 0;
+    font-size: 17px;
+    font-weight: 700;
+}
+.ghichuuudai{
+    font-size: 15px;
+    font-weight: 400;
+}
+.btnuudai{
+    width: 35%;
+    border-radius: 5px;
+    height: 36px;
+    background-color: white;
+    color: rgb(0,108,228);
+    border: 1px solid rgb(0,108,228);
+}
+.btnuudai:hover{
+    background-color: rgb(0,108,228);
+    color: white;
+}
