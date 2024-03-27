@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/login.css">
+
+    <!-- ICON -->
+    <!-- <script src="https://kit.fontawesome.com/8b1e604bb3.js" crossorigin="anonymous"></script> -->
+
+</head>
+
+<body>
+    <!-- <div class="mr-5">
+        <a href="#" data-toggle="modal" data-target="#myModal">Đăng nhập</a>
+    </div> -->
+    <!--  Modal đăng nhập -->
+    <div class="container">
+        <div>
+            <!-- <div class="modal fade" id="myModal">
+                <div class="modal-dialog">
+                    <div class="modal-content"> -->
+
+            <!-- modal header -->
+            <!-- <div class="modal-header"> -->
+            <!-- <h1 class="modal-title">Đăng nhập</h1> -->
+            <!-- <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div> -->
+
+            <!-- modal body  -->
+            <div class="modal-body" style="width: 502px; height: 570px;">
+                <div class="text">
+                    <h3>Đăng Nhập</h3>
+                    <h6 style="font-size: small;">
+                        Để đảm bảo an toàn, xin vui lòng đăng nhập để truy cập vào thông tin
+                    </h6>
+                    <div class="row email-phone">
+                        <div class="col-6 text-center">
+                            <button type="button" id="showEmailForm" class="btn tag">EMAIL</button>
+                        </div>
+                        <div class="col-6 text-center">
+                            <button type="button" id="showPhoneForm" class="btn tag">DI ĐỘNG</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Email -->
+                <div id="EmailFormWrapper">
+                    <form action="" class="needs-validation" novalidate>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="text" class="form-control" id="email" placeholder="Email" name="email"
+                                required>
+                            <div class="valid-feedback">Valid.</div>
+                            <div class="invalid-feedback">Email không được để trống.</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="pwd">Mật khẩu</label>
+                            <input type="password" class="form-control" id="pwd" placeholder="Mật khẩu" name="pswd"
+                                pattern="(?=.*[A-Z])(?=.*[!@#$%^&*])(?=.*[0-9]).{8,}" required>
+                            <div class="valid-feedback">Valid.</div>
+                            <div class="invalid-feedback">Mật khẩu phải đủ 8 ký tự trong đó có ít nhất một chữ
+                                cái hoa, một ký tự đặc biệt và một số.</div>
+                        </div>
+
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary">ĐĂNG NHẬP</button>
+                        </div>
+
+                        <div class="row aeDT">
+                            <div class="col-6">
+                                <div class="text-left">
+                                    <a href="#" data-toggle="modal" data-target="#dangKy">Tạo tài khoản</a>
+                                </div>
+                            </div>
+                            <div class="col-6 text-right">
+                                <a href="#" data-toggle="modal" data-target="#QMK">Quên mật
+                                    khẩu?</a>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12 eaVHU">
+                                <div class="line"></div>
+                                <div class="mid-text">hoặc đăng nhập bằng</div>
+                                <div class="line"></div>
+                            </div>
+                        </div>
+
+                        <div class="aeIUH">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="text-center">
+                                        <button type="submit" class="btn btn-outline-primary button-google">
+                                            <img class="img-button"
+                                                src="https://cdn6.agoda.net/images/universal-login/google-logo-v2.svg"
+                                                alt="">Google</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row button-veaH">
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-outline-primary veaH">
+                                        <img class="img-button"
+                                            src="https://cdn6.agoda.net/images/universal-login/facebook-logo.svg"
+                                            alt="">Facebook</button>
+                                    <button type="submit" class="btn btn-outline-primary veaH">
+                                        <img class="img-button"
+                                            src="https://cdn6.agoda.net/images/universal-login/apple-logo.svg"
+                                            alt="">Apple</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="text-center aePT">Khi đăng nhập, tôi đồng ý với các <a href="">Điều
+                                        khoản sử dụng</a>
+                                    và <a href="">Chính sách bảo mật</a> của Agoda.</div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Form Di Động -->
+                <div id="PhoneFormWrapper">
+                    <form action="" class="needs-validation" novalidate>
+                        <div class="form-group">
+                            <label for="SDT">Số di động</label>
+                            <input type="text" class="form-control" id="SDT" placeholder="Số di động" name="SDT"
+                                pattern="[0-9]{10}" required>
+                            <div class="valid-feedback">Valid.</div>
+                            <div class="invalid-feedback">Số di động phải đủ 10 số.</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="pwd">Mật khẩu</label>
+                            <input type="password" class="form-control" id="pwd" placeholder="Mật khẩu" name="pswd"
+                                pattern="(?=.*[A-Z])(?=.*[!@#$%^&*])(?=.*[0-9]).{8,}" required>
+                            <div class="valid-feedback">Valid.</div>
+                            <div class="invalid-feedback">Mật khẩu phải đủ 8 ký tự trong đó có ít nhất một chữ
+                                cái hoa, một ký tự đặc biệt và một số.</div>
+                        </div>
+
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary">ĐĂNG NHẬP</button>
+                        </div>
+
+                        <div class="row aeDT">
+                            <div class="col-6">
+                                <div class="text-left">
+                                    <a href="#" data-toggle="modal" data-target="#dangKy">Tạo tài khoản</a>
+                                </div>
+                            </div>
+                            <div class="col-6 text-right">
+                                <a href="#" data-toggle="modal" data-target="#QMK">Quên mật
+                                    khẩu?</a>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12 eaVHU">
+                                <div class="line"></div>
+                                <div class="mid-text">hoặc đăng nhập bằng</div>
+                                <div class="line"></div>
+                            </div>
+                        </div>
+
+                        <div class="aeIUH">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="text-center">
+                                        <button type="submit" class="btn btn-outline-primary button-google">
+                                            <img class="img-button"
+                                                src="https://cdn6.agoda.net/images/universal-login/google-logo-v2.svg"
+                                                alt="">Google</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row button-veaH">
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-outline-primary veaH">
+                                        <img class="img-button"
+                                            src="https://cdn6.agoda.net/images/universal-login/facebook-logo.svg"
+                                            alt="">Facebook</button>
+                                    <button type="submit" class="btn btn-outline-primary veaH">
+                                        <img class="img-button"
+                                            src="https://cdn6.agoda.net/images/universal-login/apple-logo.svg"
+                                            alt="">Apple</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="text-center aePT">Khi đăng nhập, tôi đồng ý với các <a href="">Điều
+                                        khoản sử dụng</a>
+                                    và <a href="">Chính sách bảo mật</a> của Agoda.</div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+
+            </div>
+
+            <!-- </div>
+    
+                </div>
+    
+            </div> -->
+
+        </div>
+
+        <!-- Modal quên mật khẩu  -->
+        <div>
+            <div class="modal fade" id="QMK">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+
+                        <!--  header  -->
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <!-- Modal body  -->
+                        <div class="modal-body">
+                            <div class="text">
+                                <h2>Quên Mật Khẩu</h2>
+                            </div>
+
+                            <div>
+                                <form action="" class="needs-validation" novalidate>
+                                    <div class="form-group">
+                                        <label for="emailPass">Email</label>
+                                        <input type="text" class="form-control" id="emailPass" placeholder="Nhập Email"
+                                            name="emailPass" required>
+                                        <div class="valid-feedback">Valid.</div>
+                                        <div class="invalid-feedback">Email không được để trống.</div>
+                                    </div>
+                                    <p>Vui lòng cung cấp email đăng nhập, chúng tôi sẽ gửi link kích hoạt cho bạn.</p>
+                                    <div class="text-center">
+                                        <button type="submit" class="btn btn-primary">CẤP LẠI MẬT KHẨU</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Modal đăng ký  -->
+        <div>
+            <div class="modal fade" id="dangKy">
+                <div class="modal-dialog modal-dialog-scrollable">
+                    <div class="modal-content">
+
+                        <!-- Modal header  -->
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+
+                        <!-- Modal body  -->
+                        <div class="modal-body " style="max-height: 600px; overflow-y: auto;">
+                            <div class="text">
+                                <h2>Đăng Ký</h2>
+                            </div>
+
+                            <!-- Nội dung form  -->
+                            <div>
+                                <form action="" class="needs-validation" novalidate>
+                                    <div class="form-group">
+                                        <label for="hoTen">Tên</label>
+                                        <input type="text" class="form-control" id="hoTen" placeholder="Tên"
+                                            name="hoTen" required>
+                                        <div class="valid-feedback">Valid.</div>
+                                        <div class="invalid-feedback">Tên không được để trống.</div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="hoTen">Họ</label>
+                                        <input type="text" class="form-control" id="hoTen" placeholder="Họ" name="hoTen"
+                                            required>
+                                        <div class="valid-feedback">Valid.</div>
+                                        <div class="invalid-feedback">Họ không được để trống.</div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="sdt">Điện thoại</label>
+                                        <input type="text" class="form-control" id="sdt" placeholder="Điện thoại"
+                                            name="sdt" required>
+                                        <div class="valid-feedback">Valid.</div>
+                                        <div class="invalid-feedback">Số điện thoại không được để trống.</div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="emailDK">Email</label>
+                                        <input type="text" class="form-control" id="emailDK" placeholder="Email"
+                                            name="emailDK" required>
+                                        <div class="valid-feedback">Valid.</div>
+                                        <div class="invalid-feedback">Email không được để trống.</div>
+                                    </div>
+
+
+
+                                    <!-- Giới tính  -->
+                                    <!-- <div class="form-group">
+                                        <div class="form-check-inline">
+                                            <label class="form-check-lable" for="male">
+                                                <input type="radio" class="form-check-input" id="nam" name="gioiTinh"
+                                                    value="nam"> Nam
+                                            </label>
+                                        </div>
+    
+                                        <div class="form-check-inline">
+                                            <label class="form-check-label" for="female">
+                                                <input type="radio" class="form-check-input" id="nu" name="gioiTinh"
+                                                    value="nu"> Nữ
+                                            </label>
+                                        </div>
+                                    </div> -->
+
+                                    <!-- Ngày sinh  -->
+                                    <div class="form-group">
+                                        <label for="date">Ngày sinh</label>
+                                        <input type="date" class="form-control" id="date" placeholder="Ngày/Tháng/Năm"
+                                            name="date" required>
+                                        <div class="valid-feedback">Valid.</div>
+                                        <div class="invalid-feedback">Ngày sinh không được để trống.</div>
+                                    </div>
+
+                                    <!-- Mật khẩu  -->
+                                    <div class="form-group">
+                                        <label for="pwdDK">Mật khẩu</label>
+                                        <input type="password" class="form-control" id="pwdDK" placeholder="Mật Khẩu"
+                                            name="pswdDK" pattern="(?=.*[A-Z])(?=.*[!@#$%^&*])(?=.*[0-9]).{8,}"
+                                            required>
+                                        <div class="valid-feedback">Valid.</div>
+                                        <div class="invalid-feedback">Mật khẩu phải đủ 8 ký tự trong đó có ít nhất một
+                                            chữ
+                                            cái hoa, một ký tự đặc biệt và một số.</div>
+                                    </div>
+
+                                    <!-- Nhập lại mật khẩu  -->
+                                    <div class="form-group">
+                                        <label for="rePass">Mật khẩu</label>
+                                        <input type="password" class="form-control" id="rePass"
+                                            placeholder="Xác nhận mật khẩu" name="rePass"
+                                            pattern="(?=.*[A-Z])(?=.*[!@#$%^&*])(?=.*[0-9]).{8,}" required>
+                                        <div class="valid-feedback">Valid.</div>
+                                        <div class="invalid-feedback">Mật khẩu phải đủ 8 ký tự trong đó có ít nhất một
+                                            chữ
+                                            cái hoa, một ký tự đặc biệt và một số.</div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="form-check-inline">
+                                            <label class="form-check-label">
+                                                <input type="checkbox" class="form-check-input" value="">
+                                                Bằng cách đăng ký,
+                                                bạn đồng ý với Điều khoản & Điều kiện của chúng tôi và bạn đã đọc Chính
+                                                sách
+                                                bảo mật của chúng tôi.
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="text-center">
+                                            <button type="submit" class="btn btn-secondary">Đăng ký</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="text-center">
+                                            <a href="#" data-toggle="modal" data-target="#myModal">
+                                                <button type="button" class="btn btn-outline-primary">Bạn đã có tài
+                                                    khoản?Đăng
+                                                    nhập</button>
+                                            </a>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="text-center aePT">Khi đăng nhập, tôi đồng ý với các <a href="">Điều
+                                                khoản sử dụng</a>
+                                            và <a href="">Chính sách bảo mật</a> của Agoda.</div>
+                                    </div>
+
+
+                                </form>
+                            </div>
+                        </div>
+
+                        <!-- modal footer  -->
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <Script>
+
+        // Disable form submissions if there are invalid fields
+        (function () {
+            'use strict';
+            window.addEventListener('load', function () {
+                // Get the forms we want to add validation styles to
+                var forms = document.getElementsByClassName('needs-validation');
+                // Loop over them and prevent submission
+                var validation = Array.prototype.filter.call(forms, function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
+
+        //  Đóng modal trước khi mở modal mới
+        $('#myModal, #QMK, #dangKy').on('show.bs.modal', function (e) {
+            $('.modal').not($(this)).each(function () {
+                $(this).modal('hide');
+            });
+        });
+
+        // Show Email form, hide Phone form
+        document.getElementById("showEmailForm").addEventListener("click", function () {
+            document.getElementById("EmailFormWrapper").style.display = "block";
+            document.getElementById("PhoneFormWrapper").style.display = "none";
+        });
+
+        // Show Phone form, hide Email form
+        document.getElementById("showPhoneForm").addEventListener("click", function () {
+            document.getElementById("EmailFormWrapper").style.display = "none";
+            document.getElementById("PhoneFormWrapper").style.display = "block";
+        });
+
+
+    </script>
+
+</body>
+
+</html>
