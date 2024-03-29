@@ -1,0 +1,141 @@
+#Telephone {
+    margin-top: 40px;
+}
+/* .container .row{
+    border-radius: 20px;
+    background-color: aliceblue;
+    margin: 10px;
+} */
+#title-datphong{
+    margin-top: 20px;
+    padding-left: 30px;
+}
+.info, .user-request{
+    border-radius: 20px;
+    background-color: aliceblue;
+    margin: 10px;
+    padding: 10px;
+    padding-top: 5px;
+}
+.col-md-6 label {
+    font-weight: normal;
+}
+
+.hotel-info, .room-info{
+    background-color: aliceblue;
+    border-radius: 20px;
+    margin-top: 10px;
+    padding: 10px;
+}
+.hotel-info, .room-info, .info, .user-request, #thanh-toan{
+    box-shadow: 1px 1px rgb(120, 170, 216);
+}
+.hotel-info h2 {
+    font-weight: bold;
+}
+
+.hotel{
+    display: flex;
+    justify-content: center;
+}
+
+.hotel img, .room img {
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+}
+
+.address {
+    display: flex;
+}
+
+.address p {
+    font-size: 15px;
+}
+.dia-chi {
+    font-weight: bolder;
+}
+.dia-chi-value {
+    padding-left: 10px;
+}
+
+#thanh-toan {
+    margin-top: 40px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: aliceblue;
+    border-radius: 20px;
+}
+
+#btn-thanhtoan {
+    width: 100%;
+    height: 100%;
+    background-color: #FF5E1F;
+    border: none;
+}
+#value-thanhtoan {
+    display: flex;
+    justify-content: flex-end;
+    color: #FF5E1F;
+    font-weight: bold;
+}
+#tong-gia {
+    font-size: 17px;
+    color: #FF5E1F;
+    font-weight: bold;
+}
+.thongtin-phong {
+    padding-left: 15px;
+}
+#tong_gia {
+    border-top: 3px #000000;
+} 
+#thongtin-nhantra {
+    border: 1px solid #000000;
+    border-radius: 10px;
+}
+
+#nhan-tra {
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.phong {
+    color: gray;
+    font-size: 14px;
+}
+.ngay {
+    font-size: 18px;
+    font-weight: bold;
+}
+.thoigian-o {
+    font-size: 12px;
+}
+.thoi-gian {
+    font-size: 14px;
+}
+#thoigian-o {
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    /* border: 1px solid #000000; */
+    border-bottom: 2px solid black;
+}
+
+.col-md-6 input {
+    padding-left: 20px;
+}
+
+#bton{
+    margin-left: 20px;
+}
+.request-name {
+    font-weight: bold;
+}
+
+footer {
+    margin-top: 50px;
+}
