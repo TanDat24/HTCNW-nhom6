@@ -170,43 +170,4 @@
             </div>
         </footer>
     </body>
-    <script>
-        var scrollAmount = 500;
-        var element = document.getElementById("scrollbar");
-        var btnLeft = document.getElementById("btn-left");
-        var btnRight = document.getElementById("btn-right");
-
-        function update() {
-            var scrollLeft = element.scrollLeft;
-            var scrollWidth = element.scrollWidth;
-            var clientWidth = element.clientWidth;
-
-            console.log(scrollLeft);
-
-            // Kiểm tra nếu lướt chạm vách trái
-            if (scrollLeft + clientWidth >= scrollWidth <= 0) {
-                btnLeft.setAttribute("hidden", "true");
-                btnRight.removeAttribute("hidden", "true");
-            }
-
-            // Kiểm tra nếu lướt chạm vách phải
-            else if (scrollLeft) {
-                btnRight.setAttribute("hidden", "true");
-                btnLeft.removeAttribute("hidden", "true");
-            } else {
-                btnLeft.removeAttribute("hidden", "true");
-                btnRight.removeAttribute("hidden", "true");
-            }
-        }
-
-        btnLeft.addEventListener("click", function () {
-            element.scrollLeft -= scrollAmount;
-            update();
-        });
-
-        btnRight.addEventListener("click", function () {
-            element.scrollLeft += scrollAmount;
-            update();
-        });
-    </script>
 </html>
