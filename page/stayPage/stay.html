@@ -35,7 +35,7 @@
         <header class="custom-header">
             <div class="container">
                 <nav class="navbar navbar-expand-lg navbar-light">
-                    <a class="navbar-brand" href="#">
+                    <a class="navbar-brand" href="../homePage/homePage.html">
                         <img
                             src="../../img/logo.png"
                             alt="#"
@@ -60,7 +60,7 @@
                     >
                         <ul class="navbar-nav mr-auto">
                             <li class="nav-item active">
-                                <a class="nav-link" href="./homePage.html"
+                                <a class="nav-link" href="../homePage/homePage.html"
                                     >Trang chủ</a
                                 >
                             </li>
@@ -93,7 +93,52 @@
                 </nav>
             </div>
         </header>
-        
+        <div class="search-area">
+            <div class="container full">
+                <div
+                    class="full d-flex justify-content-between align-items-center"
+                >
+                    <div class="search-item">
+                        <label for="place" class="text-light">Địa điểm</label>
+                        <input
+                            type="text"
+                            id="place"
+                            class="form-control"
+                            placeholder="Thành phố, khách sạn..."
+                        />
+                    </div>
+                    <div class="search-item">
+                        <label for="dd1" class="text-light"
+                            >Ngày nhận phòng</label
+                        >
+                        <input
+                            type="date"
+                            id="dd1"
+                            class="form-control"
+                            placeholder=""
+                        />
+                    </div>
+                    <div class="search-item">
+                        <label for="dd2" class="text-light"
+                            >Ngày trả phòng</label
+                        >
+                        <input type="date" id="dd2" class="form-control" />
+                    </div>
+                    <div class="search-item">
+                        <label for="people" class="text-light">Số người</label>
+                        <input
+                            type="text"
+                            id="people"
+                            class="form-control"
+                            placeholder="1 phòng - 2 người"
+                        />
+                    </div>
+                    <button type="submit" class="button-submit">
+                        Tìm ngay
+                    </button>
+                </div>
+            </div>
+        </div>
         <div class="container w-100">
             <div class="row d-flex w-100">
                 <div id="select">
@@ -115,12 +160,148 @@
                         <input id="danang" type="checkbox"><label for="danang">Đà Nẵng</label><br>
                         <input id="halong" type="checkbox"><label for="halong">Hạ Long</label><br>
                     </div>
-                    <div class="select-block">
-                        <h5>Mức giá</h5>
+                    <div class="select-block">                        <h5>Mức giá</h5>
                         <label for="start">Từ:</label><br>
                         <input id="start" type="text"><br>
                         <label for="end">Đến:</label><br>
                         <input id="end" type="text"><br>
+                    </div>
+                </div>
+
+                <div id="content">
+                    <div class="d-flex">Tìm thấy:&nbsp;<div id="resuil">2345</div>&nbsp;kết quả</div>
+                    <select name="select" id="sort" >
+                        <option selected value="price-low">Giá từ thấp đến cao</option>
+                        <option value="price-hight">Giá từ cao đến thấp</option>
+                        <option value="rate-low">Đánh giá từ cao đến thấp</option>
+                        <option value="rate-low">Đánh giá từ thấp đến cao</option>
+                    </select>
+                    <div class="items">
+                        <div class="item">
+                            <img src="../../img/hanoigolden.png"/>
+                            <div class="info">
+                                <div class="item-header">Hanoi Golden Sail</div>
+                                <a href="#">Quận Hoàn Kiếm, Hà Nội</a>
+                                <div class="rating">
+                                    <div class="stars">&#9733&#9733&#9733&#9733&#9733</div>
+                                </div>
+                                <div style="font-size: 16px; font-weight: bold;">Mô tả:</div>
+                                <div class="des" style="font-size: 14px;">Tọa lạc ở trung tâm Hà Nội, Hanoi Golden Hotel And Travel nằm cách Ô Quan Chưởng 6 phút đi bộ và Nhà hát múa rối Thăng Long chưa đến 1 km. Khách sạn 4 sao này có các phòng được trang bị điều hòa.</div>
+                            </div>
+                            <div class="other d-flex flex-column">
+                                <div class="d-flex">
+                                    <div class="d-flex flex-column align-items-end" style="padding-right: 10px;">
+                                        <div class="feel">Tuyệt vời</div>
+                                        <div class="numrate">102 đánh giá</div>
+                                    </div>
+                                    <div class="avg">9.3</div>
+                                </div>
+                                <div class="" style="margin-top: 20px; font-size: 18px;">Giá trung bình từ:</div>
+                                <div class="price">453.253 VNĐ</div>
+                                <button class="btn-moreinfo">Xem chi tiết</button>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <img src="../../img/hanoigolden.png"/>
+                            <div class="info">
+                                <div class="item-header">Hanoi Golden Sail</div>
+                                <a href="#">Quận Hoàn Kiếm, Hà Nội</a>
+                                <div class="rating">
+                                    <div class="stars">&#9733&#9733&#9733&#9733&#9733</div>
+                                </div>
+                                <div style="font-size: 16px; font-weight: bold;">Mô tả:</div>
+                                <div class="des" style="font-size: 14px;">Tọa lạc ở trung tâm Hà Nội, Hanoi Golden Hotel And Travel nằm cách Ô Quan Chưởng 6 phút đi bộ và Nhà hát múa rối Thăng Long chưa đến 1 km. Khách sạn 4 sao này có các phòng được trang bị điều hòa.</div>
+                            </div>
+                            <div class="other d-flex flex-column">
+                                <div class="d-flex">
+                                    <div class="d-flex flex-column align-items-end" style="padding-right: 10px;">
+                                        <div class="feel">Tuyệt vời</div>
+                                        <div class="numrate">102 đánh giá</div>
+                                    </div>
+                                    <div class="avg">9.3</div>
+                                </div>
+                                <div class="" style="margin-top: 20px; font-size: 18px;">Giá trung bình từ:</div>
+                                <div class="price">453.253 VNĐ</div>
+                                <button class="btn-moreinfo">Xem chi tiết</button>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <img src="../../img/hanoigolden.png"/>
+                            <div class="info">
+                                <div class="item-header">Hanoi Golden Sail</div>
+                                <a href="#">Quận Hoàn Kiếm, Hà Nội</a>
+                                <div class="rating">
+                                    <div class="stars">&#9733&#9733&#9733&#9733&#9733</div>
+                                </div>
+                                <div style="font-size: 16px; font-weight: bold;">Mô tả:</div>
+                                <div class="des" style="font-size: 14px;">Tọa lạc ở trung tâm Hà Nội, Hanoi Golden Hotel And Travel nằm cách Ô Quan Chưởng 6 phút đi bộ và Nhà hát múa rối Thăng Long chưa đến 1 km. Khách sạn 4 sao này có các phòng được trang bị điều hòa.</div>
+                            </div>
+                            <div class="other d-flex flex-column">
+                                <div class="d-flex">
+                                    <div class="d-flex flex-column align-items-end" style="padding-right: 10px;">
+                                        <div class="feel">Tuyệt vời</div>
+                                        <div class="numrate">102 đánh giá</div>
+                                    </div>
+                                    <div class="avg">9.3</div>
+                                </div>
+                                <div class="" style="margin-top: 20px; font-size: 18px;">Giá trung bình từ:</div>
+                                <div class="price">453.253 VNĐ</div>
+                                <button class="btn-moreinfo">Xem chi tiết</button>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <img src="../../img/hanoigolden.png"/>
+                            <div class="info">
+                                <div class="item-header">Hanoi Golden Sail</div>
+                                <a href="#">Quận Hoàn Kiếm, Hà Nội</a>
+                                <div class="rating">
+                                    <div class="stars">&#9733&#9733&#9733&#9733&#9733</div>
+                                </div>
+                                <div style="font-size: 16px; font-weight: bold;">Mô tả:</div>
+                                <div class="des" style="font-size: 14px;">Tọa lạc ở trung tâm Hà Nội, Hanoi Golden Hotel And Travel nằm cách Ô Quan Chưởng 6 phút đi bộ và Nhà hát múa rối Thăng Long chưa đến 1 km. Khách sạn 4 sao này có các phòng được trang bị điều hòa.</div>
+                            </div>
+                            <div class="other d-flex flex-column">
+                                <div class="d-flex">
+                                    <div class="d-flex flex-column align-items-end" style="padding-right: 10px;">
+                                        <div class="feel">Tuyệt vời</div>
+                                        <div class="numrate">102 đánh giá</div>
+                                    </div>
+                                    <div class="avg">9.3</div>
+                                </div>
+                                <div class="" style="margin-top: 20px; font-size: 18px;">Giá trung bình từ:</div>
+                                <div class="price">453.253 VNĐ</div>
+                                <button class="btn-moreinfo">Xem chi tiết</button>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <img src="../../img/hanoigolden.png"/>
+                            <div class="info">
+                                <div class="item-header">Hanoi Golden Sail</div>
+                                <a href="#">Quận Hoàn Kiếm, Hà Nội</a>
+                                <div class="rating">
+                                    <div class="stars">&#9733&#9733&#9733&#9733&#9733</div>
+                                </div>
+                                <div style="font-size: 16px; font-weight: bold;">Mô tả:</div>
+                                <div class="des" style="font-size: 14px;">Tọa lạc ở trung tâm Hà Nội, Hanoi Golden Hotel And Travel nằm cách Ô Quan Chưởng 6 phút đi bộ và Nhà hát múa rối Thăng Long chưa đến 1 km. Khách sạn 4 sao này có các phòng được trang bị điều hòa.</div>
+                            </div>
+                            <div class="other d-flex flex-column">
+                                <div class="d-flex">
+                                    <div class="d-flex flex-column align-items-end" style="padding-right: 10px;">
+                                        <div class="feel">Tuyệt vời</div>
+                                        <div class="numrate">102 đánh giá</div>
+                                    </div>
+                                    <div class="avg">9.3</div>
+                                </div>
+                                <div class="" style="margin-top: 20px; font-size: 18px;">Giá trung bình từ:</div>
+                                <div class="price">453.253 VNĐ</div>
+                                <button class="btn-moreinfo">Xem chi tiết</button>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -163,7 +344,7 @@
             </div>
             <div class="license">
                 <b
-                    >© 1996 - 2024 Marriott International, Inc. Tất cả các quyền
+                    >© 1996 - 2024 Marriott International, Inc. Tất cả các quyền
                     được bảo lưu. Thông tin độc quyền của Marriott và Starwood
                     Việt Nam</b
                 >
