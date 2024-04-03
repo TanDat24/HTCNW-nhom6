@@ -1,0 +1,21 @@
+.original-price {
+    font-weight: bold; 
+    font-size: larger;
+}
+
+.product-checkbox{
+    transform: scale(1.5);
+    margin-right: 10px;
+}
+
+.card-text{
+    color: gold;
+    font-size: 20px;
+}
+
+.bg-custom {
+    background-color: #0062ff;
+    color: white;
+    font-weight: 700;
+}
+
