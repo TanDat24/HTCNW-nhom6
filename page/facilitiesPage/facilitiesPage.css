@@ -1,0 +1,58 @@
+
+.icon {
+    height: 30px;
+    width: 30px;
+}
+
+#main {
+    padding-top: 20px;
+}
+
+.tn {
+    list-style-type: none;
+    margin-top: 10px;
+    font-size: 17px;
+    font-weight: 400;
+}
+.tn p {
+    font-size: 14px;
+}
+.card {
+    width: 350px;
+    height: 350px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+  }
+  
+  .card img {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .card h5 {
+    margin: 10px 0;
+    padding: 0 10px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .card p {
+    margin: 0 10px;
+    padding: 10px 0;
+    font-size: 14px;
+  }
+  
+  #facilities-description {
+    display: flex;
+    justify-content: center;
+    margin-left: -100px;
+  }
+  
+.kichthuocTable {
+    width: 500px;
+}
