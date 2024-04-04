@@ -1,11 +1,24 @@
 *{
     font-family: 'Times New Roman', Times, serif;
 }
-
-button.btn.btn-primary{
-    width: 470px;
+h1{
+    background-image: linear-gradient(to right bottom, rgb(93, 0, 255), purple);
+    display: inline-block;
+    color: transparent;
+    -webkit-background-clip: text;
+    font-weight: 1000;
+    font-size: 50px;
 }
-
+.modal-login{
+    border-radius: 10px;
+}
+.tag-top{
+    font-size: 60px;
+    padding-top: 40px;
+}
+.bt1{
+    padding-top: 20px;
+}
 button.btn.btn-primary:hover{
     background-color: rgb(198, 241, 241);
 }
@@ -48,7 +61,7 @@ button.btn.btn-primary:hover{
     padding-top: 5px;
 }
 .veaH{
-    width: 233px;
+    width: 232px;
 }
 .img-button{
     width: 22px;
@@ -79,9 +92,15 @@ button.btn.btn-primary:hover{
 }
 
 .modal-body{
+    height: fit-content;
     border: 1px solid #eaeaea;
+    background-color: #f8f8f8;
+    margin: 50px 0px;
 }
-.container{
+.container-fluid{
     background-image: url('../img/R.jpg');
-    background-size: 100%;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+
 }
