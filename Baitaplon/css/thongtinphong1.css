@@ -192,7 +192,7 @@ section{
     width: 70%;
 }
 .thongtinchitiet{
-    border: 1px solid rgb(221,223,226);
+    border: 1px solid rgb(201, 201, 203);
     margin-left: 12px;
     margin-top: 20px;
     padding-left: 20px;
@@ -220,7 +220,7 @@ section{
     font-weight: 700;
 }
 .diemnoibat{
-    border: 1px solid rgb(221,223,226);
+    border: 1px solid rgb(201, 201, 203);
     margin-left: 12px;
     margin-top: 20px;
     padding-left: 20px;
@@ -235,13 +235,13 @@ section{
     height: 30px;
 }
 .texttiennghi{
-        border: 1px solid rgb(221,223,226);
-        margin-left: 12px;
-        margin-top: 20px;
-        padding-left: 20px;
-        padding-top: 20px;
-        padding-right: 20px;
-        border-radius: 10px;
+    border: 1px solid rgb(201, 201, 203);
+    margin-left: 12px;
+    margin-top: 20px;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-right: 20px;
+    border-radius: 10px;
 }
 .tiennghi_bot{
     padding-left: 15px;
@@ -284,7 +284,7 @@ section{
  /* danhgia */
 
 .danhgia{
-    border: 1px solid rgb(221,223,226);
+    border: 1px solid rgb(201, 201, 203);
     margin-left: 10px;
     margin-top: 20px;
     padding-left: 20px;
@@ -295,7 +295,7 @@ section{
 
 /* map */
 .vi_tri_thuan_tien{
-    border: 1px solid rgb(221,223,226);
+    border: 1px solid rgb(201, 201, 203);
     margin-left: 10px;
     margin-top: 20px;
     padding-left: 20px;
@@ -326,7 +326,7 @@ section{
     padding-right: 20px;
 }
 .phong{
-    border: 1px solid rgb(221,223,226);
+    border: 1px solid rgb(201, 201, 203);
     margin-left: 10px;
     margin-top: 20px;
     margin-right: 30px;
