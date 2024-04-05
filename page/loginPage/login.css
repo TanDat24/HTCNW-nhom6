@@ -82,11 +82,9 @@ button.btn.btn-primary:hover{
 }
 
 .modal-body{
-    position: absolute;
     border: 1px solid #eaeaea;
-    right: 10%;
-    top: 10%;
-    
+    float: right;
+    margin: 5% 10%;
 }
 .bg{
     width: 100%;
