@@ -318,7 +318,22 @@
                 function showConfirmationDialog(card, index) {
                     swal({
                         text: "Quý khách có chắc chắn là muốn loại bỏ cái này khỏi xe đẩy hàng không?",                   
-                        buttons: true,
+                        buttons: {
+                                cancel: {
+                                    text: "Hủy",
+                                    value: null,
+                                    visible: true,
+                                    className: "",
+                                    closeModal: true,
+                                },
+                                confirm: {
+                                    text: "Ok",
+                                    value: true,
+                                    visible: true,
+                                    className: "btn-confirm",
+                                    closeModal: true,
+                                }
+                        },
                         dangerMode: true,
                     })
                     .then((willDelete) => {

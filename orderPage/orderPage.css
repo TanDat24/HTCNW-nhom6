@@ -19,3 +19,9 @@
     font-weight: 700;
 }
 
+.btn-confirm {
+    background-color: #0062ff !important; /* Đặt màu nền cho nút và sử dụng !important để ghi đè các quy tắc CSS khác */
+    color: #ffffff; /* Đặt màu chữ cho nút */
+}
+
+
