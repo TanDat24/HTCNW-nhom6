@@ -101,34 +101,40 @@ function toggleBirth() {
         editButton.textContent = "Lưu";
     } else {
         var input = phoneValue.querySelector("input");
-        var newPhone = input.value;
+        var newDate = input.value;
         phoneValue.removeChild(input);
-        phoneValue.textContent = newPhone;
+        phoneValue.textContent = newDate;
         editButton.textContent = "Chỉnh sửa";
     }
 }
 
 function toggleAddpre() {
     var phoneValue = document.getElementById("addpreValue");
-    var currentPhone = phoneValue.textContent.trim();
     var editButton = event.target;
 
     if (editButton.textContent === "Chỉnh sửa") {
         var input = document.createElement("input");
         input.type = "text";
-        input.value = currentPhone;
+        input.value = phoneValue.textContent.trim(); // Không cần dùng currentPhone, có thể truy cập trực tiếp thuộc tính textContent
         phoneValue.textContent = "";
         phoneValue.appendChild(input);
 
         editButton.textContent = "Lưu";
     } else {
         var input = phoneValue.querySelector("input");
-        var newPhone = input.value;
-        phoneValue.removeChild(input);
-        phoneValue.textContent = newPhone;
-        editButton.textContent = "Chỉnh sửa";
+
+        // Kiểm tra xem input có tồn tại không trước khi truy cập thuộc tính value
+        var newAddpress = input ? input.value : "";
+
+        if (input) {
+            phoneValue.removeChild(input);
+            phoneValue.textContent = newAddpress;
+            editButton.textContent = "Chỉnh sửa";
+        }
     }
-}function diaCAddpre() {
+}
+
+function diaCAddpre() {
     var phoneValue = document.getElementById("diacValue");
     var currentPhone = phoneValue.textContent.trim();
     var editButton = event.target;
@@ -143,9 +149,9 @@ function toggleAddpre() {
         editButton.textContent = "Lưu";
     } else {
         var input = phoneValue.querySelector("input");
-        var newPhone = input.value;
+        var newDiaChi = input.value;
         phoneValue.removeChild(input);
-        phoneValue.textContent = newPhone;
+        phoneValue.textContent = newDiaChi;
         editButton.textContent = "Chỉnh sửa";
     }
 }
