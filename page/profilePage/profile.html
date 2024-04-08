@@ -138,17 +138,13 @@
                             >
                             An toàn và bảo mật
                         </a>
-                        <a class="infor custom-menu" href="../login-logout/">
+                        <a class="infor custom-menu" href="../login/login.html">
                             <span class="material-symbols-outlined"
                                 >change_circle</span
                             >
                             Đổi tài khoản
                         </a>
-                        <a
-                            class="infor custom-menu"
-                            href="../login-logout/"
-                            onclick="confirmLogout(event)"
-                        >
+                        <a class="infor custom-menu" href="../login/login.html">
                             <span class="material-symbols-outlined"
                                 >logout</span
                             >
@@ -198,49 +194,29 @@
                                         <div class="box-phone">
                                             <b>Số điện thoại</b>
                                             <div class="box-phone-btn">
-                                                <p></p>
-                                                <button
-                                                    type="submit"
-                                                    class="btn btn-light"
-                                                >
-                                                    Chỉnh sửa
-                                                </button>
+                                                <p id="phoneValue"></p>
+                                                <button type="button" class="btn btn-light" onclick="toggleEditSave()">Chỉnh sửa</button>
                                             </div>
                                         </div>
-                                        <div class="box-birth-day">
+                                        <div class="box-phone">
                                             <b>Ngày sinh</b>
-                                            <div class="box-birth-day-btn">
-                                                <p></p>
-                                                <button
-                                                    type="submit"
-                                                    class="btn btn-light"
-                                                >
-                                                    Chỉnh sửa
-                                                </button>
+                                            <div class="box-phone-btn">
+                                                <p id="birthValue"></p>
+                                                <button type="button" class="btn btn-light" onclick="toggleBirth()">Chỉnh sửa</button>
                                             </div>
                                         </div>
-                                        <div class="box-cont">
+                                        <div class="box-phone">
                                             <b>Quốc tịch</b>
-                                            <div class="box-cont-btn">
-                                                <p></p>
-                                                <button
-                                                    type="submit"
-                                                    class="btn btn-light"
-                                                >
-                                                    Chỉnh sửa
-                                                </button>
+                                            <div class="box-phone-btn">
+                                                <p id="addpreValue"></p>
+                                                <button type="button" class="btn btn-light" onclick="toggleAddpre()">Chỉnh sửa</button>
                                             </div>
                                         </div>
-                                        <div class="box-addr">
+                                        <div class="box-phone">
                                             <b>Địa chỉ</b>
-                                            <div class="box-addr-btn">
-                                                <p></p>
-                                                <button
-                                                    type="submit"
-                                                    class="btn btn-light"
-                                                >
-                                                    Chỉnh sửa
-                                                </button>
+                                            <div class="box-phone-btn">
+                                                <p id="diacValue"></p>
+                                                <button type="button" class="btn btn-light" onclick="diaCAddpre()">Chỉnh sửa</button>
                                             </div>
                                         </div>
                                         <h5 id="pay">Phương thức thanh toán</h5>
@@ -322,7 +298,7 @@
                                 <b>Mật khẩu </b>
                                 <p>
                                     Thường xuyên thay đổi mật khẩu để giữ tài
-                                    khoảng của bạn được an toàn hơn
+                                    khoản của bạn được an toàn hơn
                                 </p>
                                 <div class="box-pwd-btn">
                                     <p></p>
@@ -334,7 +310,7 @@
                             <div class="box-pwd">
                                 <b>Xác thực 2 yếu tố</b>
                                 <p>
-                                    Tăng độ bảo mật cho tài khoảng bằng cách
+                                    Tăng độ bảo mật cho tài khoản bằng cách
                                     thiết lập xác thực 2 yếu tố.
                                 </p>
                                 <div class="box-pwd-btn">
@@ -345,12 +321,12 @@
                                 </div>
                             </div>
                             <div class="box-pwd">
-                                <b>Xóa tài khoảng</b>
-                                <p>Xóa tài khoảng vĩnh viễn</p>
+                                <b>Xóa tài khoản</b>
+                                <p>Xóa tài khoản vĩnh viễn</p>
                                 <div class="box-pwd-btn">
                                     <p></p>
                                     <button type="submit" class="btn btn-light">
-                                        Xóa tài khoảng
+                                        Xóa tài khoản
                                     </button>
                                 </div>
                             </div>
