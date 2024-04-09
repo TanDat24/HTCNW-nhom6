@@ -192,31 +192,107 @@
                                             </div>
                                         </div>
                                         <div class="box-phone">
-                                            <b>Số điện thoại</b>
+                                            <b
+                                                >Số điện thoại
+                                                <span id="errPhone">*</span></b
+                                            >
                                             <div class="box-phone-btn">
                                                 <p id="phoneValue"></p>
-                                                <button type="button" class="btn btn-light" onclick="toggleEditSave()">Chỉnh sửa</button>
+                                                <div
+                                                    id="editContainer"
+                                                    style="display: none"
+                                                >
+                                                    <input
+                                                        type="text"
+                                                        id="phoneInput"
+                                                    />
+                                                </div>
+                                                <button
+                                                    type="button"
+                                                    class="btn btn-light"
+                                                    id="editButton"
+                                                    onclick="setPhoneNew()"
+                                                >
+                                                    Chỉnh sửa
+                                                </button>
                                             </div>
                                         </div>
                                         <div class="box-phone">
-                                            <b>Ngày sinh</b>
+                                            <b
+                                                >Ngày sinh
+                                                <span id="errBirth">*</span></b
+                                            >
                                             <div class="box-phone-btn">
                                                 <p id="birthValue"></p>
-                                                <button type="button" class="btn btn-light" onclick="toggleBirth()">Chỉnh sửa</button>
+                                                <div
+                                                    id="editBirthContainer"
+                                                    style="display: none"
+                                                >
+                                                    <input
+                                                        type="text"
+                                                        id="birthInput"
+                                                    />
+                                                </div>
+                                                <button
+                                                    type="button"
+                                                    class="btn btn-light"
+                                                    id="editBirthButton"
+                                                    onclick="setBirthNew()"
+                                                >
+                                                    Chỉnh sửa
+                                                </button>
                                             </div>
                                         </div>
                                         <div class="box-phone">
-                                            <b>Quốc tịch</b>
+                                            <b
+                                                >Quốc tịch
+                                                <span id="errNati">*</span></b
+                                            >
                                             <div class="box-phone-btn">
-                                                <p id="addpreValue"></p>
-                                                <button type="button" class="btn btn-light" onclick="toggleAddpre()">Chỉnh sửa</button>
+                                                <p id="natiValue"></p>
+                                                <div
+                                                    id="editNatiContainer"
+                                                    style="display: none"
+                                                >
+                                                    <input
+                                                        type="text"
+                                                        id="natiInput"
+                                                    />
+                                                </div>
+                                                <button
+                                                    type="button"
+                                                    class="btn btn-light"
+                                                    id="editNatiButton"
+                                                    onclick="setNatiNew()"
+                                                >
+                                                    Chỉnh sửa
+                                                </button>
                                             </div>
                                         </div>
                                         <div class="box-phone">
-                                            <b>Địa chỉ</b>
+                                            <b
+                                                >Địa chỉ
+                                                <span id="errDiac">*</span></b
+                                            >
                                             <div class="box-phone-btn">
                                                 <p id="diacValue"></p>
-                                                <button type="button" class="btn btn-light" onclick="diaCAddpre()">Chỉnh sửa</button>
+                                                <div
+                                                    id="editDiacContainer"
+                                                    style="display: none"
+                                                >
+                                                    <input
+                                                        type="text"
+                                                        id="diacInput"
+                                                    />
+                                                </div>
+                                                <button
+                                                    type="button"
+                                                    class="btn btn-light"
+                                                    id="editDiacButton"
+                                                    onclick="setDiacNew()"
+                                                >
+                                                    Chỉnh sửa
+                                                </button>
                                             </div>
                                         </div>
                                         <h5 id="pay">Phương thức thanh toán</h5>
@@ -265,19 +341,27 @@
                                                 >
                                             </div>
                                         </div>
-                                        <div class="box-chek">
-                                            <p>Thông báo ưu đãi</p>
-                                            <label class="switch">
-                                                <input type="checkbox" />
-                                                <span class="slider"></span>
-                                            </label>
-                                        </div>
-                                        <div class="box-chek">
-                                            <p>Nhận email về khuyến mãi</p>
-                                            <label class="switch">
-                                                <input type="checkbox" />
-                                                <span class="slider"></span>
-                                            </label>
+                                        <div>
+                                            <div class="box-chek">
+                                                <p>Thông báo ưu đãi</p>
+                                                <label class="switch">
+                                                    <input
+                                                        type="checkbox"
+                                                        id="checkbox1"
+                                                    />
+                                                    <span class="slider"></span>
+                                                </label>
+                                            </div>
+                                            <div class="box-chek">
+                                                <p>Nhận email về khuyến mãi</p>
+                                                <label class="switch">
+                                                    <input
+                                                        type="checkbox"
+                                                        id="checkbox2"
+                                                    />
+                                                    <span class="slider"></span>
+                                                </label>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

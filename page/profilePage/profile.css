@@ -316,3 +316,29 @@
     margin: 0;
     padding: 0 17px;
 }
+#errPhone,
+#errBirth,
+#errNati,
+#errDiac {
+    font-weight: 300;
+    font-size: 14px;
+    color: rgb(255, 91, 91);
+    padding-left: 20px;
+}
+#phoneInput,
+#birthInput,
+#natiInput,
+#diacInput {
+    width: 200px;
+    border: none;
+    border-bottom: 3px solid #023d94;
+}
+#diacInput {
+    width: 300px;
+}
+#phoneInput:focus,
+#birthInput:focus,
+#natiInput:focus,
+#diacInput:focus {
+    outline: none;
+}
