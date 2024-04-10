@@ -59,13 +59,17 @@
                         id="navbarSupportedContent"
                     >
                         <ul class="navbar-nav mr-auto">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="../homePage/homePage.html"
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link"
+                                    href="../homePage/homePage.html"
                                     >Trang chủ</a
                                 >
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Lưu trú</a>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="../stayPage/stay.html"
+                                    >Lưu trú</a
+                                >
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Cơ sở vật chất</a>
@@ -73,12 +77,16 @@
                             <li class="nav-item">
                                 <a
                                     class="nav-link"
-                                    href="../offerPage/offer.html"
+                                    href="../salesPage/sales.html"
                                     >Ưu đãi</a
                                 >
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Về chúng Tôi</a>
+                                <a
+                                    class="nav-link"
+                                    href="../aboutUsPage/aboutUs.html"
+                                    >Về chúng Tôi</a
+                                >
                             </li>
                         </ul>
                         <button type="button" class="btn custom-btn">
@@ -126,12 +134,77 @@
                     </div>
                     <div class="search-item">
                         <label for="people" class="text-light">Số người</label>
-                        <input
-                            type="text"
-                            id="people"
-                            class="form-control"
-                            placeholder="1 phòng - 2 người"
-                        />
+                        <div class="d-flex btn-group">
+                            <input
+                                type="texr"
+                                id="people"
+                                class="form-control"
+                                placeholder="1 phòng - 2 người"
+                                readonly
+                            />
+                            <button
+                                class="btn btn-secondary btn-sm dropdown-toggle"
+                                type="button"
+                                data-toggle="dropdown"
+                                aria-haspopup="true"
+                                aria-expanded="false"
+                            >
+                                <span class="sr-only">Toggle Dropright</span>
+                            </button>
+                            <div
+                                class="dropdown-menu dropdown-menu-right"
+                                style="background-color: #ffffff"
+                            >
+                                <table style="width: 400px; margin: 20px">
+                                    <tr>
+                                        <td colspan="2">Người lớn:</td>
+                                        <td colspan="3">
+                                            <input
+                                                class="drop-input"
+                                                id="nguoilon"
+                                                placeholder="1"
+                                                type="number"
+                                                min="1"
+                                            />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">Trẻ em:</td>
+                                        <td colspan="3">
+                                            <input
+                                                class="drop-input"
+                                                id="treem"
+                                                placeholder="0"
+                                                type="number"
+                                                min="0"
+                                            />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">Số phòng:</td>
+                                        <td colspan="3">
+                                            <input
+                                                class="drop-input"
+                                                id="sophong"
+                                                placeholder="1"
+                                                type="number"
+                                                min="1"
+                                            />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4" class="d-flex">
+                                            <button class="drop-btn">
+                                                Xác nhận
+                                            </button>
+                                            <button class="drop-btn">
+                                                Hủy
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
                     </div>
                     <button type="submit" class="button-submit">
                         Tìm ngay
@@ -145,168 +218,295 @@
                     <div class="select-header">Tìm theo tiêu chí</div>
                     <div class="select-block">
                         <h5>Loại chỗ ở</h5>
-                        <input id="khachsan" type="checkbox"><label for="khachsan">Khách sạn</label><br>
-                        <input id="resort" type="checkbox"><label for="resort">Resort</label><br>
-                        <input id="vila" type="checkbox"><label for="vila">Vila</label><br>
-                        <input id="nhahang" type="checkbox"><label for="nhahang">Nhà hàng</label><br>
+                        <input id="khachsan" type="checkbox" /><label
+                            for="khachsan"
+                            >Khách sạn</label
+                        ><br />
+                        <input id="resort" type="checkbox" /><label for="resort"
+                            >Resort</label
+                        ><br />
+                        <input id="vila" type="checkbox" /><label for="vila"
+                            >Vila</label
+                        ><br />
+                        <input id="nhahang" type="checkbox" /><label
+                            for="nhahang"
+                            >Nhà hàng</label
+                        ><br />
                     </div>
                     <div class="select-block">
                         <h5>Địa điểm</h5>
-                        <input id="hanoi" type="checkbox"><label for="hanoi">TP.Hà Nội</label><br>
-                        <input id="hochiminh" type="checkbox"><label for="hochiminh">TP.Hồ Chí Minh</label><br>
-                        <input id="Vũng Tàu" type="checkbox"><label for="Vũng Tàu">Vũng Tàu</label><br>
-                        <input id="dalat" type="checkbox"><label for="dalat">Đà Lạt</label><br>
-                        <input id="nhatrang" type="checkbox"><label for="nhatrang">Nha Trang</label><br>
-                        <input id="danang" type="checkbox"><label for="danang">Đà Nẵng</label><br>
-                        <input id="halong" type="checkbox"><label for="halong">Hạ Long</label><br>
+                        <input id="hanoi" type="checkbox" /><label for="hanoi"
+                            >TP.Hà Nội</label
+                        ><br />
+                        <input id="hochiminh" type="checkbox" /><label
+                            for="hochiminh"
+                            >TP.Hồ Chí Minh</label
+                        ><br />
+                        <input id="Vũng Tàu" type="checkbox" /><label
+                            for="Vũng Tàu"
+                            >Vũng Tàu</label
+                        ><br />
+                        <input id="dalat" type="checkbox" /><label for="dalat"
+                            >Đà Lạt</label
+                        ><br />
+                        <input id="nhatrang" type="checkbox" /><label
+                            for="nhatrang"
+                            >Nha Trang</label
+                        ><br />
+                        <input id="danang" type="checkbox" /><label for="danang"
+                            >Đà Nẵng</label
+                        ><br />
+                        <input id="halong" type="checkbox" /><label for="halong"
+                            >Hạ Long</label
+                        ><br />
                     </div>
-                    <div class="select-block">                        <h5>Mức giá</h5>
-                        <label for="start">Từ:</label><br>
-                        <input id="start" type="text"><br>
-                        <label for="end">Đến:</label><br>
-                        <input id="end" type="text"><br>
+                    <div class="select-block">
+                        <h5>Mức giá</h5>
+                        <label for="start">Từ:</label><br />
+                        <input id="start" type="text" /><br />
+                        <label for="end">Đến:</label><br />
+                        <input id="end" type="text" /><br />
                     </div>
                 </div>
 
                 <div id="content">
-                    <div class="d-flex">Tìm thấy:&nbsp;<div id="resuil">2345</div>&nbsp;kết quả</div>
-                    <select name="select" id="sort" >
-                        <option selected value="price-low">Giá từ thấp đến cao</option>
+                    <div class="d-flex">
+                        Tìm thấy:&nbsp;
+                        <div id="resuil">2345</div>
+                        &nbsp;kết quả
+                    </div>
+                    <select name="select" id="sort">
+                        <option selected value="price-low">
+                            Giá từ thấp đến cao
+                        </option>
                         <option value="price-hight">Giá từ cao đến thấp</option>
-                        <option value="rate-low">Đánh giá từ cao đến thấp</option>
-                        <option value="rate-low">Đánh giá từ thấp đến cao</option>
+                        <option value="rate-low">
+                            Đánh giá từ cao đến thấp
+                        </option>
+                        <option value="rate-low">
+                            Đánh giá từ thấp đến cao
+                        </option>
                     </select>
                     <div class="items">
                         <div class="item">
-                            <img src="../../img/hanoigolden.png"/>
+                            <img src="../../img/hanoigolden.png" />
                             <div class="info">
                                 <div class="item-header">Hanoi Golden Sail</div>
                                 <a href="#">Quận Hoàn Kiếm, Hà Nội</a>
                                 <div class="rating">
-                                    <div class="stars">&#9733&#9733&#9733&#9733&#9733</div>
+                                    <div class="stars">★★★★★</div>
                                 </div>
-                                <div style="font-size: 16px; font-weight: bold;">Mô tả:</div>
-                                <div class="des" style="font-size: 14px;">Tọa lạc ở trung tâm Hà Nội, Hanoi Golden Hotel And Travel nằm cách Ô Quan Chưởng 6 phút đi bộ và Nhà hát múa rối Thăng Long chưa đến 1 km. Khách sạn 4 sao này có các phòng được trang bị điều hòa.</div>
+                                <div style="font-size: 16px; font-weight: bold">
+                                    Mô tả:
+                                </div>
+                                <div class="des" style="font-size: 14px">
+                                    Tọa lạc ở trung tâm Hà Nội, Hanoi Golden
+                                    Hotel And Travel nằm cách Ô Quan Chưởng 6
+                                    phút đi bộ và Nhà hát múa rối Thăng Long
+                                    chưa đến 1 km. Khách sạn 4 sao này có các
+                                    phòng được trang bị điều hòa.
+                                </div>
                             </div>
                             <div class="other d-flex flex-column">
                                 <div class="d-flex">
-                                    <div class="d-flex flex-column align-items-end" style="padding-right: 10px;">
+                                    <div
+                                        class="d-flex flex-column align-items-end"
+                                        style="padding-right: 10px"
+                                    >
                                         <div class="feel">Tuyệt vời</div>
                                         <div class="numrate">102 đánh giá</div>
                                     </div>
                                     <div class="avg">9.3</div>
                                 </div>
-                                <div class="" style="margin-top: 20px; font-size: 18px;">Giá trung bình từ:</div>
+                                <div
+                                    class=""
+                                    style="margin-top: 20px; font-size: 18px"
+                                >
+                                    Giá trung bình từ:
+                                </div>
                                 <div class="price">453.253 VNĐ</div>
-                                <button class="btn-moreinfo">Xem chi tiết</button>
+                                <button class="btn-moreinfo">
+                                    Xem chi tiết
+                                </button>
                             </div>
                         </div>
 
                         <div class="item">
-                            <img src="../../img/hanoigolden.png"/>
+                            <img src="../../img/hanoigolden.png" />
                             <div class="info">
                                 <div class="item-header">Hanoi Golden Sail</div>
                                 <a href="#">Quận Hoàn Kiếm, Hà Nội</a>
                                 <div class="rating">
-                                    <div class="stars">&#9733&#9733&#9733&#9733&#9733</div>
+                                    <div class="stars">★★★★★</div>
                                 </div>
-                                <div style="font-size: 16px; font-weight: bold;">Mô tả:</div>
-                                <div class="des" style="font-size: 14px;">Tọa lạc ở trung tâm Hà Nội, Hanoi Golden Hotel And Travel nằm cách Ô Quan Chưởng 6 phút đi bộ và Nhà hát múa rối Thăng Long chưa đến 1 km. Khách sạn 4 sao này có các phòng được trang bị điều hòa.</div>
+                                <div style="font-size: 16px; font-weight: bold">
+                                    Mô tả:
+                                </div>
+                                <div class="des" style="font-size: 14px">
+                                    Tọa lạc ở trung tâm Hà Nội, Hanoi Golden
+                                    Hotel And Travel nằm cách Ô Quan Chưởng 6
+                                    phút đi bộ và Nhà hát múa rối Thăng Long
+                                    chưa đến 1 km. Khách sạn 4 sao này có các
+                                    phòng được trang bị điều hòa.
+                                </div>
                             </div>
                             <div class="other d-flex flex-column">
                                 <div class="d-flex">
-                                    <div class="d-flex flex-column align-items-end" style="padding-right: 10px;">
+                                    <div
+                                        class="d-flex flex-column align-items-end"
+                                        style="padding-right: 10px"
+                                    >
                                         <div class="feel">Tuyệt vời</div>
                                         <div class="numrate">102 đánh giá</div>
                                     </div>
                                     <div class="avg">9.3</div>
                                 </div>
-                                <div class="" style="margin-top: 20px; font-size: 18px;">Giá trung bình từ:</div>
+                                <div
+                                    class=""
+                                    style="margin-top: 20px; font-size: 18px"
+                                >
+                                    Giá trung bình từ:
+                                </div>
                                 <div class="price">453.253 VNĐ</div>
-                                <button class="btn-moreinfo">Xem chi tiết</button>
+                                <button class="btn-moreinfo">
+                                    Xem chi tiết
+                                </button>
                             </div>
                         </div>
 
                         <div class="item">
-                            <img src="../../img/hanoigolden.png"/>
+                            <img src="../../img/hanoigolden.png" />
                             <div class="info">
                                 <div class="item-header">Hanoi Golden Sail</div>
                                 <a href="#">Quận Hoàn Kiếm, Hà Nội</a>
                                 <div class="rating">
-                                    <div class="stars">&#9733&#9733&#9733&#9733&#9733</div>
+                                    <div class="stars">★★★★★</div>
                                 </div>
-                                <div style="font-size: 16px; font-weight: bold;">Mô tả:</div>
-                                <div class="des" style="font-size: 14px;">Tọa lạc ở trung tâm Hà Nội, Hanoi Golden Hotel And Travel nằm cách Ô Quan Chưởng 6 phút đi bộ và Nhà hát múa rối Thăng Long chưa đến 1 km. Khách sạn 4 sao này có các phòng được trang bị điều hòa.</div>
+                                <div style="font-size: 16px; font-weight: bold">
+                                    Mô tả:
+                                </div>
+                                <div class="des" style="font-size: 14px">
+                                    Tọa lạc ở trung tâm Hà Nội, Hanoi Golden
+                                    Hotel And Travel nằm cách Ô Quan Chưởng 6
+                                    phút đi bộ và Nhà hát múa rối Thăng Long
+                                    chưa đến 1 km. Khách sạn 4 sao này có các
+                                    phòng được trang bị điều hòa.
+                                </div>
                             </div>
                             <div class="other d-flex flex-column">
                                 <div class="d-flex">
-                                    <div class="d-flex flex-column align-items-end" style="padding-right: 10px;">
+                                    <div
+                                        class="d-flex flex-column align-items-end"
+                                        style="padding-right: 10px"
+                                    >
                                         <div class="feel">Tuyệt vời</div>
                                         <div class="numrate">102 đánh giá</div>
                                     </div>
                                     <div class="avg">9.3</div>
                                 </div>
-                                <div class="" style="margin-top: 20px; font-size: 18px;">Giá trung bình từ:</div>
+                                <div
+                                    class=""
+                                    style="margin-top: 20px; font-size: 18px"
+                                >
+                                    Giá trung bình từ:
+                                </div>
                                 <div class="price">453.253 VNĐ</div>
-                                <button class="btn-moreinfo">Xem chi tiết</button>
+                                <button class="btn-moreinfo">
+                                    Xem chi tiết
+                                </button>
                             </div>
                         </div>
 
                         <div class="item">
-                            <img src="../../img/hanoigolden.png"/>
+                            <img src="../../img/hanoigolden.png" />
                             <div class="info">
                                 <div class="item-header">Hanoi Golden Sail</div>
                                 <a href="#">Quận Hoàn Kiếm, Hà Nội</a>
                                 <div class="rating">
-                                    <div class="stars">&#9733&#9733&#9733&#9733&#9733</div>
+                                    <div class="stars">★★★★★</div>
                                 </div>
-                                <div style="font-size: 16px; font-weight: bold;">Mô tả:</div>
-                                <div class="des" style="font-size: 14px;">Tọa lạc ở trung tâm Hà Nội, Hanoi Golden Hotel And Travel nằm cách Ô Quan Chưởng 6 phút đi bộ và Nhà hát múa rối Thăng Long chưa đến 1 km. Khách sạn 4 sao này có các phòng được trang bị điều hòa.</div>
+                                <div style="font-size: 16px; font-weight: bold">
+                                    Mô tả:
+                                </div>
+                                <div class="des" style="font-size: 14px">
+                                    Tọa lạc ở trung tâm Hà Nội, Hanoi Golden
+                                    Hotel And Travel nằm cách Ô Quan Chưởng 6
+                                    phút đi bộ và Nhà hát múa rối Thăng Long
+                                    chưa đến 1 km. Khách sạn 4 sao này có các
+                                    phòng được trang bị điều hòa.
+                                </div>
                             </div>
                             <div class="other d-flex flex-column">
                                 <div class="d-flex">
-                                    <div class="d-flex flex-column align-items-end" style="padding-right: 10px;">
+                                    <div
+                                        class="d-flex flex-column align-items-end"
+                                        style="padding-right: 10px"
+                                    >
                                         <div class="feel">Tuyệt vời</div>
                                         <div class="numrate">102 đánh giá</div>
                                     </div>
                                     <div class="avg">9.3</div>
                                 </div>
-                                <div class="" style="margin-top: 20px; font-size: 18px;">Giá trung bình từ:</div>
+                                <div
+                                    class=""
+                                    style="margin-top: 20px; font-size: 18px"
+                                >
+                                    Giá trung bình từ:
+                                </div>
                                 <div class="price">453.253 VNĐ</div>
-                                <button class="btn-moreinfo">Xem chi tiết</button>
+                                <button class="btn-moreinfo">
+                                    Xem chi tiết
+                                </button>
                             </div>
                         </div>
 
                         <div class="item">
-                            <img src="../../img/hanoigolden.png"/>
+                            <img src="../../img/hanoigolden.png" />
                             <div class="info">
                                 <div class="item-header">Hanoi Golden Sail</div>
                                 <a href="#">Quận Hoàn Kiếm, Hà Nội</a>
                                 <div class="rating">
-                                    <div class="stars">&#9733&#9733&#9733&#9733&#9733</div>
+                                    <div class="stars">★★★★★</div>
                                 </div>
-                                <div style="font-size: 16px; font-weight: bold;">Mô tả:</div>
-                                <div class="des" style="font-size: 14px;">Tọa lạc ở trung tâm Hà Nội, Hanoi Golden Hotel And Travel nằm cách Ô Quan Chưởng 6 phút đi bộ và Nhà hát múa rối Thăng Long chưa đến 1 km. Khách sạn 4 sao này có các phòng được trang bị điều hòa.</div>
+                                <div style="font-size: 16px; font-weight: bold">
+                                    Mô tả:
+                                </div>
+                                <div class="des" style="font-size: 14px">
+                                    Tọa lạc ở trung tâm Hà Nội, Hanoi Golden
+                                    Hotel And Travel nằm cách Ô Quan Chưởng 6
+                                    phút đi bộ và Nhà hát múa rối Thăng Long
+                                    chưa đến 1 km. Khách sạn 4 sao này có các
+                                    phòng được trang bị điều hòa.
+                                </div>
                             </div>
                             <div class="other d-flex flex-column">
                                 <div class="d-flex">
-                                    <div class="d-flex flex-column align-items-end" style="padding-right: 10px;">
+                                    <div
+                                        class="d-flex flex-column align-items-end"
+                                        style="padding-right: 10px"
+                                    >
                                         <div class="feel">Tuyệt vời</div>
                                         <div class="numrate">102 đánh giá</div>
                                     </div>
                                     <div class="avg">9.3</div>
                                 </div>
-                                <div class="" style="margin-top: 20px; font-size: 18px;">Giá trung bình từ:</div>
+                                <div
+                                    class=""
+                                    style="margin-top: 20px; font-size: 18px"
+                                >
+                                    Giá trung bình từ:
+                                </div>
                                 <div class="price">453.253 VNĐ</div>
-                                <button class="btn-moreinfo">Xem chi tiết</button>
+                                <button class="btn-moreinfo">
+                                    Xem chi tiết
+                                </button>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
         </div>
-         
+
         <footer class="custom-footer">
             <div class="container">
                 <div class="row list-footer">
@@ -316,35 +516,45 @@
                     <div class="col-3">
                         <h5>Về chúng tôi</h5>
                         <ul>
-                            <li>Giới thiệu</li>
-                            <li>Liên hệ</li>
-                            <li>Truyền thông</li>
-                            <li>Chi nhánh</li>
+                            <li><a href="">Giới thiệu</a></li>
+                            <li><a href="">Liên hệ</a></li>
+                            <li><a href="">Truyền thông</a></li>
+                            <li><a href="">Chi nhánh</a></li>
                         </ul>
                     </div>
                     <div class="col-3">
                         <h5>Danh mục</h5>
                         <ul>
-                            <li>Khách sạn</li>
-                            <li>Resort</li>
-                            <li>Villa</li>
-                            <li>Nhà hàng</li>
+                            <li><a href="">Khách sạn</a></li>
+                            <li><a href="">Resort</a></li>
+                            <li><a href="">Villa</a></li>
+                            <li><a href="">Nhà hàng</a></li>
                         </ul>
                     </div>
                     <div class="col-3">
                         <h5>Khác</h5>
                         <ul>
-                            <li>Hướng dẫn đặt phòng</li>
-                            <li>Lịch sử thanh toán</li>
-                            <li>Tuyển dụng</li>
-                            <li>Đăng ký đối tác</li>
+                            <li><a href="">Hướng dẫn đặt phòng</a></li>
+                            <li><a href="">Lịch sử thanh toán</a></li>
+                            <li><a href="">Tuyển dụng</a></li>
+                            <li>
+                                <a href="../policyPage/index.html"
+                                    >Chính sách</a
+                                >
+                            </li>
+                            <li>
+                                <a href="../rulesPage/rules.html"
+                                    >Điều khoảng</a
+                                >
+                            </li>
+                            <li><a href="">Đăng ký đối tác</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
             <div class="license">
                 <b
-                    >© 1996 - 2024 Marriott International, Inc. Tất cả các quyền
+                    >© 1996 - 2024 Marriott International, Inc. Tất cả các quyền
                     được bảo lưu. Thông tin độc quyền của Marriott và Starwood
                     Việt Nam</b
                 >

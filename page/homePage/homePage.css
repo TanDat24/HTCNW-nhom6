@@ -53,7 +53,7 @@
     margin-left: 60px;
 }
 .main-pic-button {
-    margin: 20px 60px;
+    margin: 20px 60px !important;
 }
 
 ::-webkit-scrollbar {
@@ -143,4 +143,72 @@
     font-weight: bold;
     padding: 10px;
     border-radius: 20px;
+}
+
+.drop-btn {
+    color: white;
+    background-color: #003b95;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+}
+
+.drop-input {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+/* 
+css thêm */
+.animated-text {
+    display: inline-block;
+    animation: bounce 1s infinite alternate;
+    text-shadow: 3px 3px rgba(0, 0, 0, 0.5);
+}
+.main-pic-button {
+    animation: bounce 1s infinite alternate;
+}
+
+.main-pic-button:hover {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+    padding: 20px;
+}
+.place-item img {
+    margin: 5px;
+    transition: transform 0.3s ease;
+}
+.place-item img:hover {
+    transform: scale(1.1);
+}
+.custon-app {
+}
+.custon-app {
+    width: 500px;
+    height: 250px;
+    background-color: white;
+    box-shadow: -5px 5px 10px #717171;
+    position: absolute;
+    z-index: 2;
+    right: 0%;
+    animation: moveUpDown 1.6s infinite alternate;
+}
+
+@keyframes moveUpDown {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(30px);
+    }
+}
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+        margin: 20px;
+    }
+    100% {
+        transform: translateY(-6px);
+        margin: 20px;
+    }
 }

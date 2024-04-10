@@ -141,6 +141,18 @@ header {
     height: 300px;
 }
 
+.custom-footer:hover {
+    text-decoration: none !important;
+}
+
+.custom-footer a {
+    color: #fff;
+}
+
+.custom-footer a:hover {
+    text-decoration: none;
+}
+
 .custom-footer ul li {
     list-style: none;
 }
