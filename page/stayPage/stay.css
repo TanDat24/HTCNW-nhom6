@@ -1,4 +1,4 @@
-#select{
+#select {
     width: 20%;
     height: 680px;
     border-radius: 20px;
@@ -6,14 +6,14 @@
     margin-top: 20px;
 }
 
-.search-area{
+.search-area {
     width: 100%;
     height: 120px;
     padding: 0 !important;
     margin: 0 !important;
-    background-color: #003B95;
+    background-color: #003b95;
 }
-.button-submit{
+.button-submit {
     padding: 10px;
     background-color: #fcff36;
     font-weight: bold;
@@ -21,17 +21,17 @@
     margin-top: 30px;
 }
 
-.full{
+.full {
     height: 100%;
 }
 
-.select-block{
+.select-block {
     width: 100%;
     padding: 10px 20px;
     border-bottom: 2px solid #eaeaea;
 }
 
-.select-header{
+.select-header {
     font-size: 18px;
     font-weight: bold;
     width: 100%;
@@ -39,21 +39,21 @@
     border-bottom: 2px solid #eaeaea;
 }
 
-.select-block label{
+.select-block label {
     padding-left: 5px;
 }
 
-#content{
+#content {
     width: 76%;
     margin: 20px;
 }
 
-#sort{
+#sort {
     border-radius: 20px;
     margin: 10px 0px;
 }
 
-.item{
+.item {
     width: 100%;
     display: flex;
     margin-bottom: 10px;
@@ -61,37 +61,37 @@
     border-radius: 10px;
 }
 
-.item img{
+.item img {
     margin: 10px;
     width: 25%;
     height: 25%;
 }
 
-.item .info{
+.item .info {
     margin: 5px;
     width: 50%;
 }
 
-.item-header{
+.item-header {
     font-size: 28px;
     font-weight: bold;
 }
 
-.stars{
+.stars {
     color: rgb(235, 235, 0);
     font-size: 24px;
 }
 
-.item .other{
+.item .other {
     padding: 10px;
     width: 30%;
     align-items: end;
 }
 
-.avg{
+.avg {
     width: 50px;
     height: 50px;
-    background-color: #003B95;
+    background-color: #003b95;
     color: white;
     font-weight: bold;
     border-radius: 10px;
@@ -100,32 +100,35 @@
     justify-content: center;
 }
 
-.btn-moreinfo{
+.btn-moreinfo {
     width: 80%;
     height: 40px;
     color: white;
-    background-color: #003B95;
+    background-color: #003b95;
     border: none;
     font-size: 18px;
     border-radius: 10px;
 }
 
-.price{
-    color: red; 
-    font-size: 28px; 
+.price {
+    color: red;
+    font-size: 28px;
     font-weight: bold;
 }
 
-.drop-btn{
+.drop-btn {
     color: white;
-    background-color: #003B95;
+    background-color: #003b95;
     border: none;
     border-radius: 5px;
     padding: 5px;
     margin: 5px;
 }
 
-.drop-input{
+.drop-input {
     border: 1px solid black;
     padding: 10px;
+}
+.custom-btn:hover {
+    color: #fff;
 }

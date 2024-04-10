@@ -1,15 +1,14 @@
-
-button.btn.btn-primary{
+button.btn.btn-primary {
     width: 370px;
 }
 
-button.btn.btn-primary:hover{
+button.btn.btn-primary:hover {
     background-color: rgb(198, 241, 241);
 }
-.email-phone{
+.email-phone {
     padding-top: 5px;
 }
-.eaVHU{
+.eaVHU {
     width: 100%;
     display: flex;
     text-align: center;
@@ -21,75 +20,73 @@ button.btn.btn-primary:hover{
     background-color: transparent;
     padding: 0px;
 }
-.line{
+.line {
     min-width: 1px;
     width: 100%;
     flex: 1 1 0%;
     margin: 0px;
     border-bottom: 1px solid rgb(221, 223, 226);
 }
-.aeDT{
+.aeDT {
     padding-top: 10px;
 }
-.mid-text{
+.mid-text {
     margin-left: 8px;
     margin-right: 8px;
 }
-.aeIUH{
+.aeIUH {
     padding-top: 10px;
 }
-.button-google{
+.button-google {
     width: 370px;
 }
-.button-veaH{
+.button-veaH {
     padding-top: 5px;
 }
-.veaH{
+.veaH {
     width: 185px;
 }
 
-.text h3{
+.text h3 {
     text-align: center;
 }
 
-.img-button{
+.img-button {
     width: 22px;
     aspect-ratio: auto 22 / 22;
     height: 22px;
     margin-right: 5px;
     margin-bottom: 2px;
 }
-.aePT{
+.aePT {
     padding-top: 10px;
     font-size: small;
 }
-.tag{
+.tag {
     width: 160px;
     margin-bottom: 10px;
     font-weight: bold;
-
 }
-.btn:hover{
-    background-color: #f8f8f8;
-    color: rgb(48, 48, 162);
+.btn:hover {
+    color: #fff;
 }
-.btn.btn-secondary{
+.btn.btn-secondary {
     width: 455px;
 }
 
-#PhoneFormWrapper{
+#PhoneFormWrapper {
     display: none;
 }
 
-.modal-body{
+.modal-body {
     border: 1px solid #eaeaea;
     float: right;
     margin: 5% 10%;
 }
-.bg{
+.bg {
     width: 100%;
     height: 790px;
     position: relative;
-    background-image: url('../../img/R.jpg');
+    background-image: url("../../img/R.jpg");
     background-size: 100%;
 }
