@@ -8,7 +8,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
     function updateCartItemCount() {
         const cartItemCount = document.querySelectorAll(".card").length - 2;
         const cartTitle = document.getElementById("cartTitle");
-        cartTitle.textContent = `Xe đẩy hàng của quý khách (${cartItemCount})`;
+        cartTitle.textContent = `Giỏ hàng của quý khách (${cartItemCount})`;
     }
 
     // Lặp qua từng nút xóa và gán sự kiện click
@@ -48,8 +48,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
     // Hàm cập nhật tổng giá
     function updateTotalPrice(amount) {
         const totalPriceElement = document.querySelector(".total-price");
-        totalPriceElement.textContent =
-            "Tổng giá: " + formatCurrency(amount, "VND");
+        totalPriceElement.textContent = formatCurrency(amount, "VND");
     }
 
     // Hàm hiển thị hộp thoại xác nhận
