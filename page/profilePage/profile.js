@@ -65,3 +65,87 @@ function confirmLogout(event) {
         window.location.href = "../login-logout/logout.html";
     }
 }
+function toggleEditSave() {
+    var phoneValue = document.getElementById("phoneValue");
+    var currentPhone = phoneValue.textContent.trim();
+    var editButton = event.target;
+
+    if (editButton.textContent === "Chỉnh sửa") {
+        var input = document.createElement("input");
+        input.type = "text";
+        input.value = currentPhone;
+        phoneValue.textContent = "";
+        phoneValue.appendChild(input);
+
+        editButton.textContent = "Lưu";
+    } else {
+        var input = phoneValue.querySelector("input");
+        var newPhone = input.value;
+        phoneValue.removeChild(input);
+        phoneValue.textContent = newPhone;
+        editButton.textContent = "Chỉnh sửa";
+    }
+}
+function toggleBirth() {
+    var phoneValue = document.getElementById("birthValue");
+    var currentPhone = phoneValue.textContent.trim();
+    var editButton = event.target;
+
+    if (editButton.textContent === "Chỉnh sửa") {
+        var input = document.createElement("input");
+        input.type = "text";
+        input.value = currentPhone;
+        phoneValue.textContent = "";
+        phoneValue.appendChild(input);
+
+        editButton.textContent = "Lưu";
+    } else {
+        var input = phoneValue.querySelector("input");
+        var newPhone = input.value;
+        phoneValue.removeChild(input);
+        phoneValue.textContent = newPhone;
+        editButton.textContent = "Chỉnh sửa";
+    }
+}
+
+function toggleAddpre() {
+    var phoneValue = document.getElementById("addpreValue");
+    var currentPhone = phoneValue.textContent.trim();
+    var editButton = event.target;
+
+    if (editButton.textContent === "Chỉnh sửa") {
+        var input = document.createElement("input");
+        input.type = "text";
+        input.value = currentPhone;
+        phoneValue.textContent = "";
+        phoneValue.appendChild(input);
+
+        editButton.textContent = "Lưu";
+    } else {
+        var input = phoneValue.querySelector("input");
+        var newPhone = input.value;
+        phoneValue.removeChild(input);
+        phoneValue.textContent = newPhone;
+        editButton.textContent = "Chỉnh sửa";
+    }
+}function diaCAddpre() {
+    var phoneValue = document.getElementById("diacValue");
+    var currentPhone = phoneValue.textContent.trim();
+    var editButton = event.target;
+
+    if (editButton.textContent === "Chỉnh sửa") {
+        var input = document.createElement("input");
+        input.type = "text";
+        input.value = currentPhone;
+        phoneValue.textContent = "";
+        phoneValue.appendChild(input);
+
+        editButton.textContent = "Lưu";
+    } else {
+        var input = phoneValue.querySelector("input");
+        var newPhone = input.value;
+        phoneValue.removeChild(input);
+        phoneValue.textContent = newPhone;
+        editButton.textContent = "Chỉnh sửa";
+    }
+}
