@@ -59,12 +59,12 @@
                         id="navbarSupportedContent"
                     >
                         <ul class="navbar-nav mr-auto">
-                            <li class="nav-item active">
+                            <li class="nav-item">
                                 <a class="nav-link" href="../homePage/homePage.html"
                                     >Trang chủ</a
                                 >
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item active">
                                 <a class="nav-link" href="#">Lưu trú</a>
                             </li>
                             <li class="nav-item">
@@ -126,12 +126,40 @@
                     </div>
                     <div class="search-item">
                         <label for="people" class="text-light">Số người</label>
-                        <input
-                            type="text"
-                            id="people"
-                            class="form-control"
-                            placeholder="1 phòng - 2 người"
-                        />
+                        <div class="d-flex btn-group">
+                            <input 
+                                type="texr"
+                                id="people"
+                                class="form-control"
+                                placeholder="1 phòng - 2 người"
+                                readonly
+                            />
+                            <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="sr-only">Toggle Dropright</span>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right" style="background-color: #ffffff; ">
+                                <table style="width: 400px; margin: 20px">
+                                    <tr>
+                                        <td colspan="2">Người lớn:</td>
+                                        <td colspan="3"><input class="drop-input" id="nguoilon" placeholder="1" type="number" min="1"></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">Trẻ em:</td>
+                                        <td colspan="3"><input class="drop-input" id="treem" placeholder="0" type="number" min="0"></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">Số phòng:</td>
+                                        <td colspan="3"><input class="drop-input" id="sophong" placeholder="1" type="number" min="1"></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4" class="d-flex">
+                                            <button class="drop-btn">Xác nhận</button>
+                                            <button class="drop-btn">Hủy</button>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
                     </div>
                     <button type="submit" class="button-submit">
                         Tìm ngay
