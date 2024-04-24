@@ -132,3 +132,8 @@
 .custom-btn:hover {
     color: #fff;
 }
+
+.btn-moreinfo a{
+    color: white;
+    text-decoration: none;
+}
