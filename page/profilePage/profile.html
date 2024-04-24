@@ -117,7 +117,7 @@
                         </div>
                         <a
                             class="infor custom-menu"
-                            href="../homePage/homePage.html"
+                            href="../cartPage/cart.html"
                         >
                             <span class="material-symbols-outlined"
                                 >receipt_long</span
@@ -138,7 +138,10 @@
                             >
                             An toàn và bảo mật
                         </a>
-                        <a class="infor custom-menu" href="../login-logout/">
+                        <a
+                            class="infor custom-menu"
+                            href="../loginPage/login.html"
+                        >
                             <span class="material-symbols-outlined"
                                 >change_circle</span
                             >
@@ -146,8 +149,7 @@
                         </a>
                         <a
                             class="infor custom-menu"
-                            href="../login-logout/"
-                            onclick="confirmLogout(event)"
+                            href="../loginPage/login.html"
                         >
                             <span class="material-symbols-outlined"
                                 >logout</span
@@ -196,48 +198,104 @@
                                             </div>
                                         </div>
                                         <div class="box-phone">
-                                            <b>Số điện thoại</b>
+                                            <b
+                                                >Số điện thoại
+                                                <span id="errPhone">*</span></b
+                                            >
                                             <div class="box-phone-btn">
-                                                <p></p>
+                                                <p id="phoneValue"></p>
+                                                <div
+                                                    id="editContainer"
+                                                    style="display: none"
+                                                >
+                                                    <input
+                                                        type="text"
+                                                        id="phoneInput"
+                                                    />
+                                                </div>
                                                 <button
-                                                    type="submit"
+                                                    type="button"
                                                     class="btn btn-light"
+                                                    id="editButton"
+                                                    onclick="setPhoneNew()"
                                                 >
                                                     Chỉnh sửa
                                                 </button>
                                             </div>
                                         </div>
-                                        <div class="box-birth-day">
-                                            <b>Ngày sinh</b>
-                                            <div class="box-birth-day-btn">
-                                                <p></p>
+                                        <div class="box-phone">
+                                            <b
+                                                >Ngày sinh
+                                                <span id="errBirth">*</span></b
+                                            >
+                                            <div class="box-phone-btn">
+                                                <p id="birthValue"></p>
+                                                <div
+                                                    id="editBirthContainer"
+                                                    style="display: none"
+                                                >
+                                                    <input
+                                                        type="text"
+                                                        id="birthInput"
+                                                    />
+                                                </div>
                                                 <button
-                                                    type="submit"
+                                                    type="button"
                                                     class="btn btn-light"
+                                                    id="editBirthButton"
+                                                    onclick="setBirthNew()"
                                                 >
                                                     Chỉnh sửa
                                                 </button>
                                             </div>
                                         </div>
-                                        <div class="box-cont">
-                                            <b>Quốc tịch</b>
-                                            <div class="box-cont-btn">
-                                                <p></p>
+                                        <div class="box-phone">
+                                            <b
+                                                >Quốc tịch
+                                                <span id="errNati">*</span></b
+                                            >
+                                            <div class="box-phone-btn">
+                                                <p id="natiValue"></p>
+                                                <div
+                                                    id="editNatiContainer"
+                                                    style="display: none"
+                                                >
+                                                    <input
+                                                        type="text"
+                                                        id="natiInput"
+                                                    />
+                                                </div>
                                                 <button
-                                                    type="submit"
+                                                    type="button"
                                                     class="btn btn-light"
+                                                    id="editNatiButton"
+                                                    onclick="setNatiNew()"
                                                 >
                                                     Chỉnh sửa
                                                 </button>
                                             </div>
                                         </div>
-                                        <div class="box-addr">
-                                            <b>Địa chỉ</b>
-                                            <div class="box-addr-btn">
-                                                <p></p>
+                                        <div class="box-phone">
+                                            <b
+                                                >Địa chỉ
+                                                <span id="errDiac">*</span></b
+                                            >
+                                            <div class="box-phone-btn">
+                                                <p id="diacValue"></p>
+                                                <div
+                                                    id="editDiacContainer"
+                                                    style="display: none"
+                                                >
+                                                    <input
+                                                        type="text"
+                                                        id="diacInput"
+                                                    />
+                                                </div>
                                                 <button
-                                                    type="submit"
+                                                    type="button"
                                                     class="btn btn-light"
+                                                    id="editDiacButton"
+                                                    onclick="setDiacNew()"
                                                 >
                                                     Chỉnh sửa
                                                 </button>
@@ -289,19 +347,27 @@
                                                 >
                                             </div>
                                         </div>
-                                        <div class="box-chek">
-                                            <p>Thông báo ưu đãi</p>
-                                            <label class="switch">
-                                                <input type="checkbox" />
-                                                <span class="slider"></span>
-                                            </label>
-                                        </div>
-                                        <div class="box-chek">
-                                            <p>Nhận email về khuyến mãi</p>
-                                            <label class="switch">
-                                                <input type="checkbox" />
-                                                <span class="slider"></span>
-                                            </label>
+                                        <div>
+                                            <div class="box-chek">
+                                                <p>Thông báo ưu đãi</p>
+                                                <label class="switch">
+                                                    <input
+                                                        type="checkbox"
+                                                        id="checkbox1"
+                                                    />
+                                                    <span class="slider"></span>
+                                                </label>
+                                            </div>
+                                            <div class="box-chek">
+                                                <p>Nhận email về khuyến mãi</p>
+                                                <label class="switch">
+                                                    <input
+                                                        type="checkbox"
+                                                        id="checkbox2"
+                                                    />
+                                                    <span class="slider"></span>
+                                                </label>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -322,7 +388,7 @@
                                 <b>Mật khẩu </b>
                                 <p>
                                     Thường xuyên thay đổi mật khẩu để giữ tài
-                                    khoảng của bạn được an toàn hơn
+                                    khoản của bạn được an toàn hơn
                                 </p>
                                 <div class="box-pwd-btn">
                                     <p></p>
@@ -334,7 +400,7 @@
                             <div class="box-pwd">
                                 <b>Xác thực 2 yếu tố</b>
                                 <p>
-                                    Tăng độ bảo mật cho tài khoảng bằng cách
+                                    Tăng độ bảo mật cho tài khoản bằng cách
                                     thiết lập xác thực 2 yếu tố.
                                 </p>
                                 <div class="box-pwd-btn">
@@ -345,12 +411,12 @@
                                 </div>
                             </div>
                             <div class="box-pwd">
-                                <b>Xóa tài khoảng</b>
-                                <p>Xóa tài khoảng vĩnh viễn</p>
+                                <b>Xóa tài khoản</b>
+                                <p>Xóa tài khoản vĩnh viễn</p>
                                 <div class="box-pwd-btn">
                                     <p></p>
                                     <button type="submit" class="btn btn-light">
-                                        Xóa tài khoảng
+                                        Xóa tài khoản
                                     </button>
                                 </div>
                             </div>
@@ -369,28 +435,38 @@
                     <div class="col-3">
                         <h5>Về chúng tôi</h5>
                         <ul>
-                            <li>Giới thiệu</li>
-                            <li>Liên hệ</li>
-                            <li>Truyền thông</li>
-                            <li>Chi nhánh</li>
+                            <li><a href="">Giới thiệu</a></li>
+                            <li><a href="">Liên hệ</a></li>
+                            <li><a href="">Truyền thông</a></li>
+                            <li><a href="">Chi nhánh</a></li>
                         </ul>
                     </div>
                     <div class="col-3">
                         <h5>Danh mục</h5>
                         <ul>
-                            <li>Khách sạn</li>
-                            <li>Resort</li>
-                            <li>Villa</li>
-                            <li>Nhà hàng</li>
+                            <li><a href="">Khách sạn</a></li>
+                            <li><a href="">Resort</a></li>
+                            <li><a href="">Villa</a></li>
+                            <li><a href="">Nhà hàng</a></li>
                         </ul>
                     </div>
                     <div class="col-3">
                         <h5>Khác</h5>
                         <ul>
-                            <li>Hướng dẫn đặt phòng</li>
-                            <li>Lịch sử thanh toán</li>
-                            <li>Tuyển dụng</li>
-                            <li>Đăng ký đối tác</li>
+                            <li><a href="">Hướng dẫn đặt phòng</a></li>
+                            <li><a href="">Lịch sử thanh toán</a></li>
+                            <li><a href="">Tuyển dụng</a></li>
+                            <li>
+                                <a href="../policyPage/index.html"
+                                    >Chính sách</a
+                                >
+                            </li>
+                            <li>
+                                <a href="../rulesPage/rules.html"
+                                    >Điều khoảng</a
+                                >
+                            </li>
+                            <li><a href="">Đăng ký đối tác</a></li>
                         </ul>
                     </div>
                 </div>
