@@ -89,7 +89,7 @@ button.btn.btn-primary:hover{
 .modal-body{
     border: 1px solid #eaeaea;
     float: right;
-    margin: 5% 10%;
+    margin: 10% 20%;
 }
 .bg{
     width: 100%;
@@ -114,10 +114,12 @@ button.btn.btn-primary:hover{
     margin-top: 20px;
 }
 .btnhl3{
+    background-color: rgb(0, 123, 255);
+    border: 1px solid rgb(0, 123, 255);
     margin-top: 10px;
     font-size: 30px;
-    width: 50px;
     border-radius: 10px;
+    width: 350px;
 }
 svg{
     margin-bottom: 10px;
