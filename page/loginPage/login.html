@@ -36,7 +36,7 @@
         <header class="custom-header">
             <div class="container">
                 <nav class="navbar navbar-expand-lg navbar-light">
-                    <a class="navbar-brand" href="#">
+                    <a class="navbar-brand" href="../homePage/homePage.html">
                         <img
                             src="../../img/logo.png"
                             alt="#"
@@ -60,7 +60,7 @@
                         id="navbarSupportedContent"
                     >
                         <ul class="navbar-nav mr-auto">
-                            <li class="nav-item">
+                            <li class="nav-item active">
                                 <a
                                     class="nav-link"
                                     href="../homePage/homePage.html"
@@ -90,17 +90,24 @@
                                 <a
                                     class="nav-link"
                                     href="../aboutUsPage/aboutUs.html"
-                                    >Về chúng tôi</a
+                                    >Về chúng Tôi</a
                                 >
                             </li>
+                            <!-- <li class="nav-item custom-cart">
+                                <a
+                                    class="nav-link"
+                                    href="../aboutUsPage/aboutUs.html"
+                                    ><span class="material-symbols-outlined">
+                                        local_mall
+                                    </span></a
+                                >
+                            </li> -->
                         </ul>
                         <button type="button" class="btn custom-btn">
                             <span class="material-symbols-outlined">
-                                account_circle
+                                login
                             </span>
-                            <a href="../profilePage/profile.html"
-                                ><span>Tài khoản của tôi</span></a
-                            >
+                            <a href=""><span>Đăng nhập</span></a>
                         </button>
                     </div>
                 </nav>
@@ -151,11 +158,7 @@
 
                     <div
                         class="modal-body bg-white"
-                        style="
-                            width: 410px;
-                            height: 610px;
-                            min-height: fit-content;
-                        "
+                        style="height: 610px; min-height: fit-content"
                     >
                         <div class="text">
                             <h3>Đăng Nhập</h3>
@@ -208,14 +211,156 @@
                                         id="pwd"
                                         placeholder="Mật khẩu"
                                         name="pswd"
-                                        pattern="(?=.*[A-Z])(?=.*[!@#$%^&*])(?=.*[0-9]).{8,}"
+                                        pattern="[a-zA-Z0-9]{8,}"
                                         required
                                     />
                                     <div class="valid-feedback">Valid.</div>
                                     <div class="invalid-feedback">
-                                        Mật khẩu phải đủ 8 ký tự trong đó có ít
-                                        nhất một chữ cái hoa, một ký tự đặc biệt
-                                        và một số.
+                                        Mật khẩu phải đủ 8 ký tự trở lên
+                                    </div>
+                                </div>
+
+                                <div class="text-center">
+                                    <button
+                                        type="submit"
+                                        class="btn btn-primary"
+                                    >
+                                        ĐĂNG NHẬP
+                                    </button>
+                                </div>
+
+                                <div class="row aeDT">
+                                    <div class="col-6">
+                                        <div class="text-left">
+                                            <a
+                                                href="#"
+                                                data-toggle="modal"
+                                                data-target="#dangKy"
+                                                >Tạo tài khoản</a
+                                            >
+                                        </div>
+                                    </div>
+                                    <div class="col-6 text-right">
+                                        <a
+                                            href="#"
+                                            data-toggle="modal"
+                                            data-target="#QMK"
+                                            >Quên mật khẩu?</a
+                                        >
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-12 eaVHU">
+                                        <div class="line"></div>
+                                        <div class="mid-text">
+                                            hoặc đăng nhập bằng
+                                        </div>
+                                        <div class="line"></div>
+                                    </div>
+                                </div>
+
+                                <div class="aeIUH">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="text-center">
+                                                <button
+                                                    type="submit"
+                                                    class="btn btn-outline-primary button-google"
+                                                >
+                                                    <img
+                                                        class="img-button"
+                                                        src="https://cdn6.agoda.net/images/universal-login/google-logo-v2.svg"
+                                                        alt=""
+                                                    />Google
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row button-veaH">
+                                        <div
+                                            class="col-6"
+                                            style="padding-right: 2px"
+                                        >
+                                            <button
+                                                type="submit"
+                                                class="btn btn-outline-primary veaH"
+                                            >
+                                                <img
+                                                    class="img-button"
+                                                    src="https://cdn6.agoda.net/images/universal-login/facebook-logo.svg"
+                                                    alt=""
+                                                />Facebook
+                                            </button>
+                                        </div>
+                                        <div
+                                            class="col-6"
+                                            style="padding-left: 2px"
+                                        >
+                                            <button
+                                                type="submit"
+                                                class="btn btn-outline-primary veaH"
+                                            >
+                                                <img
+                                                    class="img-button"
+                                                    src="https://cdn6.agoda.net/images/universal-login/apple-logo.svg"
+                                                    alt=""
+                                                />Apple
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="text-center aePT">
+                                            Khi đăng nhập, tôi đồng ý với các
+                                            <a href="../rules/rules.html"
+                                                >Điều khoản sử dụng</a
+                                            >
+                                            và
+                                            <a href="../policy/policy.html"
+                                                >Chính sách bảo mật</a
+                                            >
+                                            của Starwood Việt Nam.
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- Form Di Động -->
+                        <div id="PhoneFormWrapper">
+                            <form action="" class="needs-validation" novalidate>
+                                <div class="form-group">
+                                    <label for="SDT">Số di động</label>
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="SDT"
+                                        placeholder="Số di động"
+                                        name="SDT"
+                                        pattern="[0-9]{10}"
+                                        required
+                                    />
+                                    <div class="valid-feedback">Valid.</div>
+                                    <div class="invalid-feedback">
+                                        Số di động phải đủ 10 số.
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="pwd">Mật khẩu</label>
+                                    <input
+                                        type="password"
+                                        class="form-control"
+                                        id="pwd2"
+                                        placeholder="Mật khẩu"
+                                        name="pwd"
+                                        pattern="[a-zA-Z0-9]{8,}"
+                                        required
+                                    />
+                                    <div class="valid-feedback">Valid.</div>
+                                    <div class="invalid-feedback">
+                                        Mật khẩu phải đủ 8 ký tự trở lên
                                     </div>
                                 </div>
 
@@ -318,144 +463,17 @@
                                 </div>
                             </form>
                         </div>
-
-                        <!-- Form Di Động -->
-                        <div id="PhoneFormWrapper">
-                            <form action="" class="needs-validation" novalidate>
-                                <div class="form-group">
-                                    <label for="SDT">Số di động</label>
-                                    <input
-                                        type="text"
-                                        class="form-control"
-                                        id="SDT"
-                                        placeholder="Số di động"
-                                        name="SDT"
-                                        pattern="[0-9]{10}"
-                                        required
-                                    />
-                                    <div class="valid-feedback">Valid.</div>
-                                    <div class="invalid-feedback">
-                                        Số di động phải đủ 10 số.
-                                    </div>
+                        <div class="overlay" id="overlay">
+                            <div class="spinner">
+                                <!-- Thêm spinner ở đây -->
+                                <!-- Ví dụ: -->
+                                <div
+                                    class="spinner-border text-light"
+                                    role="status"
+                                >
+                                    <span class="sr-only">Loading...</span>
                                 </div>
-
-                                <div class="form-group">
-                                    <label for="pwd">Mật khẩu</label>
-                                    <input
-                                        type="password"
-                                        class="form-control"
-                                        id="pwd"
-                                        placeholder="Mật khẩu"
-                                        name="pswd"
-                                        pattern="(?=.*[A-Z])(?=.*[!@#$%^&*])(?=.*[0-9]).{8,}"
-                                        required
-                                    />
-                                    <div class="valid-feedback">Valid.</div>
-                                    <div class="invalid-feedback">
-                                        Mật khẩu phải đủ 8 ký tự trong đó có ít
-                                        nhất một chữ cái hoa, một ký tự đặc biệt
-                                        và một số.
-                                    </div>
-                                </div>
-
-                                <div class="text-center">
-                                    <button
-                                        type="submit"
-                                        class="btn btn-primary"
-                                    >
-                                        ĐĂNG NHẬP
-                                    </button>
-                                </div>
-
-                                <div class="row aeDT">
-                                    <div class="col-6">
-                                        <div class="text-left">
-                                            <a
-                                                href="#"
-                                                data-toggle="modal"
-                                                data-target="#dangKy"
-                                                >Tạo tài khoản</a
-                                            >
-                                        </div>
-                                    </div>
-                                    <div class="col-6 text-right">
-                                        <a
-                                            href="#"
-                                            data-toggle="modal"
-                                            data-target="#QMK"
-                                            >Quên mật khẩu?</a
-                                        >
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-12 eaVHU">
-                                        <div class="line"></div>
-                                        <div class="mid-text">
-                                            hoặc đăng nhập bằng
-                                        </div>
-                                        <div class="line"></div>
-                                    </div>
-                                </div>
-
-                                <div class="aeIUH">
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <div class="text-center">
-                                                <button
-                                                    type="submit"
-                                                    class="btn btn-outline-primary button-google"
-                                                >
-                                                    <img
-                                                        class="img-button"
-                                                        src="https://cdn6.agoda.net/images/universal-login/google-logo-v2.svg"
-                                                        alt=""
-                                                    />Google
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row button-veaH">
-                                        <div class="col-12">
-                                            <button
-                                                type="submit"
-                                                class="btn btn-outline-primary veaH"
-                                            >
-                                                <img
-                                                    class="img-button"
-                                                    src="https://cdn6.agoda.net/images/universal-login/facebook-logo.svg"
-                                                    alt=""
-                                                />Facebook
-                                            </button>
-                                            <button
-                                                type="submit"
-                                                class="btn btn-outline-primary veaH"
-                                            >
-                                                <img
-                                                    class="img-button"
-                                                    src="https://cdn6.agoda.net/images/universal-login/apple-logo.svg"
-                                                    alt=""
-                                                />Apple
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="text-center aePT">
-                                            Khi đăng nhập, tôi đồng ý với các
-                                            <a href="../rules/rules.html"
-                                                >Điều khoản sử dụng</a
-                                            >
-                                            và
-                                            <a href="../policy/policy.html"
-                                                >Chính sách bảo mật</a
-                                            >
-                                            của Agoda.
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
+                            </div>
                         </div>
                     </div>
 
@@ -553,7 +571,7 @@
                                 <!-- Modal body  -->
                                 <div
                                     class="modal-body"
-                                    style="max-height: 600px; overflow-y: auto"
+                                    style="max-height: 600px; overflow-y: auto; margin: 0;"
                                 >
                                     <div class="text">
                                         <h2>Đăng Ký</h2>
@@ -574,6 +592,7 @@
                                                     id="hoTen"
                                                     placeholder="Tên"
                                                     name="hoTen"
+                                                    pattern="/^[^\d!@#$%^&*()_+={}\[\]|\\:;";
                                                     required
                                                 />
                                                 <div class="valid-feedback">
@@ -592,6 +611,7 @@
                                                     id="hoTen"
                                                     placeholder="Họ"
                                                     name="hoTen"
+                                                    pattern="/^[^\d!@#$%^&*()_+={}\[\]|\\:;";
                                                     required
                                                 />
                                                 <div class="valid-feedback">
@@ -612,6 +632,7 @@
                                                     id="sdt"
                                                     placeholder="Điện thoại"
                                                     name="sdt"
+                                                    pattern="^(03|05|07|08|09|01[2|6|8|9])([0-9]{8})\b$"
                                                     required
                                                 />
                                                 <div class="valid-feedback">
@@ -633,6 +654,7 @@
                                                     id="emailDK"
                                                     placeholder="Email"
                                                     name="emailDK"
+                                                    pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
                                                     required
                                                 />
                                                 <div class="valid-feedback">
@@ -642,24 +664,6 @@
                                                     Email không được để trống.
                                                 </div>
                                             </div>
-
-                                            <!-- Giới tính  -->
-                                            <!-- <div class="form-group">
-                                            <div class="form-check-inline">
-                                                <label class="form-check-lable" for="male">
-                                                    <input type="radio" class="form-check-input" id="nam" name="gioiTinh"
-                                                        value="nam"> Nam
-                                                </label>
-                                            </div>
-        
-                                            <div class="form-check-inline">
-                                                <label class="form-check-label" for="female">
-                                                    <input type="radio" class="form-check-input" id="nu" name="gioiTinh"
-                                                        value="nu"> Nữ
-                                                </label>
-                                            </div>
-                                        </div> -->
-
                                             <!-- Ngày sinh  -->
                                             <div class="form-group">
                                                 <label for="date"
@@ -693,7 +697,7 @@
                                                     id="pwdDK"
                                                     placeholder="Mật Khẩu"
                                                     name="pswdDK"
-                                                    pattern="(?=.*[A-Z])(?=.*[!@#$%^&*])(?=.*[0-9]).{8,}"
+                                                    pattern="[a-zA-Z0-9]{8,}"
                                                     required
                                                 />
                                                 <div class="valid-feedback">
@@ -718,7 +722,7 @@
                                                     id="rePass"
                                                     placeholder="Xác nhận mật khẩu"
                                                     name="rePass"
-                                                    pattern="(?=.*[A-Z])(?=.*[!@#$%^&*])(?=.*[0-9]).{8,}"
+                                                    pattern="[a-zA-Z0-9]{8,}"
                                                     required
                                                 />
                                                 <div class="valid-feedback">
@@ -790,7 +794,7 @@
                                                     <a href=""
                                                         >Chính sách bảo mật</a
                                                     >
-                                                    của Agoda.
+                                                    của Starwood Việt Nam.
                                                 </div>
                                             </div>
                                         </form>
@@ -909,4 +913,5 @@
                     "block";
             });
     </script>
+    <script src="./login.js"></script>
 </html>

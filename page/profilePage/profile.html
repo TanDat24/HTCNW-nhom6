@@ -150,12 +150,60 @@
                         <a
                             class="infor custom-menu"
                             href="../loginPage/login.html"
+                            type="button"
+                            class="btn btn-primary"
+                            data-toggle="modal"
+                            data-target="#modalExit"
                         >
                             <span class="material-symbols-outlined"
                                 >logout</span
                             >
                             Đăng xuất
                         </a>
+                        <div
+                            class="modal fade"
+                            id="modalExit"
+                            tabindex="-1"
+                            role="dialog"
+                            aria-labelledby="exampleModalCenterTitle"
+                            aria-hidden="true"
+                        >
+                            <div
+                                class="modal-dialog modal-dialog-centered"
+                                role="document"
+                            >
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5
+                                            class="modal-title"
+                                            id="exampleModalLongTitle"
+                                        >
+                                            Đăng xuất!
+                                        </h5>
+                                    </div>
+                                    <div class="modal-body">
+                                        Bạn có chắc chắn muốn đăng xuất hay
+                                        không?
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button
+                                            type="button"
+                                            class="btn btn-secondary"
+                                            onclick="logout()"
+                                        >
+                                            Đăng xuất
+                                        </button>
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary"
+                                            data-dismiss="modal"
+                                        >
+                                            Không
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-7 ml-auto custom-container-tabs">

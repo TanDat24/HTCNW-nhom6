@@ -173,3 +173,23 @@ header {
 .custom-footer .container {
     height: 100%;
 }
+
+/* custom cart */
+.custom-cart {
+    padding: 0 !important;
+    align-items: center;
+    display: flex;
+    padding-left: 12px;
+}
+.custom-cart:hover:after {
+    content: "Giỏ hàng";
+    position: absolute;
+    background-color: rgb(54, 54, 54);
+    color: white;
+    padding: 8px;
+    border-radius: 5px;
+    top: 70%;
+}
+.custom-cart a {
+    padding: 0;
+}
