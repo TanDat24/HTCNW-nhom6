@@ -11,6 +11,7 @@
             rel="stylesheet"
             href="../../style/bootstrap-4.0.0-dist/css/bootstrap.min.css"
         />
+        <script src="jquery/jquery-3.4.1.min.js"></script>
         <script src="../../style/bootstrap-4.0.0-dist/js/bootstrap.js"></script>
         <script src="../../style/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
 
@@ -95,14 +96,17 @@
                     <div class="form-group">
                         <label for="name">Họ và tên</label>
                         <input type="text" class="form-control" id="name" placeholder="Họ và tên">
+                        <span id="erName"></span>
                     </div>
                     <div class="form-group">
                         <label for="passport">Hộ chiếu/ CCCD/ CMND</label>
                         <input type="text" class="form-control" id="passport" placeholder="Hộ chiếu/ CCCD/ CMND">
+                        <span id="erPassport"></span>
                     </div>
                     <div class="form-group">
                         <label for="email">E-mail</label>
                         <input type="email" class="form-control" id="email" placeholder="E-mail">
+                        <span id="erEmail"></span>
                     </div>
                     <div class="form-group" id="Telephone">
                         <div class="row">
@@ -122,6 +126,7 @@
                             </div>
                             <div class="col-md-6">
                                 <input type="tel" class="form-control" id="phone" placeholder="Số điện thoại">
+                                <span id="erPhone"></span>
                             </div>
                         </div>                        
                     </div>
@@ -337,4 +342,59 @@
           </div>
       </footer>
 </body>
+<script>
+  $(document).ready(function() {
+    $("#name").blur(function(e) {
+            e.preventDefault();
+            let hoTen = $("#name").val().trim()
+            let regexHoTen = /^[A-Z][a-z]*(\s[A-Z][a-z]*){1,}$/;
+            if (!regexHoTen.test(hoTen)) {
+                $("#erName").html("Họ tên không được bỏ trống, từ 2 chữ trở lên, viết hoa ký tự đầu")
+                return false
+            } else {
+                $("#erName").html("");
+                return true
+            }
+        })
+        $("#passport").blur(function(e) {
+            e.preventDefault();
+            let cccd = $("#passport").val().trim()
+            let regexcccd = /^\d{9}$/;
+            if (!regexcccd.test(cccd)) {
+                $("#erPassport").html("Mã CCCD bao gồm 9 số")
+                return false
+            } else {
+                $("#erPassport").html("");
+                return true
+            }
+        })
+        $("#email").blur(function (e) { 
+            e.preventDefault();
+            let email = $("#email").val().trim(); 
+            let regEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Biểu thức chính quy kiểm tra định dạng email
+         if (!regEmail.test(email)) {
+                $("#erEmail").html("Email không đúng định dạng");
+                return false;
+            } else {
+                $("#erEmail").html("");
+                return true;
+            }
+            
+        });
+        $("#phone").blur(function (e) { 
+            e.preventDefault();
+            let dienthoai = $("#phone").val();
+            let regdienThoai = /^[0][3-9]\d{8}$/;
+            if(!regdienThoai.test(dienthoai)){
+                $("#erPhone").html("Số điện thoại phải là số");
+                return false;
+            }
+            else{
+                $("#erPhone").html("");
+                return true;
+            }
+            
+        });
+  })
+</script>
 </html>
