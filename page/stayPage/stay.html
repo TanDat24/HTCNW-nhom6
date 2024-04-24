@@ -131,7 +131,7 @@
                         <label for="dd2" class="text-light"
                             >Ngày trả phòng</label
                         >
-                        <input type="date" id="dd2" class="form-control" />
+                        <input type="date" id="dd2" class="form-control" min="" readonly/>
                     </div>
                     <div class="search-item">
                         <label for="people" class="text-light">Số người</label>
@@ -161,11 +161,12 @@
                                         <td colspan="2">Người lớn:</td>
                                         <td colspan="3">
                                             <input
-                                                class="drop-input"
+                                                class="drop-input w-100"
                                                 id="nguoilon"
-                                                placeholder="1"
+                                                value=2
                                                 type="number"
                                                 min="1"
+                                                max="4"
                                             />
                                         </td>
                                     </tr>
@@ -173,11 +174,12 @@
                                         <td colspan="2">Trẻ em:</td>
                                         <td colspan="3">
                                             <input
-                                                class="drop-input"
+                                                class="drop-input w-100"
                                                 id="treem"
-                                                placeholder="0"
+                                                value=0
                                                 type="number"
                                                 min="0"
+                                                max="4"
                                             />
                                         </td>
                                     </tr>
@@ -185,9 +187,9 @@
                                         <td colspan="2">Số phòng:</td>
                                         <td colspan="3">
                                             <input
-                                                class="drop-input"
+                                                class="drop-input w-100"
                                                 id="sophong"
-                                                placeholder="1"
+                                                value="1"
                                                 type="number"
                                                 min="1"
                                             />
@@ -195,7 +197,7 @@
                                     </tr>
                                     <tr>
                                         <td colspan="4" class="d-flex">
-                                            <button class="drop-btn">
+                                            <button class="drop-btn" id="submit-number">
                                                 Xác nhận
                                             </button>
                                             <button class="drop-btn">

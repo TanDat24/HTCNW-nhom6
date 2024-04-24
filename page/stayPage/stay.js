@@ -225,7 +225,19 @@ function display(l){
     $("#collapsePage1").addClass("show");
 }
 
+
 $(document).ready(function () {
+    var today = new Date();
+    today.setDate(today.getDate() + 2); 
+    var minDate = today.toISOString().split('T')[0];
+    $("#dd1").attr('min', minDate);
+
+    $("#dd1").change(function() {
+        var selectedDate = $(this).val();
+        $("#dd2").attr('readonly', false);
+        $("#dd2").attr('min', selectedDate);
+    });
+
 
     display(list);
     $('.collapse').on('shown.bs.collapse', function () {
@@ -253,7 +265,7 @@ $(document).ready(function () {
         display(newList);
     });
 
-    $('#sort').on('click', function (){
+    $('#sort').on('change', function (){
         var type = $('#sort').val();
         if (type == "price-low"){
             newList = sortPrice(newList, false);
@@ -270,8 +282,17 @@ $(document).ready(function () {
         display(newList);
     });
 
-    
+    $('#submit-number').on('click', function (){
+       var treem = $('#treem').val(); 
+       var nguoilon = $('#nguoilon').val(); 
+       var phong = $('#sophong').val();
+       $('#people').attr('placeholder', phong+' phòng - '+ (parseInt(nguoilon) + parseInt(treem)) + ' Người');
+    });
 
+    $('.button-submit').on('click', function (){
+
+    });
+    
     
 
 });

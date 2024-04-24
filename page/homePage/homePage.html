@@ -158,11 +158,12 @@
                                         <td colspan="2">Người lớn:</td>
                                         <td colspan="3">
                                             <input
-                                                class="drop-input"
+                                                class="drop-input w-100"
                                                 id="nguoilon"
-                                                placeholder="1"
+                                                value=2
                                                 type="number"
                                                 min="1"
+                                                max="4"
                                             />
                                         </td>
                                     </tr>
@@ -170,11 +171,12 @@
                                         <td colspan="2">Trẻ em:</td>
                                         <td colspan="3">
                                             <input
-                                                class="drop-input"
+                                                class="drop-input w-100"
                                                 id="treem"
-                                                placeholder="0"
+                                                value=0
                                                 type="number"
                                                 min="0"
+                                                max="4"
                                             />
                                         </td>
                                     </tr>
@@ -182,9 +184,9 @@
                                         <td colspan="2">Số phòng:</td>
                                         <td colspan="3">
                                             <input
-                                                class="drop-input"
+                                                class="drop-input w-100"
                                                 id="sophong"
-                                                placeholder="1"
+                                                value="1"
                                                 type="number"
                                                 min="1"
                                             />
@@ -192,7 +194,7 @@
                                     </tr>
                                     <tr>
                                         <td colspan="4" class="d-flex">
-                                            <button class="drop-btn">
+                                            <button class="drop-btn" id="submit-number">
                                                 Xác nhận
                                             </button>
                                             <button class="drop-btn">
@@ -730,5 +732,13 @@
             element.scrollLeft += scrollAmount;
             update();
         });
+    $(document).ready(function e(){
+        $('#submit-number').on('click', function (){
+            var treem = $('#treem').val(); 
+            var nguoilon = $('#nguoilon').val(); 
+            var phong = $('#sophong').val();
+            $('#people').attr('placeholder', phong+' phòng - '+ (parseInt(nguoilon) + parseInt(treem)) + ' Người');
+         });     
+    });
     </script>
 </html>
