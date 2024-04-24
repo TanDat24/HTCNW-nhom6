@@ -91,7 +91,7 @@ var list = [
         img: "../../img/hiddenmansions.png",
         describe: "Hidden Mansions Saigon Resort cách Bảo tàng lịch sử Việt Nam 12 km và Trung tâm mua sắm AEON MALL Bình Dương Canary 13 km. Sân bay gần nhất là Sân bay Quốc tế Tân Sơn Nhất, cách resort 8 km.",
     },
-]
+];
 
 function toString(a){
     return a[0]+", "+a[1];
