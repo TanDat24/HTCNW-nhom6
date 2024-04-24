@@ -219,45 +219,45 @@
                     <div class="select-header">Tìm theo tiêu chí</div>
                     <div class="select-block">
                         <h5>Loại chỗ ở</h5>
-                        <input id="khachsan" type="checkbox" /><label
+                        <input id="khachsan" type="checkbox" value="0" class="condbox condbox1" /><label
                             for="khachsan"
                             >Khách sạn</label
                         ><br />
-                        <input id="resort" type="checkbox" /><label for="resort"
+                        <input id="resort" type="checkbox" value="1" class="condbox condbox1" /><label for="resort"
                             >Resort</label
                         ><br />
-                        <input id="vila" type="checkbox" /><label for="vila"
+                        <input id="villa" type="checkbox" value="2" class="condbox condbox1" /><label for="villa"
                             >Vila</label
                         ><br />
-                        <input id="nhahang" type="checkbox" /><label
+                        <input id="nhahang" type="checkbox" value="3" class="condbox condbox1" /><label
                             for="nhahang"
                             >Nhà hàng</label
                         ><br />
                     </div>
                     <div class="select-block">
                         <h5>Địa điểm</h5>
-                        <input id="hanoi" type="checkbox" /><label for="hanoi"
+                        <input id="hanoi" type="checkbox" value="Hà Nội" class="condbox condbox2" /><label for="hanoi"
                             >TP.Hà Nội</label
                         ><br />
-                        <input id="hochiminh" type="checkbox" /><label
+                        <input id="hochiminh" type="checkbox" value="Hồ Chí Minh" class="condbox condbox2" /><label
                             for="hochiminh"
                             >TP.Hồ Chí Minh</label
                         ><br />
-                        <input id="Vũng Tàu" type="checkbox" /><label
+                        <input id="Vũng Tàu" type="checkbox" value="Vũng Tàu" class="condbox condbox2" /><label
                             for="Vũng Tàu"
                             >Vũng Tàu</label
                         ><br />
-                        <input id="dalat" type="checkbox" /><label for="dalat"
+                        <input id="dalat" type="checkbox" value="Đà Lạt" class="condbox condbox2" /><label for="dalat"
                             >Đà Lạt</label
                         ><br />
-                        <input id="nhatrang" type="checkbox" /><label
+                        <input id="nhatrang" type="checkbox" value="Nha Trang" class="condbox condbox2" /><label
                             for="nhatrang"
                             >Nha Trang</label
                         ><br />
-                        <input id="danang" type="checkbox" /><label for="danang"
+                        <input id="danang" type="checkbox" value="Đà Nẵng" class="condbox condbox2" /><label for="danang"
                             >Đà Nẵng</label
                         ><br />
-                        <input id="halong" type="checkbox" /><label for="halong"
+                        <input id="halong" type="checkbox" value="Hạ Long" class="condbox condbox2" /><label for="halong"
                             >Hạ Long</label
                         ><br />
                     </div>
@@ -273,7 +273,7 @@
                 <div id="content">
                     <div class="d-flex">
                         Tìm thấy:&nbsp;
-                        <div id="resuil">2345</div>
+                        <div id="resuit"></div>
                         &nbsp;kết quả
                     </div>
                     <select name="select" id="sort">
@@ -284,7 +284,7 @@
                         <option value="rate-low">
                             Đánh giá từ cao đến thấp
                         </option>
-                        <option value="rate-low">
+                        <option value="rate-hight">
                             Đánh giá từ thấp đến cao
                         </option>
                     </select>
@@ -294,11 +294,11 @@
                     </div>
 
                     <ul class="pagination justify-content-center">
-                        <li style="width: 80px;" class="page-item"><a class="page-link" href="javascript:void(0);" onclick="showPrevious()">Previous</a></li>
-                        <li class="page-item"><a class="page-link" href="javascript:void(0);" onclick="showPage('collapsePage1')">1</a></li>
-                        <li class="page-item"><a class="page-link" href="javascript:void(0);" onclick="showPage('collapsePage2')">2</a></li>
-                        <li class="page-item"><a class="page-link" href="javascript:void(0);" onclick="showPage('collapsePage3')">3</a></li>
-                        <li style="width: 80px;" class="page-item"><a class="page-link" href="javascript:void(0);" onclick="showNext()">Next</a></li>
+                        <li style="width: 80px;" class="page-item"><a class="page-link" href="javascript:void(0);" onclick="showPrevious()" id="back-to-top">Previous</a></li>
+                        <li class="page-item"><a class="page-link" href="javascript:void(0);" onclick="showPage('collapsePage1')" id="back-to-top">1</a></li>
+                        <li class="page-item"><a class="page-link" href="javascript:void(0);" onclick="showPage('collapsePage2')" id="back-to-top">2</a></li>
+                        <li class="page-item"><a class="page-link" href="javascript:void(0);" onclick="showPage('collapsePage3')" id="back-to-top">3</a></li>
+                        <li style="width: 80px;" class="page-item"><a class="page-link" href="javascript:void(0);" onclick="showNext()" id="back-to-top">Next</a></li>
                     </ul>
                 </div>
             </div>

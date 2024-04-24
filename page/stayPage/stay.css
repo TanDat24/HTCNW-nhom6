@@ -137,3 +137,7 @@
     color: white;
     text-decoration: none;
 }
+
+.collapse.show{
+    height: 1400px;
+}

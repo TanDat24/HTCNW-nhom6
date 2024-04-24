@@ -5,7 +5,7 @@ var list = [
         name: "Hanoi Golden Sail",
         star: 5,
         location: ["Quận Hoàn Kiếm", "Hà Nội"],
-        type: 0,
+        type: '0',
         rating: 9.3,
         avgPrice: 453.253,
         price1: 178412.125,
@@ -18,7 +18,7 @@ var list = [
         name: "Landmark Apartment",
         star: 5,
         location: ["Quận Bình Thạnh", "Hồ Chí Minh"],
-        type: 0,
+        type: '0',
         rating: 9.1,
         avgPrice: 1153.253,
         price1: 178412.125,
@@ -31,7 +31,7 @@ var list = [
         name: "Hidden Mansions Saigon Resort",
         star: 4,
         location: ["Quận 12", "Hồ Chí Minh"],
-        type: 1,
+        type: '1',
         rating: 8.6,
         avgPrice: 903.253,
         price1: 128412.125,
@@ -44,7 +44,7 @@ var list = [
         name: "Hidden Mansions Saigon Resort",
         star: 4,
         location: ["Quận 12", "Hồ Chí Minh"],
-        type: 1,
+        type: '1',
         rating: 8.6,
         avgPrice: 903.253,
         price1: 128412.125,
@@ -57,7 +57,7 @@ var list = [
         name: "Hidden Mansions Saigon Resort",
         star: 4,
         location: ["Quận 12", "Hồ Chí Minh"],
-        type: 1,
+        type: '1',
         rating: 8.6,
         avgPrice: 903.253,
         price1: 128412.125,
@@ -70,7 +70,7 @@ var list = [
         name: "Hidden Mansions Saigon Resort",
         star: 4,
         location: ["Quận 12", "Hồ Chí Minh"],
-        type: 1,
+        type: '1',
         rating: 8.6,
         avgPrice: 903.253,
         price1: 128412.125,
@@ -83,7 +83,7 @@ var list = [
         name: "Hidden Mansions Saigon Resort",
         star: 4,
         location: ["Quận 12", "Hồ Chí Minh"],
-        type: 1,
+        type: '1',
         rating: 8.6,
         avgPrice: 903.253,
         price1: 128412.125,
@@ -105,7 +105,73 @@ function starDisplay(n){
     return s;
 }
 
+function sortPrice(l, rev){
+    for (var i=0; i<l.length-1; i++){
+        for (var j=i+1; j<l.length; j++){
+            if (l[i].avgPrice> l[j].avgPrice){
+                var tmp = l[i];
+                l[i] = l[j];
+                l[j] = tmp;
+            }
+        }
+    }
+    if (rev == true) return l.reverse();
+    return l;
+}
+
+function sortScore(l, rev){
+    for (var i=0; i<l.length-1; i++){
+        for (var j=i+1; j<l.length; j++){
+            if (l[i].rating> l[j].rating){
+                var tmp = l[i];
+                l[i] = l[j];
+                l[j] = tmp;
+            }
+        }
+    }
+    if (rev == true) return l.reverse();
+    return l;
+}
+
+function hasCommonElement(arr1, arr2) {
+    for (let i = 0; i < arr1.length; i++) {
+      if (arr2.includes(arr1[i])) {
+        return true;
+      }
+    }
+    return false;
+}
+
+function sortCond2(arr, cond){
+    var newList = [];
+    for (var i=0; i<arr.length; i++){
+        if (hasCommonElement(arr[i].location, cond)){
+            newList.push(arr[i]);
+        }
+    }
+    return newList;
+}
+
+function sortCond1(arr, cond){
+    var newList = [];
+    for (var i=0; i<arr.length; i++){
+        if (hasCommonElement(arr[i].type, cond)){
+            newList.push(arr[i]);
+        }
+    }
+    return newList;
+}
+
+function refesh(){
+    $('#collapsePage2').remove();
+    $('#collapsePage3').remove();
+    $('#collapsePage1').empty();
+
+}
+
 function display(l){
+    refesh();
+    $('#resuit').html(l.length);
     var cnt = 1;
     var container = "#collapsePage" + cnt;
     for (var i=0; i<l.length; i++){
@@ -155,13 +221,59 @@ function display(l){
 
         }
         $(container).append(item);
-
-
     }
+    $("#collapsePage1").addClass("show");
 }
 
 $(document).ready(function () {
+
     display(list);
+    $('.collapse').on('shown.bs.collapse', function () {
+        $('html, body').animate({scrollTop: $('#scroll-to-top-button').offset().top}, 800);
+    });
+    var newList = list;
+    $('.condbox').on('click', function (){
+        newList = list;
+        var cond1 = $('.condbox1:checked').map(function() {
+            return $(this).val();
+        }).get();
+        console.log(cond1);   
+     
+        var cond2 = $('.condbox2:checked').map(function() {
+            return $(this).val();
+        }).get();
+        console.log(cond2);   
+        
+        if (cond1.length!=0){
+            newList = sortCond1(newList, cond1);
+        }
+        if (cond2.length!=0){
+            newList = sortCond2(newList, cond2);
+        }
+        display(newList);
+    });
+
+    $('#sort').on('click', function (){
+        var type = $('#sort').val();
+        if (type == "price-low"){
+            newList = sortPrice(newList, false);
+        }
+        else if (type == "price-hight"){
+            newList = sortPrice(newList, true);
+        }
+        else if (type == "rate-low"){
+            newList = sortScore(newList, true);
+        }
+        else if (type == "rate-hight"){
+            newList = sortScore(newList, false);
+        }
+        display(newList);
+    });
+
+    
+
+    
+
 });
 function showPage(collapseId) {
     var collapses = document.querySelectorAll('.collapse');
