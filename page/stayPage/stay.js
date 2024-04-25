@@ -147,33 +147,34 @@ function hasCommonElement(arr1, arr2) {
 }
 
 function sortCond2(arr, cond){
-    var newList = [];
+    var currentList = [];
     for (var i=0; i<arr.length; i++){
         if (hasCommonElement(arr[i].location, cond)){
-            newList.push(arr[i]);
+            currentList.push(arr[i]);
         }
     }
-    return newList;
+    return currentList;
 }
 
 function sortCond1(arr, cond){
-    var newList = [];
+    var currentList = [];
     for (var i=0; i<arr.length; i++){
         if (hasCommonElement(arr[i].type, cond)){
-            newList.push(arr[i]);
+            currentList.push(arr[i]);
         }
     }
-    return newList;
+    return currentList;
 }
 
 function locPrice(l, minP, maxP) {
     var newl = [];
     for (var i=0; i<l.length; i++){
         var price = l[i].avgPrice*calcDay();
-        if (price>=minP && price<maxP){
+        if (price>=minP && price<=maxP){
             newl.push(l[i]);
         }
     }
+    return newl;
 }
 
 
@@ -184,8 +185,9 @@ function refesh(){
 
 }
 
-function display(l){
+function display(list){
     refesh();
+    var l = setPrice(list);
     $('#resuit').html(l.length);
     var cnt = 1;
     var container = "#collapsePage" + cnt;
@@ -283,6 +285,33 @@ function calcDay(){
     return diffDays;
 }
 
+function setPrice(list) {
+    var tmpl = list;
+    var p1 = $('#start').val();
+    var p2 = $('#end').val();
+    tmpl = locPrice(tmpl, p1, p2);
+    console.log(tmpl);
+    display(tmpl);
+    return tmpl;
+}
+
+function sortFirst(currentList){
+    var type = $('#sort').val();
+    if (type == "price-low"){
+        currentList = sortPrice(currentList, false);
+    }
+    else if (type == "price-hight"){
+        currentList = sortPrice(currentList, true);
+    }
+    else if (type == "rate-low"){
+        currentList = sortScore(currentList, true);
+    }
+    else if (type == "rate-hight"){
+        currentList = sortScore(currentList, false);
+    }
+    return currentList;
+}
+
 $(document).ready(function () {
     var today = new Date();
     today.setDate(today.getDate() + 2); 
@@ -295,14 +324,14 @@ $(document).ready(function () {
         $("#dd2").attr('min', selectedDate);
     });
 
-
-    display(list);
+    var currentList = list;
+    display(currentList);
     $('.collapse').on('shown.bs.collapse', function () {
         $('html, body').animate({scrollTop: $('#scroll-to-top-button').offset().top}, 800);
     });
-    var newList = list;
+
     $('.condbox').on('click', function (){
-        newList = list;
+        currentList = sortFirst(currentList);
         var cond1 = $('.condbox1:checked').map(function() {
             return $(this).val();
         }).get();
@@ -314,29 +343,17 @@ $(document).ready(function () {
         console.log(cond2);   
         
         if (cond1.length!=0){
-            newList = sortCond1(newList, cond1);
+            currentList = sortCond1(currentList, cond1);
         }
         if (cond2.length!=0){
-            newList = sortCond2(newList, cond2);
+            currentList = sortCond2(currentList, cond2);
         }
-        display(newList);
+        display(currentList);
     });
 
     $('#sort').on('change', function (){
-        var type = $('#sort').val();
-        if (type == "price-low"){
-            newList = sortPrice(newList, false);
-        }
-        else if (type == "price-hight"){
-            newList = sortPrice(newList, true);
-        }
-        else if (type == "rate-low"){
-            newList = sortScore(newList, true);
-        }
-        else if (type == "rate-hight"){
-            newList = sortScore(newList, false);
-        }
-        display(newList);
+        currentList = sortFirst(currentList);
+        display(currentList);
     });
 
     $('#submit-number').on('click', function (){
@@ -352,11 +369,15 @@ $(document).ready(function () {
 
     $('#search-now').on('click', function (){
         calcDay();
-        var searchList = newList;
+        var searchList = currentList;
         var cond = $('#place').val();
         if (cond != '') searchList = sortSearch(searchList, cond);
-        else searchList = newList;
+        else searchList = currentList;
         display(searchList);
+    });
+
+    $('.priceck').on('blur', function () {
+        display(currentList);
     });
     
 
