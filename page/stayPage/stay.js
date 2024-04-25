@@ -185,9 +185,8 @@ function refesh(){
 
 }
 
-function display(list){
+function display(l){
     refesh();
-    var l = setPrice(list);
     $('#resuit').html(l.length);
     var cnt = 1;
     var container = "#collapsePage" + cnt;
