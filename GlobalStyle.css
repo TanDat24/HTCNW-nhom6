@@ -193,3 +193,19 @@ header {
 .custom-cart a {
     padding: 0;
 }
+
+.custom-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.material-symbols-outlined {
+    padding-right: 17px;
+}
+.icon-cart {
+    display: flex;
+    align-items: center;
+}
+.cart {
+    padding: 0;
+}

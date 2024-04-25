@@ -259,5 +259,6 @@ document.addEventListener("DOMContentLoaded", function () {
 //đăng xuất
 function logout() {
     // Điều hướng sang trang đăng nhập
+    localStorage.removeItem("isLogin");
     window.location.href = "../loginPage/login.html";
 }

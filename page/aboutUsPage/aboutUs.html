@@ -89,21 +89,44 @@
                                     >Về chúng Tôi</a
                                 >
                             </li>
-                            <li class="nav-item custom-cart">
-                                <a class="nav-link" href="../cartPage/cart.html"
-                                    ><span class="material-symbols-outlined">
-                                        local_mall
-                                    </span></a
-                                >
-                            </li>
+                            <div class="icon-cart">
+                                <li class="nav-item custom-cart" id="cart">
+                                    <a
+                                        class="nav-link"
+                                        href="../cartPage/cart.html"
+                                        ><span
+                                            class="material-symbols-outlined cart"
+                                        >
+                                            local_mall
+                                        </span></a
+                                    >
+                                </li>
+                            </div>
                         </ul>
-                        <button type="button" class="btn custom-btn">
-                            <span class="material-symbols-outlined">
-                                account_circle
-                            </span>
-                            <a href="../profilePage/profile.html"
-                                ><span>Tài khoản của tôi</span></a
-                            >
+                        <button type="button" class="btn custom-btn" id="tkct">
+                            <div class="custom-login">
+                                <span class="material-symbols-outlined">
+                                    account_circle
+                                </span>
+                                <a href="../profilePage/profile.html"
+                                    ><span>Tài khoản của tôi</span></a
+                                >
+                            </div>
+                        </button>
+                        <button
+                            type="button"
+                            class="btn custom-btn"
+                            id="login"
+                            style="display: none"
+                        >
+                            <div class="custom-login">
+                                <span class="material-symbols-outlined">
+                                    login
+                                </span>
+                                <a href="../loginPage/login.html"
+                                    ><span>Đăng nhập</span></a
+                                >
+                            </div>
                         </button>
                     </div>
                 </nav>
@@ -210,4 +233,5 @@
             </div>
         </footer>
     </body>
+    <script src="../headerLogin.js"></script>
 </html>
