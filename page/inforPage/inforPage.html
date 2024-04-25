@@ -126,6 +126,7 @@
                 </nav>
             </div>
         </header>
+
         <div class="container-fluid custom-body">
             <!-- row 2 -->
             <div class="row" id="row1">
@@ -273,9 +274,7 @@
                                     margin-top: 20px;
                                     margin-bottom: 10px;
                                 "
-                            >
-                                Vinpearl Beachfront Nha Trang
-                            </h2>
+                            ></h2>
                         </div>
                         <div
                             style="display: flex; align-items: center"
@@ -923,130 +922,6 @@
                                                                 />
                                                             </div>
                                                         </div>
-                                                        <script>
-                                                            document.addEventListener(
-                                                                "DOMContentLoaded",
-                                                                function () {
-                                                                    showElement(
-                                                                        "All"
-                                                                    );
-                                                                    document
-                                                                        .getElementById(
-                                                                            "showAll"
-                                                                        )
-                                                                        .addEventListener(
-                                                                            "click",
-                                                                            function () {
-                                                                                showElement(
-                                                                                    "All"
-                                                                                );
-                                                                            }
-                                                                        );
-
-                                                                    document
-                                                                        .getElementById(
-                                                                            "Room"
-                                                                        )
-                                                                        .addEventListener(
-                                                                            "click",
-                                                                            function () {
-                                                                                showElement(
-                                                                                    "Allroom"
-                                                                                );
-                                                                            }
-                                                                        );
-
-                                                                    document
-                                                                        .getElementById(
-                                                                            "Hotel"
-                                                                        )
-                                                                        .addEventListener(
-                                                                            "click",
-                                                                            function () {
-                                                                                showElement(
-                                                                                    "AllHotel"
-                                                                                );
-                                                                            }
-                                                                        );
-
-                                                                    document
-                                                                        .getElementById(
-                                                                            "tien_nghi"
-                                                                        )
-                                                                        .addEventListener(
-                                                                            "click",
-                                                                            function () {
-                                                                                showElement(
-                                                                                    "Alltiennghi"
-                                                                                );
-                                                                            }
-                                                                        );
-
-                                                                    document
-                                                                        .getElementById(
-                                                                            "Eat"
-                                                                        )
-                                                                        .addEventListener(
-                                                                            "click",
-                                                                            function () {
-                                                                                showElement(
-                                                                                    "Allanuong"
-                                                                                );
-                                                                            }
-                                                                        );
-
-                                                                    document
-                                                                        .getElementById(
-                                                                            "Another"
-                                                                        )
-                                                                        .addEventListener(
-                                                                            "click",
-                                                                            function () {
-                                                                                showElement(
-                                                                                    "Allkhac"
-                                                                                );
-                                                                            }
-                                                                        );
-                                                                }
-                                                            );
-                                                            function showElement(
-                                                                elementId
-                                                            ) {
-                                                                var elements = [
-                                                                    "All",
-                                                                    "Allroom",
-                                                                    "AllHotel",
-                                                                    "Alltiennghi",
-                                                                    "Allanuong",
-                                                                    "Allkhac",
-                                                                ];
-                                                                elements.forEach(
-                                                                    function (
-                                                                        id
-                                                                    ) {
-                                                                        var element =
-                                                                            document.getElementById(
-                                                                                id
-                                                                            );
-                                                                        if (
-                                                                            element
-                                                                        ) {
-                                                                            // Nếu ID của phần tử trùng khớp với ID được chỉ định, hiển thị nó, ngược lại, ẩn nó
-                                                                            if (
-                                                                                id ===
-                                                                                elementId
-                                                                            ) {
-                                                                                element.style.display =
-                                                                                    "block";
-                                                                            } else {
-                                                                                element.style.display =
-                                                                                    "none";
-                                                                            }
-                                                                        }
-                                                                    }
-                                                                );
-                                                            }
-                                                        </script>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1068,10 +943,10 @@
             <div class="section_left">
                 <div class="thongtinchitiet">
                     <div class="thongtintop">
-                        <h4 id="linkthongtin">Vinpearl Beachfront Nha Trang</h4>
+                        <h4 id="linkthongtin"></h4>
                         <p>
                             <button
-                                id="thong_tin_chi_tiet_hover"
+                                id="thong_tin_chi_tiet_hover2"
                                 data-toggle="modal"
                                 data-target="#myMap"
                                 style="
@@ -1079,23 +954,11 @@
                                     background-color: white;
                                     color: rgb(16, 129, 224);
                                 "
-                            >
-                                78-80 phố Trần Phú, Lộc Thọ, Nha Trang, Việt Nam
-                            </button>
+                            ></button>
                         </p>
                     </div>
-                    <div class="thongtinbot">
-                        <p>
-                            Đỗ xe và Wi-Fi luôn miễn phí, vì vậy quý khách có
-                            thể giữ liên lạc, đến và đi tùy ý. Nằm ở vị trí
-                            chiến lược tại Lộc Thọ, cho phép quý khách lui tới
-                            và gần với các điểm thu hút và tham quan địa phương.
-                            Hãy nhớ dành một chút thời gian để thăm thú
-                            VinWonders Nha Trang cũng như Biển Nha Trang gần đó.
-                            Được xếp hạng 5 sao, chỗ nghỉ chất lượng cao này cho
-                            phép khách nghỉ sử dụng bể bơi trong nhà, mát-xa và
-                            bể bơi ngoài trời ngay trong khuôn viên.
-                        </p>
+                    <div class="thongtinbot" id="describe">
+                        <p></p>
                     </div>
                 </div>
                 <!-- diem noi bat -->
@@ -1479,15 +1342,14 @@
                     class="danhgia"
                 >
                     <h4
+                        id="rate"
                         style="
                             font-size: 180%;
                             font-weight: 600;
                             padding: 0;
                             margin: 0;
                         "
-                    >
-                        9,5 Tuyệt vời
-                    </h4>
+                    ></h4>
                     <button
                         style="
                             height: 25px;
@@ -2899,9 +2761,10 @@
                                         margin: 0;
                                     "
                                 >
-                                    <s>5.242.003 ₫</s>
+                                    <!-- <s>5.242.003 ₫</s> -->
                                 </p>
                                 <p
+                                    id="avgPrice"
                                     style="
                                         padding: 0;
                                         margin: 0;
@@ -2909,9 +2772,7 @@
                                         font-weight: 700;
                                         color: red;
                                     "
-                                >
-                                    1.841.472₫
-                                </p>
+                                ></p>
                                 <p style="font-size: 12px">
                                     Giá mỗi đêm chưa gồm thuế và phí
                                 </p>
@@ -2952,9 +2813,10 @@
                                         margin: 0;
                                     "
                                 >
-                                    <s>5.242.015 ₫</s>
+                                    <!-- <s>5.242.015 ₫</s> -->
                                 </p>
                                 <p
+                                    id="vipPrice"
                                     style="
                                         padding: 0;
                                         margin: 0;
@@ -2962,9 +2824,7 @@
                                         font-weight: 700;
                                         color: red;
                                     "
-                                >
-                                    1.971.781₫
-                                </p>
+                                ></p>
                                 <p style="font-size: 12px">
                                     Giá mỗi đêm chưa gồm thuế và phí
                                 </p>
@@ -2998,6 +2858,8 @@
                             class="btngia"
                         >
                             <button
+                                class="dat"
+                                value="0"
                                 style="
                                     font-weight: 600;
                                     color: white;
@@ -3024,6 +2886,8 @@
                             class="btngia"
                         >
                             <button
+                                class="dat"
+                                value="1"
                                 style="
                                     font-weight: 600;
                                     color: white;
@@ -4944,95 +4808,7 @@
                             </div>
                         </div>
                     </div>
-
-                    <!-- Thanh phân trang -->
-                    <!-- <ul class="pagination justify-content-center">
-                        <li style="width: 80px" class="page-item">
-                            <a
-                                class="page-link"
-                                href="javascript:void(0);"
-                                onclick="showPrevious()"
-                                >Previous</a
-                            >
-                        </li>
-                        <li class="page-item">
-                            <a
-                                class="page-link"
-                                href="javascript:void(0);"
-                                onclick="showPage('collapsePage1')"
-                                >1</a
-                            >
-                        </li>
-                        <li class="page-item">
-                            <a
-                                class="page-link"
-                                href="javascript:void(0);"
-                                onclick="showPage('collapsePage2')"
-                                >2</a
-                            >
-                        </li>
-                        <li class="page-item">
-                            <a
-                                class="page-link"
-                                href="javascript:void(0);"
-                                onclick="showPage('collapsePage3')"
-                                >3</a
-                            >
-                        </li>
-                        <li style="width: 80px" class="page-item">
-                            <a
-                                class="page-link"
-                                href="javascript:void(0);"
-                                onclick="showNext()"
-                                >Next</a
-                            >
-                        </li>
-                    </ul> -->
                 </div>
-
-                <!-- Script JavaScript -->
-                <script>
-                    // Hàm hiển thị collapse của trang được chọn
-                    function showPage(collapseId) {
-                        var collapses = document.querySelectorAll(".collapse");
-                        collapses.forEach(function (collapse) {
-                            collapse.classList.remove("show");
-                        });
-
-                        var selectedCollapse =
-                            document.getElementById(collapseId);
-                        selectedCollapse.classList.add("show");
-                    }
-                    function showPrevious() {
-                        var currentPage =
-                            document.querySelector(".collapse.show");
-                        var previousPage = currentPage.previousElementSibling;
-                        if (
-                            previousPage &&
-                            previousPage.classList.contains("collapse")
-                        ) {
-                            currentPage.classList.remove("show");
-                            previousPage.classList.add("show");
-                        }
-                    }
-
-                    // Hàm hiển thị trang tiếp theo
-                    function showNext() {
-                        var currentPage =
-                            document.querySelector(".collapse.show");
-                        var nextPage = currentPage.nextElementSibling;
-                        if (
-                            nextPage &&
-                            nextPage.classList.contains("collapse")
-                        ) {
-                            currentPage.classList.remove("show");
-                            nextPage.classList.add("show");
-                        }
-                    }
-                    window.onload = function () {
-                        showPage("collapsePage1");
-                    };
-                </script>
             </div>
         </div>
         <!-- het row danh gia -->
@@ -5081,5 +4857,6 @@
             </div>
         </footer>
     </body>
+    <script src="./inforPage.js"></script>
     <script src="../headerLogin.js"></script>
 </html>
