@@ -55,7 +55,7 @@
                         id="navbarSupportedContent"
                     >
                         <ul class="navbar-nav mr-auto">
-                            <li class="nav-item active">
+                            <li class="nav-item">
                                 <a
                                     class="nav-link"
                                     href="../homePage/homePage.html"
@@ -64,11 +64,15 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="../stayPage/stay.html"
-                                    >Lưu chú</a
+                                    >Lưu trú</a
                                 >
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Cơ sở vật chất</a>
+                                <a
+                                    class="nav-link"
+                                    href="../facilitiesPage/facilities.html"
+                                    >Cơ sở vật chất</a
+                                >
                             </li>
                             <li class="nav-item">
                                 <a
@@ -81,17 +85,45 @@
                                 <a
                                     class="nav-link"
                                     href="../aboutUsPage/aboutUs.html"
-                                    >Về chúng tôi</a
+                                    >Về chúng Tôi</a
                                 >
                             </li>
+                            <div class="icon-cart">
+                                <li class="nav-item custom-cart" id="cart">
+                                    <a
+                                        class="nav-link"
+                                        href="../cartPage/cart.html"
+                                        ><span
+                                            class="material-symbols-outlined cart"
+                                        >
+                                            local_mall
+                                        </span></a
+                                    >
+                                </li>
+                            </div>
                         </ul>
-                        <button type="button" class="btn custom-btn">
-                            <span class="material-symbols-outlined">
-                                account_circle
-                            </span>
-                            <a href="../profilePage/profile.html"
-                                ><span>Tài khoản của tôi</span></a
-                            >
+                        <button type="button" class="btn custom-btn" id="tkct">
+                            <div class="custom-login">
+                                <span class="material-symbols-outlined">
+                                    account_circle
+                                </span>
+                                <a href="../profilePage/profile.html"
+                                    ><span>Tài khoản của tôi</span></a
+                                >
+                            </div>
+                        </button>
+                        <button
+                            type="button"
+                            class="btn custom-btn"
+                            id="login"
+                            style="display: none"
+                        >
+                            <div class="custom-login">
+                                <span class="material-symbols-outlined">
+                                    login
+                                </span>
+                                <a href=""><span>Đăng nhập</span></a>
+                            </div>
                         </button>
                     </div>
                 </nav>
@@ -500,9 +532,7 @@
                                 >
                             </li>
                             <li>
-                                <a href="../rulesPage/rules.html"
-                                    >Điều khoảng</a
-                                >
+                                <a href="../rulesPage/rules.html">Điều khoản</a>
                             </li>
                             <li><a href="">Đăng ký đối tác</a></li>
                         </ul>
@@ -518,4 +548,5 @@
             </div>
         </footer>
     </body>
+    <script src="../headerLogin.js"></script>
 </html>

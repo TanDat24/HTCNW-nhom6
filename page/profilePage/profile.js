@@ -255,3 +255,10 @@ document.addEventListener("DOMContentLoaded", function () {
         .getElementById("checkbox2")
         .addEventListener("change", saveToLocalStorage);
 });
+
+//đăng xuất
+function logout() {
+    // Điều hướng sang trang đăng nhập
+    localStorage.removeItem("isLogin");
+    window.location.href = "../loginPage/login.html";
+}
