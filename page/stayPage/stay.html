@@ -73,7 +73,11 @@
                                 >
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="../facilitiesPage/facilities.html">Cơ sở vật chất</a>
+                                <a
+                                    class="nav-link"
+                                    href="../facilitiesPage/facilities.html"
+                                    >Cơ sở vật chất</a
+                                >
                             </li>
                             <li class="nav-item">
                                 <a
@@ -89,21 +93,44 @@
                                     >Về chúng Tôi</a
                                 >
                             </li>
-                            <li class="nav-item custom-cart">
-                                <a class="nav-link" href="../cartPage/cart.html"
-                                    ><span class="material-symbols-outlined">
-                                        local_mall
-                                    </span></a
-                                >
-                            </li>
+                            <div class="icon-cart">
+                                <li class="nav-item custom-cart" id="cart">
+                                    <a
+                                        class="nav-link"
+                                        href="../cartPage/cart.html"
+                                        ><span
+                                            class="material-symbols-outlined cart"
+                                        >
+                                            local_mall
+                                        </span></a
+                                    >
+                                </li>
+                            </div>
                         </ul>
-                        <button type="button" class="btn custom-btn">
-                            <span class="material-symbols-outlined">
-                                account_circle
-                            </span>
-                            <a href="../profilePage/profile.html"
-                                ><span>Tài khoản của tôi</span></a
-                            >
+                        <button type="button" class="btn custom-btn" id="tkct">
+                            <div class="custom-login">
+                                <span class="material-symbols-outlined">
+                                    account_circle
+                                </span>
+                                <a href="../profilePage/profile.html"
+                                    ><span>Tài khoản của tôi</span></a
+                                >
+                            </div>
+                        </button>
+                        <button
+                            type="button"
+                            class="btn custom-btn"
+                            id="login"
+                            style="display: none"
+                        >
+                            <div class="custom-login">
+                                <span class="material-symbols-outlined">
+                                    login
+                                </span>
+                                <a href="../loginPage/login.html"
+                                    ><span>Đăng nhập</span></a
+                                >
+                            </div>
                         </button>
                     </div>
                 </nav>
@@ -295,17 +322,50 @@
                             Đánh giá từ thấp đến cao
                         </option>
                     </select>
-                    
-                    <div  id="collapsePage1" class="collapse">
 
-                    </div>
+                    <div id="collapsePage1" class="collapse"></div>
 
                     <ul class="pagination justify-content-center">
-                        <li style="width: 80px;" class="page-item"><a class="page-link" href="javascript:void(0);" onclick="showPrevious()">Previous</a></li>
-                        <li class="page-item"><a class="page-link" href="javascript:void(0);" onclick="showPage('collapsePage1')">1</a></li>
-                        <li class="page-item"><a class="page-link" href="javascript:void(0);" onclick="showPage('collapsePage2')">2</a></li>
-                        <li class="page-item"><a class="page-link" href="javascript:void(0);" onclick="showPage('collapsePage3')">3</a></li>
-                        <li style="width: 80px;" class="page-item"><a class="page-link" href="javascript:void(0);" onclick="showNext()">Next</a></li>
+                        <li style="width: 80px" class="page-item">
+                            <a
+                                class="page-link"
+                                href="javascript:void(0);"
+                                onclick="showPrevious()"
+                                >Previous</a
+                            >
+                        </li>
+                        <li class="page-item">
+                            <a
+                                class="page-link"
+                                href="javascript:void(0);"
+                                onclick="showPage('collapsePage1')"
+                                >1</a
+                            >
+                        </li>
+                        <li class="page-item">
+                            <a
+                                class="page-link"
+                                href="javascript:void(0);"
+                                onclick="showPage('collapsePage2')"
+                                >2</a
+                            >
+                        </li>
+                        <li class="page-item">
+                            <a
+                                class="page-link"
+                                href="javascript:void(0);"
+                                onclick="showPage('collapsePage3')"
+                                >3</a
+                            >
+                        </li>
+                        <li style="width: 80px" class="page-item">
+                            <a
+                                class="page-link"
+                                href="javascript:void(0);"
+                                onclick="showNext()"
+                                >Next</a
+                            >
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -363,4 +423,5 @@
             </div>
         </footer>
     </body>
+    <script src="../headerLogin.js"></script>
 </html>

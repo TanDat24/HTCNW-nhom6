@@ -43,28 +43,96 @@
                     <a class="navbar-brand" href="../homePage/homePage.html">
                         <img
                             src="../../img/logo.png"
-                            alt=""
+                            alt="#"
                             class="custom-logo"
                         />
                     </a>
+                    <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-toggle="collapse"
+                        data-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
 
                     <div
-                        class="collapse navbar-collapse d-flex justify-content-end navbar-nav mr-auto"
+                        class="collapse navbar-collapse"
                         id="navbarSupportedContent"
                     >
-                        <div class="country">
-                            <a href=""
-                                ><img src="../../img/country.png" alt=""
-                            /></a>
-                        </div>
-                        <div class="money">
-                            <span>0₫</span>
-                        </div>
-                        <button type="button" class="btn custom-btn">
-                            <span class="material-symbols-outlined">
-                                account_circle
-                            </span>
-                            <span>Nguyễn Văn A</span>
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                                <a
+                                    class="nav-link"
+                                    href="../homePage/homePage.html"
+                                    >Trang chủ</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../stayPage/stay.html"
+                                    >Lưu trú</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link"
+                                    href="../facilitiesPage/facilities.html"
+                                    >Cơ sở vật chất</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link"
+                                    href="../salesPage/sales.html"
+                                    >Ưu đãi</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link"
+                                    href="../aboutUsPage/aboutUs.html"
+                                    >Về chúng Tôi</a
+                                >
+                            </li>
+                            <div class="icon-cart">
+                                <li class="nav-item custom-cart" id="cart">
+                                    <a
+                                        class="nav-link"
+                                        href="../cartPage/cart.html"
+                                        ><span
+                                            class="material-symbols-outlined cart"
+                                        >
+                                            local_mall
+                                        </span></a
+                                    >
+                                </li>
+                            </div>
+                        </ul>
+                        <button type="button" class="btn custom-btn" id="tkct">
+                            <div class="custom-login">
+                                <span class="material-symbols-outlined">
+                                    account_circle
+                                </span>
+                                <a href="../profilePage/profile.html"
+                                    ><span>Tài khoản của tôi</span></a
+                                >
+                            </div>
+                        </button>
+                        <button
+                            type="button"
+                            class="btn custom-btn"
+                            id="login"
+                            style="display: none"
+                        >
+                            <div class="custom-login">
+                                <span class="material-symbols-outlined">
+                                    login
+                                </span>
+                                <a href=""><span>Đăng nhập</span></a>
+                            </div>
                         </button>
                     </div>
                 </nav>
@@ -529,4 +597,5 @@
         </footer>
     </body>
     <script src="../profilePage/profile.js"></script>
+    <script src="../headerLogin.js"></script>
 </html>

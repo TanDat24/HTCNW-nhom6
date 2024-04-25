@@ -23,6 +23,55 @@
                     );
                 }
             );
+
+            // validation form login
+            const EmailLogin = document.querySelector(".loginemail");
+            // const SDTLogin = document.querySelector(".form-control.loginsdt");
+            const PasswordLogin = document.querySelector(".loginpassemail");
+            const btnLogin = document.querySelector(".btnlogin");
+
+            btnLogin.addEventListener("click", (e) => {
+                e.preventDefault();
+                if (EmailLogin.value === "" || PasswordLogin.value === "") {
+                    alert("Thông tin đăng nhập không được để trống");
+                } else {
+                    const user = JSON.parse(localStorage.getItem("user"));
+                    if (
+                        user.email === EmailLogin.value &&
+                        user.password === PasswordLogin.value
+                    ) {
+                        alert("Đăng Nhập Thành Công");
+                        localStorage.setItem("isLogin", "true");
+                        window.location.href = "../homePage/homePage.html";
+                    } else {
+                        alert("Tài khoản hoặc mật khẩu không đúng");
+                    }
+                }
+            });
+
+            const SDTLogin = document.querySelector(".loginsdt");
+            const PasswordLoginSDT = document.querySelector(".loginpass");
+            const btnLoginSDT = document.querySelector(".btnloginsdt");
+
+            btnLoginSDT.addEventListener("click", (e) => {
+                e.preventDefault();
+                if (SDTLogin.value === "" || PasswordLoginSDT.value === "") {
+                    alert("Thông tin đăng nhập không được để trống");
+                } else {
+                    const user = JSON.parse(localStorage.getItem("user"));
+
+                    if (
+                        user.sdt === SDTLogin.value &&
+                        user.password === PasswordLoginSDT.value
+                    ) {
+                        alert("Đăng Nhập Thành Công");
+                        localStorage.setItem("isLogin", "true");
+                        window.location.href = "../homePage/homePage.html";
+                    } else {
+                        alert("Tài khoản hoặc mật khẩu không đúng");
+                    }
+                }
+            });
         },
         false
     );
@@ -43,57 +92,10 @@ let flagPhone = false;
 document.getElementById("showEmailForm").addEventListener("click", function () {
     document.getElementById("EmailFormWrapper").style.display = "block";
     document.getElementById("PhoneFormWrapper").style.display = "none";
-    // validation form login
-    const EmailLogin = document.querySelector(".loginemail");
-    // const SDTLogin = document.querySelector(".form-control.loginsdt");
-    const PasswordLogin = document.querySelector(".loginpassemail");
-    const btnLogin = document.querySelector(".btnlogin");
-
-    // validation form login
-    btnLogin.addEventListener("click", (e) => {
-        e.preventDefault();
-        if (EmailLogin.value === "" || PasswordLogin.value === "") {
-            alert("Thông tin đăng nhập không được để trống");
-        } else {
-            const user = JSON.parse(localStorage.getItem("user"));
-            if (
-                user.email === EmailLogin.value &&
-                user.password === PasswordLogin.value
-            ) {
-                alert("Đăng Nhập Thành Công");
-                window.location.href = "../homePage/homePage.html";
-            } else {
-                alert("Tài khoản hoặc mật khẩu không đúng");
-            }
-        }
-    });
 });
 
 // Show Phone form, hide Email form
 document.getElementById("showPhoneForm").addEventListener("click", function () {
     document.getElementById("EmailFormWrapper").style.display = "none";
     document.getElementById("PhoneFormWrapper").style.display = "block";
-
-    const SDTLogin = document.querySelector(".loginsdt");
-    const PasswordLoginSDT = document.querySelector(".loginpass");
-    const btnLoginSDT = document.querySelector(".btnloginsdt");
-
-    btnLoginSDT.addEventListener("click", (e) => {
-        e.preventDefault();
-        if (SDTLogin.value === "" || PasswordLoginSDT.value === "") {
-            alert("Thông tin đăng nhập không được để trống");
-        } else {
-            const user = JSON.parse(localStorage.getItem("user"));
-
-            if (
-                user.sdt === SDTLogin.value &&
-                user.password === PasswordLoginSDT.value
-            ) {
-                alert("Đăng Nhập Thành Công");
-                window.location.href = "../homePage/homePage.html";
-            } else {
-                alert("Tài khoản hoặc mật khẩu không đúng");
-            }
-        }
-    });
 });
