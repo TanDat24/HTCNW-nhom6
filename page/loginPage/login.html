@@ -36,7 +36,7 @@
         <header class="custom-header">
             <div class="container">
                 <nav class="navbar navbar-expand-lg navbar-light">
-                    <a class="navbar-brand" href="#">
+                    <a class="navbar-brand" href="../homePage/homePage.html">
                         <img
                             src="../../img/logo.png"
                             alt="#"
@@ -60,7 +60,7 @@
                         id="navbarSupportedContent"
                     >
                         <ul class="navbar-nav mr-auto">
-                            <li class="nav-item">
+                            <li class="nav-item active">
                                 <a
                                     class="nav-link"
                                     href="../homePage/homePage.html"
@@ -90,17 +90,24 @@
                                 <a
                                     class="nav-link"
                                     href="../aboutUsPage/aboutUs.html"
-                                    >Về chúng tôi</a
+                                    >Về chúng Tôi</a
                                 >
                             </li>
+                            <!-- <li class="nav-item custom-cart">
+                            <a
+                                class="nav-link"
+                                href="../aboutUsPage/aboutUs.html"
+                                ><span class="material-symbols-outlined">
+                                    local_mall
+                                </span></a
+                            >
+                        </li> -->
                         </ul>
                         <button type="button" class="btn custom-btn">
                             <span class="material-symbols-outlined">
-                                account_circle
+                                login
                             </span>
-                            <a href="../profilePage/profile.html"
-                                ><span>Tài khoản của tôi</span></a
-                            >
+                            <a href=""><span>Đăng nhập</span></a>
                         </button>
                     </div>
                 </nav>
@@ -121,7 +128,7 @@
                         Chúng tôi tập trung vào việc cung cấp cho khách hàng mức
                         độ thoải mái cao nhất và mức giá phải chăng nhất.
                     </p>
-                    <div class="btnhl3 text-center">
+                    <div class="btndatngay text-center">
                         <a
                             href="../homePage/homePage.html"
                             style="text-decoration: none"
@@ -188,41 +195,37 @@
                                     <label for="email">Email</label>
                                     <input
                                         type="text"
-                                        class="form-control"
+                                        class="loginemail form-control"
                                         id="email"
                                         placeholder="Email"
                                         name="email"
                                         required
                                     />
-                                    <div class="valid-feedback">Valid.</div>
-                                    <div class="invalid-feedback">
-                                        Email không được để trống.
-                                    </div>
+                                    <!-- <div class="valid-feedback">Valid.</div>
+                                <div class="invalid-feedback">Email không được để trống.</div> -->
                                 </div>
 
                                 <div class="form-group">
                                     <label for="pwd">Mật khẩu</label>
                                     <input
                                         type="password"
-                                        class="form-control"
+                                        class="loginpassemail form-control"
                                         id="pwd"
                                         placeholder="Mật khẩu"
                                         name="pswd"
-                                        pattern="(?=.*[A-Z])(?=.*[!@#$%^&*])(?=.*[0-9]).{8,}"
                                         required
                                     />
-                                    <div class="valid-feedback">Valid.</div>
-                                    <div class="invalid-feedback">
-                                        Mật khẩu phải đủ 8 ký tự trong đó có ít
-                                        nhất một chữ cái hoa, một ký tự đặc biệt
-                                        và một số.
-                                    </div>
+                                    <!-- <input type="password" class="loginpass form-control" id="pwd" placeholder="Mật khẩu"
+                                    name="pswd" pattern="(?=.*[A-Z])(?=.*[!@#$%^&*])(?=.*[0-9]).{8,}" required> -->
+                                    <!-- <div class="valid-feedback">Valid.</div>
+                                <div class="invalid-feedback">Mật khẩu phải đủ 8 ký tự trong đó có ít nhất một chữ
+                                    cái hoa, một ký tự đặc biệt và một số.</div> -->
                                 </div>
 
                                 <div class="text-center">
                                     <button
                                         type="submit"
-                                        class="btn btn-primary"
+                                        class="btnlogin btn btn-primary"
                                     >
                                         ĐĂNG NHẬP
                                     </button>
@@ -323,45 +326,38 @@
                         <div id="PhoneFormWrapper">
                             <form action="" class="needs-validation" novalidate>
                                 <div class="form-group">
-                                    <label for="SDT">Số di động</label>
+                                    <label for="inSDT">Số di động</label>
                                     <input
-                                        type="text"
-                                        class="form-control"
-                                        id="SDT"
+                                        type="tel"
+                                        class="loginsdt form-control"
+                                        id="inSDT"
                                         placeholder="Số di động"
                                         name="SDT"
-                                        pattern="[0-9]{10}"
                                         required
                                     />
-                                    <div class="valid-feedback">Valid.</div>
-                                    <div class="invalid-feedback">
-                                        Số di động phải đủ 10 số.
-                                    </div>
+                                    <!-- <div class="valid-feedback">Valid.</div>
+                                <div class="invalid-feedback">Số di động phải đủ 10 số.</div> -->
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="pwd">Mật khẩu</label>
+                                    <label for="pwd2">Mật khẩu</label>
                                     <input
                                         type="password"
-                                        class="form-control"
-                                        id="pwd"
+                                        class="loginpass form-control"
+                                        id="pwd2"
                                         placeholder="Mật khẩu"
                                         name="pswd"
-                                        pattern="(?=.*[A-Z])(?=.*[!@#$%^&*])(?=.*[0-9]).{8,}"
                                         required
                                     />
-                                    <div class="valid-feedback">Valid.</div>
-                                    <div class="invalid-feedback">
-                                        Mật khẩu phải đủ 8 ký tự trong đó có ít
-                                        nhất một chữ cái hoa, một ký tự đặc biệt
-                                        và một số.
-                                    </div>
+                                    <!-- <div class="valid-feedback">Valid.</div>
+                                <div class="invalid-feedback">Mật khẩu phải đủ 8 ký tự trong đó có ít nhất một chữ
+                                    cái hoa, một ký tự đặc biệt và một số.</div> -->
                                 </div>
 
                                 <div class="text-center">
                                     <button
                                         type="submit"
-                                        class="btn btn-primary"
+                                        class="btnloginsdt btn btn-primary"
                                     >
                                         ĐĂNG NHẬP
                                     </button>
@@ -451,7 +447,7 @@
                                             <a href="../policy/policy.html"
                                                 >Chính sách bảo mật</a
                                             >
-                                            của Agoda.
+                                            của Starwood Việt Nam.
                                         </div>
                                     </div>
                                 </div>
@@ -553,7 +549,11 @@
                                 <!-- Modal body  -->
                                 <div
                                     class="modal-body"
-                                    style="max-height: 600px; overflow-y: auto"
+                                    style="
+                                        height: 600px;
+                                        overflow-y: auto;
+                                        margin: 0;
+                                    "
                                 >
                                     <div class="text">
                                         <h2>Đăng Ký</h2>
@@ -562,6 +562,7 @@
                                     <!-- Nội dung form  -->
                                     <div>
                                         <form
+                                            id="registrationForm"
                                             action=""
                                             class="needs-validation"
                                             novalidate
@@ -570,36 +571,28 @@
                                                 <label for="hoTen">Tên</label>
                                                 <input
                                                     type="text"
-                                                    class="form-control"
-                                                    id="hoTen"
+                                                    class="form-control ten"
+                                                    id="Ten"
                                                     placeholder="Tên"
                                                     name="hoTen"
                                                     required
                                                 />
-                                                <div class="valid-feedback">
-                                                    Valid.
-                                                </div>
-                                                <div class="invalid-feedback">
-                                                    Tên không được để trống.
-                                                </div>
+                                                <!-- <div class="valid-feedback">Valid.</div>
+                                            <div class="invalid-feedback">Tên không được để trống.</div> -->
                                             </div>
 
                                             <div class="form-group">
                                                 <label for="hoTen">Họ</label>
                                                 <input
                                                     type="text"
-                                                    class="form-control"
-                                                    id="hoTen"
+                                                    class="form-control ho"
+                                                    id="ho"
                                                     placeholder="Họ"
                                                     name="hoTen"
                                                     required
                                                 />
-                                                <div class="valid-feedback">
-                                                    Valid.
-                                                </div>
-                                                <div class="invalid-feedback">
-                                                    Họ không được để trống.
-                                                </div>
+                                                <!-- <div class="valid-feedback">Valid.</div>
+                                            <div class="invalid-feedback">Họ không được để trống.</div> -->
                                             </div>
 
                                             <div class="form-group">
@@ -608,18 +601,24 @@
                                                 >
                                                 <input
                                                     type="text"
-                                                    class="form-control"
+                                                    class="form-control sdt"
                                                     id="sdt"
                                                     placeholder="Điện thoại"
                                                     name="sdt"
                                                     required
                                                 />
-                                                <div class="valid-feedback">
-                                                    Valid.
-                                                </div>
-                                                <div class="invalid-feedback">
-                                                    Số điện thoại không được để
-                                                    trống.
+                                                <span
+                                                    id="phoneValid"
+                                                    class="valid"
+                                                    style="display: none"
+                                                    >Hợp lệ</span
+                                                >
+                                                <div
+                                                    id="phoneError"
+                                                    class="error"
+                                                    style="display: none"
+                                                >
+                                                    Nhập số điện thoại!
                                                 </div>
                                             </div>
 
@@ -629,168 +628,175 @@
                                                 >
                                                 <input
                                                     type="text"
-                                                    class="form-control"
+                                                    class="form-control email"
                                                     id="emailDK"
                                                     placeholder="Email"
                                                     name="emailDK"
                                                     required
                                                 />
-                                                <div class="valid-feedback">
-                                                    Valid.
-                                                </div>
-                                                <div class="invalid-feedback">
-                                                    Email không được để trống.
-                                                </div>
-                                            </div>
-
-                                            <!-- Giới tính  -->
-                                            <!-- <div class="form-group">
-                                            <div class="form-check-inline">
-                                                <label class="form-check-lable" for="male">
-                                                    <input type="radio" class="form-check-input" id="nam" name="gioiTinh"
-                                                        value="nam"> Nam
-                                                </label>
-                                            </div>
-        
-                                            <div class="form-check-inline">
-                                                <label class="form-check-label" for="female">
-                                                    <input type="radio" class="form-check-input" id="nu" name="gioiTinh"
-                                                        value="nu"> Nữ
-                                                </label>
-                                            </div>
-                                        </div> -->
-
-                                            <!-- Ngày sinh  -->
-                                            <div class="form-group">
-                                                <label for="date"
-                                                    >Ngày sinh</label
+                                                <span
+                                                    id="emailValid"
+                                                    class="valid"
+                                                    style="display: none"
+                                                    >Hợp lệ</span
                                                 >
-                                                <input
-                                                    type="date"
-                                                    class="form-control"
-                                                    id="date"
-                                                    placeholder="Ngày/Tháng/Năm"
-                                                    name="date"
-                                                    required
-                                                />
-                                                <div class="valid-feedback">
-                                                    Valid.
-                                                </div>
-                                                <div class="invalid-feedback">
-                                                    Ngày sinh không được để
-                                                    trống.
-                                                </div>
-                                            </div>
-
-                                            <!-- Mật khẩu  -->
-                                            <div class="form-group">
-                                                <label for="pwdDK"
-                                                    >Mật khẩu</label
+                                                <div
+                                                    id="emailError"
+                                                    class="error"
+                                                    style="display: none"
                                                 >
-                                                <input
-                                                    type="password"
-                                                    class="form-control"
-                                                    id="pwdDK"
-                                                    placeholder="Mật Khẩu"
-                                                    name="pswdDK"
-                                                    pattern="(?=.*[A-Z])(?=.*[!@#$%^&*])(?=.*[0-9]).{8,}"
-                                                    required
-                                                />
-                                                <div class="valid-feedback">
-                                                    Valid.
+                                                    Nhập Email!
                                                 </div>
-                                                <div class="invalid-feedback">
-                                                    Mật khẩu phải đủ 8 ký tự
-                                                    trong đó có ít nhất một chữ
-                                                    cái hoa, một ký tự đặc biệt
-                                                    và một số.
-                                                </div>
-                                            </div>
 
-                                            <!-- Nhập lại mật khẩu  -->
-                                            <div class="form-group">
-                                                <label for="rePass">
-                                                    Xác nhận mật khẩu</label
-                                                >
-                                                <input
-                                                    type="password"
-                                                    class="form-control"
-                                                    id="rePass"
-                                                    placeholder="Xác nhận mật khẩu"
-                                                    name="rePass"
-                                                    pattern="(?=.*[A-Z])(?=.*[!@#$%^&*])(?=.*[0-9]).{8,}"
-                                                    required
-                                                />
-                                                <div class="valid-feedback">
-                                                    Valid.
-                                                </div>
-                                                <div class="invalid-feedback">
-                                                    Mật khẩu phải đủ 8 ký tự
-                                                    trong đó có ít nhất một chữ
-                                                    cái hoa, một ký tự đặc biệt
-                                                    và một số.
-                                                </div>
-                                            </div>
-
-                                            <div class="form-group">
-                                                <div class="form-check-inline">
-                                                    <label
-                                                        class="form-check-label"
+                                                <!-- Ngày sinh  -->
+                                                <div class="form-group">
+                                                    <label for="date"
+                                                        >Ngày sinh</label
                                                     >
-                                                        <input
-                                                            type="checkbox"
-                                                            class="form-check-input"
-                                                            value=""
-                                                        />
-                                                        Bằng cách đăng ký, bạn
-                                                        đồng ý với Điều khoản &
-                                                        Điều kiện của chúng tôi
-                                                        và bạn đã đọc Chính sách
-                                                        bảo mật của chúng tôi.
-                                                    </label>
+                                                    <input
+                                                        type="date"
+                                                        class="form-control date"
+                                                        id="date"
+                                                        placeholder="Ngày/Tháng/Năm"
+                                                        name="date"
+                                                        required
+                                                    />
+                                                    <!-- <div class="valid-feedback">Valid.</div>
+                                            <div class="invalid-feedback">Ngày sinh không được để trống.</div> -->
                                                 </div>
-                                            </div>
 
-                                            <div class="form-group">
-                                                <div class="text-center">
-                                                    <button
-                                                        type="submit"
-                                                        class="btn btn-secondary btndk"
-                                                        style="width: 250.25px"
+                                                <!-- Mật khẩu  -->
+                                                <div class="form-group">
+                                                    <label for="pwdDK"
+                                                        >Mật khẩu</label
                                                     >
-                                                        Đăng ký
-                                                    </button>
+                                                    <input
+                                                        type="password"
+                                                        class="form-control pass"
+                                                        id="pwdDK"
+                                                        placeholder="Mật Khẩu"
+                                                        name="pswdDK"
+                                                        required
+                                                    />
+                                                    <span
+                                                        id="passwordValid"
+                                                        class="valid"
+                                                        style="display: none"
+                                                        >Hợp lệ</span
+                                                    >
+                                                    <div
+                                                        id="passwordError"
+                                                        class="error"
+                                                        style="display: none"
+                                                    >
+                                                        Nhập mật khẩu!(Ít nhất 8
+                                                        kí tự bao gồm chữ cái
+                                                        hoa, số, kí tự đặc biệt)
+                                                    </div>
                                                 </div>
-                                            </div>
 
-                                            <div class="form-group">
-                                                <div class="text-center">
-                                                    <a
-                                                        href="../loginPage/login.html"
+                                                <!-- Nhập lại mật khẩu  -->
+                                                <div class="form-group">
+                                                    <label for="rePass"
+                                                        >Mật khẩu</label
                                                     >
-                                                        <button
-                                                            type="button"
-                                                            class="btn btn-outline-primary"
+                                                    <input
+                                                        type="password"
+                                                        class="form-control repass"
+                                                        id="rePass"
+                                                        placeholder="Xác nhận mật khẩu"
+                                                        name="rePass"
+                                                        required
+                                                    />
+                                                    <span
+                                                        id="confirmPasswordValid"
+                                                        class="valid"
+                                                        style="display: none"
+                                                        >Hợp lệ</span
+                                                    >
+                                                    <div
+                                                        id="confirmPasswordError"
+                                                        class="error"
+                                                        style="display: none"
+                                                    >
+                                                        Xác nhận mật khẩu!
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <div
+                                                        class="form-check-inline"
+                                                    >
+                                                        <label
+                                                            class="form-check-label"
                                                         >
-                                                            Bạn đã có tài
-                                                            khoản?Đăng nhập
-                                                        </button>
-                                                    </a>
+                                                            <input
+                                                                type="checkbox"
+                                                                class="form-check-input"
+                                                                id="agree"
+                                                                value=""
+                                                            />
+                                                            Bằng cách đăng ký,
+                                                            bạn đồng ý với Điều
+                                                            khoản & Điều kiện
+                                                            của chúng tôi và bạn
+                                                            đã đọc Chính sách
+                                                            bảo mật của chúng
+                                                            tôi.
+                                                        </label>
+                                                    </div>
                                                 </div>
-                                            </div>
 
-                                            <div class="form-group">
-                                                <div class="text-center aePT">
-                                                    Khi đăng nhập, tôi đồng ý
-                                                    với các
-                                                    <a href=""
-                                                        >Điều khoản sử dụng</a
+                                                <div class="form-group">
+                                                    <div class="text-center">
+                                                        <button
+                                                            type="submit"
+                                                            class="btn btn-secondary btndk"
+                                                            style="
+                                                                width: 250.25px;
+                                                            "
+                                                            id="DK"
+                                                        >
+                                                            Đăng ký
+                                                        </button>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <div class="text-center">
+                                                        <a
+                                                            href="../loginPage/login.html"
+                                                        >
+                                                            <button
+                                                                type="button"
+                                                                class="btn btn-outline-primary"
+                                                            >
+                                                                Bạn đã có tài
+                                                                khoản?Đăng nhập
+                                                            </button>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <div
+                                                        class="text-center aePT"
                                                     >
-                                                    và
-                                                    <a href=""
-                                                        >Chính sách bảo mật</a
-                                                    >
-                                                    của Agoda.
+                                                        Khi đăng nhập, tôi đồng
+                                                        ý với các
+                                                        <a
+                                                            href="../rules/rules.html"
+                                                            >Điều khoản sử
+                                                            dụng</a
+                                                        >
+                                                        và
+                                                        <a
+                                                            href="../policy/policy.html"
+                                                            >Chính sách bảo
+                                                            mật</a
+                                                        >
+                                                        của Agoda.
+                                                    </div>
                                                 </div>
                                             </div>
                                         </form>
@@ -848,65 +854,7 @@
             </div>
         </footer>
     </body>
-    <script>
-        // Disable form submissions if there are invalid fields
-        (function () {
-            "use strict";
-            window.addEventListener(
-                "load",
-                function () {
-                    // Get the forms we want to add validation styles to
-                    var forms =
-                        document.getElementsByClassName("needs-validation");
-                    // Loop over them and prevent submission
-                    var validation = Array.prototype.filter.call(
-                        forms,
-                        function (form) {
-                            form.addEventListener(
-                                "submit",
-                                function (event) {
-                                    if (form.checkValidity() === false) {
-                                        event.preventDefault();
-                                        event.stopPropagation();
-                                    }
-                                    form.classList.add("was-validated");
-                                },
-                                false
-                            );
-                        }
-                    );
-                },
-                false
-            );
-        })();
-
-        //  Đóng modal trước khi mở modal mới
-        $("#myModal, #QMK, #dangKy").on("show.bs.modal", function (e) {
-            $(".modal")
-                .not($(this))
-                .each(function () {
-                    $(this).modal("hide");
-                });
-        });
-
-        // Show Email form, hide Phone form
-        document
-            .getElementById("showEmailForm")
-            .addEventListener("click", function () {
-                document.getElementById("EmailFormWrapper").style.display =
-                    "block";
-                document.getElementById("PhoneFormWrapper").style.display =
-                    "none";
-            });
-
-        // Show Phone form, hide Email form
-        document
-            .getElementById("showPhoneForm")
-            .addEventListener("click", function () {
-                document.getElementById("EmailFormWrapper").style.display =
-                    "none";
-                document.getElementById("PhoneFormWrapper").style.display =
-                    "block";
-            });
-    </script>
+    <script src="../loginPage/check.js"></script>
+    <script src="../loginPage/form.js"></script>
+    <script src="../loginPage/signup.js"></script>
 </html>
