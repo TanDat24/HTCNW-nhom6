@@ -1,0 +1,489 @@
+.container-fluid{
+    height: 100%;
+    width: 100%;
+}
+body{
+    padding: 0;
+    margin: 0;
+}
+#header{
+    height: 20%;
+    align-items: center;
+    display: inline-flex;
+
+}
+#header img{
+    width: 15%;
+}
+#header ul{
+    display: flex;
+}
+#header ul li{
+    position: relative;
+    list-style-type: none;
+    padding-right: 40px;
+}
+#header ul li a{
+    font-size: 105%;
+    text-decoration: none;
+    color: black;
+}
+#header ul li a:hover{
+    color: red;
+}
+#row1{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+}
+#row1_left{
+    margin-top: 60px;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(254,187,2);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+}
+.text1{
+    width: 80%;
+    display: table-column;
+}
+#logo1{
+    align-items: center;
+    display: flex;
+    width: 150px;
+    border: 1px solid rgb(231, 253, 233);
+    height: 20px;
+    background-color: rgb(231, 253, 233);
+    margin-top: 11px;
+    margin-left: 15px;
+}
+#form_1{
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+}
+#txt1{
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+#row1_left button{
+    width: 80%;
+    height: 50px;
+
+    margin-top: 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+#row1_right{
+    width: 75%;
+}
+#row1_right ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    list-style-type: none;
+    width: 100%;
+}
+#row1_right li{
+    padding: 20px;
+    border: 1px solid white;    
+}
+#row1_right a{
+    text-decoration: none;
+    color: black;
+}
+#row1_right li:hover{
+    background-color: rgb(240,240,240);
+}
+.text_bot{
+    border-top: 1px solid rgb(152, 149, 149);
+}
+
+.video-container {
+    width: 380px;
+}
+.video-container video {
+    width: 95%;
+}
+#hinhanhminhhoa{
+    width: 230px;
+    height: 215px;
+}
+#hinhanhminhhoa2{
+    width: 150px;height: 170px;
+}
+#hinhanhminhhoa3{
+    height:190px ;width: 180px;padding-right: 10px;
+    padding-bottom: 10px;
+}
+#hinhanhminhhoa:hover{
+    filter: brightness(70%);
+}
+#hinhanhminhhoa2:hover{
+    filter: brightness(70%);
+}
+#hinhanhminhhoa3:hover{
+    filter: brightness(70%);
+}
+video:hover{
+    filter: brightness(70%);
+}
+.hinhanhcongthem {
+    background-image: url(../../img/imgInfor/hinh14.webp);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px 0px 10px 0px;
+}
+#chuyennhieuhinh {
+    border: 0;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 64px;
+    width: 64px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+/* modal */
+.modal-header{
+    display: flex;
+    justify-content: center;
+}
+.modal-header button{
+    margin: 0 5px;
+    margin-right: 25px;
+    border: 0;
+    background-color: white;
+    border-radius: 30px;
+}
+.modal-header button:hover{
+    background-color: rgba(240, 240, 255, 0.919);
+    border-top: 10px;
+    color: rgb(68,125,233);
+}
+.modal-dialog {
+    overflow-y: auto;
+    max-width: 80%;
+    max-height:90%;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+#hinhmodal{
+    width: 350px;
+    height: 250px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
+/* row3 */
+section{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+}
+.section_left{
+    width: 70%;
+}
+.thongtinchitiet{
+    border: 1px solid rgb(201, 201, 203);
+    margin-left: 12px;
+    margin-top: 20px;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-right: 20px;
+    border-radius: 10px;
+}
+.thongtinbot{
+    border-top: 1px solid rgb(221,223,226);
+}
+
+/* diem noi bat */
+.iconnoibat{
+    display: flex;
+    justify-content: center;
+}
+.col_diemnoibat{
+    padding-top: 10px;
+    text-align: center;
+    flex-direction: column;
+    padding-right: 20px;
+}
+#chunho{
+    font-size: 85%;
+    font-weight: 700;
+}
+.diemnoibat{
+    border: 1px solid rgb(201, 201, 203);
+    margin-left: 12px;
+    margin-top: 20px;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-right: 20px;
+    border-radius: 10px;
+}
+
+/* tien nghi */
+#icon_svg{
+    width: 25px;
+    height: 30px;
+}
+.texttiennghi{
+    border: 1px solid rgb(201, 201, 203);
+    margin-left: 12px;
+    margin-top: 20px;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-right: 20px;
+    border-radius: 10px;
+}
+.tiennghi_bot{
+    padding-left: 15px;
+}
+
+/* danh gia tren */
+.danhgiatext{
+    align-items: center;
+    display: flex;
+    width: 120px;
+    border: 1px solid rgb(231, 253, 233);
+    height: 20px;
+    background-color: rgb(231, 253, 233);
+    margin-top: 11px;
+
+}
+.danhgiatext2{
+    align-items: center;
+    display: flex;
+    width: 170px;
+    border: 1px solid rgb(231, 253, 233);
+    height: 20px;
+    background-color: rgb(231, 253, 233);
+    margin-top: 11px;
+}
+.bentrong_carousel{
+    width: 95%;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 30px;
+    padding-left: 50px;    
+    padding-right: 35px;
+}
+#onho_hailong{
+    border: 1px solid black;
+    font-size: small;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+ /* danhgia */
+
+.danhgia{
+    border: 1px solid rgb(201, 201, 203);
+    margin-left: 10px;
+    margin-top: 20px;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-right: 20px;
+    border-radius: 10px;
+}
+
+/* map */
+.vi_tri_thuan_tien{
+    border: 1px solid rgb(201, 201, 203);
+    margin-left: 10px;
+    margin-top: 20px;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-right: 20px;
+    border-radius: 10px;
+
+}
+#coimap{
+    background-image: url(../img/Screenshot\ 2024-03-25\ 213240.png);
+    width:  280px;
+    height: 120px;
+    border: none;
+    border-radius: 10px;
+}
+#map {
+    height: 600px;
+    width: 100%;
+}
+.section2{
+    width: 80%;
+    margin: 0 auto;
+    flex-direction: column;
+    
+}
+.bang_gia{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.phong{
+    border: 1px solid rgb(201, 201, 203);
+    margin-left: 10px;
+    margin-top: 20px;
+    margin-right: 30px;
+    padding-top: 20px;
+    border-radius: 10px;
+}
+.btngia{
+    border: 2px solid orange;
+    border-left: none;
+    height: 196.2px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+}
+.btngia button {
+    margin: 0 auto;
+}
+.row_dichvu{
+    width: 80%;
+    margin: 0 auto;
+    flex-direction: column;
+}
+.cauhoi_thuong_gap{
+    border: 1px solid rgb(201, 201, 203);
+    margin-left: 10px;
+    margin-top: 20px;
+    margin-right: 30px;
+    padding-top: 20px;
+    border-radius: 10px; 
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.cacnauhoi{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cacnauhoi button {
+    width: 100%;
+    height: 50px;
+    margin-top: 20px;
+    text-align: left;
+    padding-left: 20px;
+    background-color: rgb(246,247,249);
+    border: none;
+    border-left: 5px solid rgb(62,108,234);
+}
+.collapse_dichvu{
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.btncauhoi {
+    background-color: #f0f0f0;
+}
+
+/* Màu nền của button khi được chọn */
+.btncauhoi.selected {
+    background-color: rgb(62,108,234); /* Xanh */
+    color: white;
+}
+.danhgia_cuakhachhang{
+    border: 1px solid rgb(201, 201, 203);
+    margin-left: 10px;
+    margin-top: 20px;
+    margin-right: 30px;
+    border-radius: 10px; 
+    padding-left: 20px
+}
+.row_danhgia{
+    width: 80%;
+    margin: 0 auto;
+}
+.bchinhsua{
+    width: 150px;
+    height: 170px;
+    margin-top: 10px;
+    padding: 0;
+    background-color: none;
+    margin-right: 5px;
+    border: none;
+}
+.gia_thap_nhat{
+    border: 2px solid orange;border-right:  none;border-right: 2px solid rgb(201, 201, 203);background-color: white;
+}
+.gia_thap_nhat2{
+    background-color: white;
+    margin-top: 10px;
+    border: 2px solid rgb(201, 201, 203);
+    margin-bottom: 20px;
+}
+.hinhsucchua{
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-top: 2px solid orange;
+    border-bottom: 2px solid orange;
+    height: 196.2px;
+    border-right: 2px solid rgb(201, 201, 203);
+    background-color: white;
+}
+.hinhsucchua2{
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 285px;
+    border: 2px solid rgb(201, 201, 203);
+    border-left: none;
+    margin-top: 10px;
+    background-color: white;
+}
+.ben_duoi_gia{
+    border-top: 2px solid orange;
+    padding-left: 20px;
+    border-bottom: 2px solid orange;
+    height: 196.2px;
+    border-right: 2px solid rgb(201, 201, 203);
+    background-color: white;
+}
+.giaphongduoi{
+    width: 100%;
+    float: left;
+    height: 285px;
+    border: 2px solid rgb(201, 201, 203);
+    margin-top: 10px;
+    border-left: none;
+    background-color: white;
+    padding-left: 20px;
+}
+.btngia2{
+    width: 100%;
+    float: left;
+    height: 285px;
+    border: 2px solid rgb(201, 201, 203);
+    border-left: none;
+    margin-top: 10px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+}
+.btndatphong{
+    font-weight: 600;
+    color: white;
+    background-color: rgb(83,146,249);
+    width: 160px;
+    height: 45px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+.danhgiatichcuc{
+    border-top:1px solid rgb(201, 201, 203)
+}
+#linkdat{
+    color: white;
+    text-decoration: none;
+}
