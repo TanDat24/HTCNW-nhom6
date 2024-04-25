@@ -1,3 +1,4 @@
+// <<<<<<< DarkDev
 // var data = {
 //     id: 3,
 //     name: "Hidden Mansions Saigon Resort",
@@ -137,3 +138,9 @@ buttons.forEach(function (button) {
         console.log(cart);
     });
 });
+// =======
+// $(document).ready(function () {
+//     var data = JSON.parse(localStorage.getItem('get'))
+//     console.log(data);
+// });
+// >>>>>>> main
