@@ -74,7 +74,7 @@ button.btn.btn-primary:hover {
     font-weight: bold;
 }
 .btn:hover {
-    background-color: #f8f8f8;
+    /* background-color: #f8f8f8; */
     color: rgb(48, 48, 162);
 }
 .btn.btn-secondary {
@@ -117,7 +117,7 @@ button.btn.btn-primary:hover {
     font-size: 20px;
     margin-top: 20px;
 }
-.btnhl3 {
+.btndatngay {
     background-color: rgb(0, 123, 255);
     border: 1px solid rgb(0, 123, 255);
     margin-top: 10px;
@@ -127,4 +127,11 @@ button.btn.btn-primary:hover {
 }
 svg {
     margin-bottom: 10px;
+}
+.error {
+    color: red;
+}
+
+.valid {
+    color: green;
 }

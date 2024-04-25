@@ -73,7 +73,11 @@
                                 >
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Cơ sở vật chất</a>
+                                <a
+                                    class="nav-link"
+                                    href="../facilitiesPage/facilities.html"
+                                    >Cơ sở vật chất</a
+                                >
                             </li>
                             <li class="nav-item">
                                 <a
@@ -89,14 +93,44 @@
                                     >Về chúng Tôi</a
                                 >
                             </li>
+                            <div class="icon-cart">
+                                <li class="nav-item custom-cart" id="cart">
+                                    <a
+                                        class="nav-link"
+                                        href="../cartPage/cart.html"
+                                        ><span
+                                            class="material-symbols-outlined cart"
+                                        >
+                                            local_mall
+                                        </span></a
+                                    >
+                                </li>
+                            </div>
                         </ul>
-                        <button type="button" class="btn custom-btn">
-                            <span class="material-symbols-outlined">
-                                account_circle
-                            </span>
-                            <a href="../profilePage/profile.html"
-                                ><span>Tài khoản của tôi</span></a
-                            >
+                        <button type="button" class="btn custom-btn" id="tkct">
+                            <div class="custom-login">
+                                <span class="material-symbols-outlined">
+                                    account_circle
+                                </span>
+                                <a href="../profilePage/profile.html"
+                                    ><span>Tài khoản của tôi</span></a
+                                >
+                            </div>
+                        </button>
+                        <button
+                            type="button"
+                            class="btn custom-btn"
+                            id="login"
+                            style="display: none"
+                        >
+                            <div class="custom-login">
+                                <span class="material-symbols-outlined">
+                                    login
+                                </span>
+                                <a href="../loginPage/login.html"
+                                    ><span>Đăng nhập</span></a
+                                >
+                            </div>
                         </button>
                     </div>
                 </nav>
@@ -290,10 +324,8 @@
                             Đánh giá từ thấp đến cao
                         </option>
                     </select>
-                    
-                    <div  id="collapsePage1" class="collapse">
 
-                    </div>
+                    <div id="collapsePage1" class="collapse"></div>
 
                     <ul class="pagination justify-content-center">
                         <li style="width: 80px;" class="page-item"><a class="page-link" href="javascript:void(0);" onclick="showPrevious()" id="back-to-top">Previous</a></li>
@@ -342,9 +374,7 @@
                                 >
                             </li>
                             <li>
-                                <a href="../rulesPage/rules.html"
-                                    >Điều khoảng</a
-                                >
+                                <a href="../rulesPage/rules.html">Điều khoản</a>
                             </li>
                             <li><a href="">Đăng ký đối tác</a></li>
                         </ul>
@@ -360,4 +390,5 @@
             </div>
         </footer>
     </body>
+    <script src="../headerLogin.js"></script>
 </html>
