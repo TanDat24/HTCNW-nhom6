@@ -7,9 +7,9 @@ var list = [
         location: ["Quận Hoàn Kiếm", "Hà Nội"],
         type: '0',
         rating: 9.3,
-        avgPrice: 453.253,
-        price1: 178412.125,
-        price2: 193214.752,
+        avgPrice: 453253,
+        price1: 178412125,
+        price2: 193214752,
         img: "../../img/hanoigolden.png",
         describe: "Tọa lạc ở trung tâm Hà Nội, Hanoi Golden Hotel And Travel nằm cách Ô Quan Chưởng 6 phút đi bộ và Nhà hát múa rối Thăng Long chưa đến 1 km. Khách sạn 4 sao này có các phòng được trang bị điều hòa.",
     },
@@ -20,9 +20,9 @@ var list = [
         location: ["Quận Bình Thạnh", "Hồ Chí Minh"],
         type: '0',
         rating: 9.1,
-        avgPrice: 1153.253,
-        price1: 178412.125,
-        price2: 193214.752,
+        avgPrice: 1153253,
+        price1: 178412125,
+        price2: 193214752,
         img: "../../img/landmark.png",
         describe: "LANDMARK APARTMENTS in Vinhomes Central Park Binh Thanh cách Trung Tâm Thương Mại Diamond Plaza 4.7 km và Nhà thờ Đức Bà 4.7 km. Sân bay gần nhất là Sân bay Quốc tế Tân Sơn Nhất, cách căn hộ 8 km, đồng thời chỗ nghỉ có cung cấp dịch vụ đưa đón sân bay mất phí.",
     },
@@ -33,9 +33,9 @@ var list = [
         location: ["Quận 12", "Hồ Chí Minh"],
         type: '1',
         rating: 8.6,
-        avgPrice: 903.253,
-        price1: 128412.125,
-        price2: 143214.752,
+        avgPrice: 903253,
+        price1: 128412125,
+        price2: 143214752,
         img: "../../img/hiddenmansions.png",
         describe: "Hidden Mansions Saigon Resort cách Bảo tàng lịch sử Việt Nam 12 km và Trung tâm mua sắm AEON MALL Bình Dương Canary 13 km. Sân bay gần nhất là Sân bay Quốc tế Tân Sơn Nhất, cách resort 8 km.",
     },
@@ -46,9 +46,9 @@ var list = [
         location: ["Quận 12", "Hồ Chí Minh"],
         type: '1',
         rating: 8.6,
-        avgPrice: 903.253,
-        price1: 128412.125,
-        price2: 143214.752,
+        avgPrice: 903253,
+        price1: 128412125,
+        price2: 143214752,
         img: "../../img/hiddenmansions.png",
         describe: "Hidden Mansions Saigon Resort cách Bảo tàng lịch sử Việt Nam 12 km và Trung tâm mua sắm AEON MALL Bình Dương Canary 13 km. Sân bay gần nhất là Sân bay Quốc tế Tân Sơn Nhất, cách resort 8 km.",
     },
@@ -59,9 +59,9 @@ var list = [
         location: ["Quận 12", "Hồ Chí Minh"],
         type: '1',
         rating: 8.6,
-        avgPrice: 903.253,
-        price1: 128412.125,
-        price2: 143214.752,
+        avgPrice: 903253,
+        price1: 128412125,
+        price2: 143214752,
         img: "../../img/hiddenmansions.png",
         describe: "Hidden Mansions Saigon Resort cách Bảo tàng lịch sử Việt Nam 12 km và Trung tâm mua sắm AEON MALL Bình Dương Canary 13 km. Sân bay gần nhất là Sân bay Quốc tế Tân Sơn Nhất, cách resort 8 km.",
     },
@@ -72,9 +72,9 @@ var list = [
         location: ["Quận 12", "Hồ Chí Minh"],
         type: '1',
         rating: 8.6,
-        avgPrice: 903.253,
-        price1: 128412.125,
-        price2: 143214.752,
+        avgPrice: 903253,
+        price1: 128412125,
+        price2: 143214752,
         img: "../../img/hiddenmansions.png",
         describe: "Hidden Mansions Saigon Resort cách Bảo tàng lịch sử Việt Nam 12 km và Trung tâm mua sắm AEON MALL Bình Dương Canary 13 km. Sân bay gần nhất là Sân bay Quốc tế Tân Sơn Nhất, cách resort 8 km.",
     },
@@ -85,13 +85,17 @@ var list = [
         location: ["Quận 12", "Hồ Chí Minh"],
         type: '1',
         rating: 8.6,
-        avgPrice: 903.253,
-        price1: 128412.125,
-        price2: 143214.752,
+        avgPrice: 903253,
+        price1: 128412125,
+        price2: 143214752,
         img: "../../img/hiddenmansions.png",
         describe: "Hidden Mansions Saigon Resort cách Bảo tàng lịch sử Việt Nam 12 km và Trung tâm mua sắm AEON MALL Bình Dương Canary 13 km. Sân bay gần nhất là Sân bay Quốc tế Tân Sơn Nhất, cách resort 8 km.",
     },
 ];
+
+function addCommas(number) {
+    return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
 
 function toString(a){
     return a[0]+", "+a[1];
@@ -162,6 +166,17 @@ function sortCond1(arr, cond){
     return newList;
 }
 
+function locPrice(l, minP, maxP) {
+    var newl = [];
+    for (var i=0; i<l.length; i++){
+        var price = l[i].avgPrice*calcDay();
+        if (price>=minP && price<maxP){
+            newl.push(l[i]);
+        }
+    }
+}
+
+
 function refesh(){
     $('#collapsePage2').remove();
     $('#collapsePage3').remove();
@@ -177,7 +192,7 @@ function display(l){
     for (var i=0; i<l.length; i++){
         var item = 
             `<div class="item">
-                <img src="${l[i].img}" style="width: 200px; height: 200px;" />
+                <img src="${l[i].img}" style="width: 200px; height: 200px; border-radius: 10px;" />
                 <div class="info">
                     <div class="item-header">${l[i].name}</div>
                     <a href="#">${toString(l[i].location)}</a>
@@ -208,7 +223,7 @@ function display(l){
                     >
                         Giá trung bình từ:
                     </div>
-                    <div class="price">${l[i].avgPrice} VNĐ</div>
+                    <div class="price">${addCommas(l[i].avgPrice*calcDay())} VNĐ</div>
                     <button class="btn-moreinfo">
                         <a href="../inforPage/inforPage.html">Xem chi tiết</a>
                     </button>
@@ -225,6 +240,48 @@ function display(l){
     $("#collapsePage1").addClass("show");
 }
 
+// Hàm loại bỏ dấu từ chuỗi
+function removeDiacritics(str) {
+    return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+}
+
+function checks1ins2(s1, s2) {
+    var lowers1 = removeDiacritics(s1.toLowerCase().replace(/\s/g, ''));
+    var lowers2 = removeDiacritics(s2.toLowerCase().replace(/\s/g, ''));
+    console.log(lowers1, lowers2);
+    if (lowers1.indexOf(lowers2) !== -1) {
+      return true;
+    } 
+    else {
+      return false;
+    }
+}
+
+function sortSearch(l, searchValues){
+    var newl = [];
+    console.log(searchValues);
+    for (var i=0; i<l.length; i++){
+        if (checks1ins2(toString(l[i].location), searchValues)){
+            newl.push(l[i]);
+        }
+        else if (checks1ins2(l[i].name, searchValues)){
+            newl.push(l[i]);
+        }
+    }
+    console.log(newl);
+    return newl;
+}
+
+function calcDay(){
+    var date1 = new Date($('#dd1').val());
+    var date2 = new Date($('#dd2').val());
+    var diffDays = 1;
+    if (!isNaN(date1) && !isNaN(date2)){
+        var timeDiff = Math.abs(date2.getTime() - date1.getTime());
+        diffDays = Math.max(1, Math.ceil(timeDiff / (1000 * 3600 * 24))); 
+    }
+    return diffDays;
+}
 
 $(document).ready(function () {
     var today = new Date();
@@ -292,7 +349,15 @@ $(document).ready(function () {
     $('.button-submit').on('click', function (){
 
     });
-    
+
+    $('#search-now').on('click', function (){
+        calcDay();
+        var searchList = newList;
+        var cond = $('#place').val();
+        if (cond != '') searchList = sortSearch(searchList, cond);
+        else searchList = newList;
+        display(searchList);
+    });
     
 
 });
