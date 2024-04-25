@@ -8,8 +8,7 @@ var list = [
         type: "0",
         rating: 9.3,
         avgPrice: 453253,
-        price1: 178412125,
-        price2: 193214752,
+        vipPrice: 812125,
         img: "../../img/hanoigolden.png",
         describe:
             "Tọa lạc ở trung tâm Hà Nội, Hanoi Golden Hotel And Travel nằm cách Ô Quan Chưởng 6 phút đi bộ và Nhà hát múa rối Thăng Long chưa đến 1 km. Khách sạn 4 sao này có các phòng được trang bị điều hòa.",
@@ -22,8 +21,7 @@ var list = [
         type: "0",
         rating: 9.1,
         avgPrice: 1153253,
-        price1: 178412125,
-        price2: 193214752,
+        vipPrice: 1782125,
         img: "../../img/landmark.png",
         describe:
             "LANDMARK APARTMENTS in Vinhomes Central Park Binh Thanh cách Trung Tâm Thương Mại Diamond Plaza 4.7 km và Nhà thờ Đức Bà 4.7 km. Sân bay gần nhất là Sân bay Quốc tế Tân Sơn Nhất, cách căn hộ 8 km, đồng thời chỗ nghỉ có cung cấp dịch vụ đưa đón sân bay mất phí.",
@@ -36,8 +34,7 @@ var list = [
         type: "1",
         rating: 8.6,
         avgPrice: 903253,
-        price1: 128412125,
-        price2: 143214752,
+        vipPrice: 1012125,
         img: "../../img/hiddenmansions.png",
         describe:
             "Hidden Mansions Saigon Resort cách Bảo tàng lịch sử Việt Nam 12 km và Trung tâm mua sắm AEON MALL Bình Dương Canary 13 km. Sân bay gần nhất là Sân bay Quốc tế Tân Sơn Nhất, cách resort 8 km.",
@@ -49,51 +46,21 @@ var list = [
         location: ["Quận 12", "Hồ Chí Minh"],
         type: "1",
         rating: 8.6,
-        avgPrice: 903253,
-        price1: 128412125,
-        price2: 143214752,
+        avgPrice: 803253,
+        vipPrice: 1282125,
         img: "../../img/hiddenmansions.png",
         describe:
             "Hidden Mansions Saigon Resort cách Bảo tàng lịch sử Việt Nam 12 km và Trung tâm mua sắm AEON MALL Bình Dương Canary 13 km. Sân bay gần nhất là Sân bay Quốc tế Tân Sơn Nhất, cách resort 8 km.",
     },
     {
         id: 4,
-        name: "Hidden Mansions Saigon Resort",
+        name: "Hidden Mansions Saigon Villa 2",
         star: 4,
         location: ["Quận 12", "Hồ Chí Minh"],
-        type: "1",
+        type: '2',
         rating: 8.6,
         avgPrice: 903253,
-        price1: 128412125,
-        price2: 143214752,
-        img: "../../img/hiddenmansions.png",
-        describe:
-            "Hidden Mansions Saigon Resort cách Bảo tàng lịch sử Việt Nam 12 km và Trung tâm mua sắm AEON MALL Bình Dương Canary 13 km. Sân bay gần nhất là Sân bay Quốc tế Tân Sơn Nhất, cách resort 8 km.",
-    },
-    {
-        id: 5,
-        name: "Hidden Mansions Saigon Resort",
-        star: 4,
-        location: ["Quận 12", "Hồ Chí Minh"],
-        type: "1",
-        rating: 8.6,
-        avgPrice: 903253,
-        price1: 128412125,
-        price2: 143214752,
-        img: "../../img/hiddenmansions.png",
-        describe:
-            "Hidden Mansions Saigon Resort cách Bảo tàng lịch sử Việt Nam 12 km và Trung tâm mua sắm AEON MALL Bình Dương Canary 13 km. Sân bay gần nhất là Sân bay Quốc tế Tân Sơn Nhất, cách resort 8 km.",
-    },
-    {
-        id: 6,
-        name: "Hidden Mansions Saigon Resort",
-        star: 4,
-        location: ["Quận 12", "Hồ Chí Minh"],
-        type: "1",
-        rating: 8.6,
-        avgPrice: 903253,
-        price1: 128412125,
-        price2: 143214752,
+        vipPrice: 128412125,
         img: "../../img/hiddenmansions.png",
         describe:
             "Hidden Mansions Saigon Resort cách Bảo tàng lịch sử Việt Nam 12 km và Trung tâm mua sắm AEON MALL Bình Dương Canary 13 km. Sân bay gần nhất là Sân bay Quốc tế Tân Sơn Nhất, cách resort 8 km.",
@@ -173,16 +140,17 @@ function sortCond1(arr, cond) {
     return currentList;
 }
 
-function locPrice(l, minP, maxP) {
-    var newl = [];
-    for (var i = 0; i < l.length; i++) {
-        var price = l[i].avgPrice * calcDay();
-        if (price >= minP && price <= maxP) {
-            newl.push(l[i]);
-        }
-    }
-    return newl;
-}
+// function locPrice(l, minP, maxP) {
+//     var newl = [];
+//     for (var i=0; i<l.length; i++){
+//         var price = l[i].avgPrice*calcDay();
+//         if (price>=minP && price<=maxP){
+//             newl.push(l[i]);
+//         }
+//     }
+//     return newl;
+// }
+
 
 function refesh() {
     $("#collapsePage2").remove();
@@ -230,10 +198,8 @@ function display(l) {
                     >
                         Giá trung bình từ:
                     </div>
-                    <div class="price">${addCommas(
-                        l[i].avgPrice * calcDay()
-                    )} VNĐ</div>
-                    <button class="btn-moreinfo">
+                    <div class="price">${addCommas(l[i].avgPrice*calcDay())} VNĐ</div>
+                    <button class="btn-moreinfo" value="${list[i].id}">
                         <a href="../inforPage/inforPage.html">Xem chi tiết</a>
                     </button>
                 </div>
@@ -291,6 +257,14 @@ function calcDay() {
     return diffDays;
 }
 
+// function setPrice(list) {
+//     var currentList = list;
+//     var p1 = $('#start').val();
+//     var p2 = $('#end').val();
+//     currentList = locPrice(currentList, p1, p2);
+//     console.log(currentList);
+//     return currentList;
+// }
 function setPrice(list) {
     var tmpl = list;
     var p1 = $("#start").val();
@@ -316,18 +290,26 @@ function sortFirst(currentList) {
 }
 
 $(document).ready(function () {
-    var today = new Date();
-    today.setDate(today.getDate() + 2);
-    var minDate = today.toISOString().split("T")[0];
-    $("#dd1").attr("min", minDate);
 
-    $("#dd1").change(function () {
+    localStorage.setItem('data', JSON.stringify(list));
+    var data = localStorage.getItem('key');     
+    console.log(JSON.parse(data));
+
+    var today = new Date();
+
+    today.setDate(today.getDate() + 2); 
+    var minDate = today.toISOString().split('T')[0];
+    $("#dd1").attr('min', minDate);
+    $("#dd1").change(function() {
+
         var selectedDate = $(this).val();
         $("#dd2").attr("readonly", false);
         $("#dd2").attr("min", selectedDate);
     });
 
     var currentList = list;
+    currentList = sortFirst(currentList);
+    // var show = setPrice(currentList);
     display(currentList);
     $(".collapse").on("shown.bs.collapse", function () {
         $("html, body").animate(
@@ -336,33 +318,32 @@ $(document).ready(function () {
         );
     });
 
-    $(".condbox").on("click", function () {
-        currentList = sortFirst(currentList);
-        var cond1 = $(".condbox1:checked")
-            .map(function () {
-                return $(this).val();
-            })
-            .get();
-        console.log(cond1);
-
-        var cond2 = $(".condbox2:checked")
-            .map(function () {
-                return $(this).val();
-            })
-            .get();
-        console.log(cond2);
-
-        if (cond1.length != 0) {
-            currentList = sortCond1(currentList, cond1);
+    $('.condbox').on('click', function (){
+        currentList = sortFirst(list);
+        var cond1 = $('.condbox1:checked').map(function() {
+            return $(this).val();
+        }).get();
+        console.log(cond1);   
+     
+        var cond2 = $('.condbox2:checked').map(function() {
+            return $(this).val();
+        }).get();
+        console.log(cond2);   
+        var sorted = currentList;
+        if (cond1.length!=0){
+            sorted = sortCond1(currentList, cond1);
         }
-        if (cond2.length != 0) {
-            currentList = sortCond2(currentList, cond2);
+        if (cond2.length!=0){
+            sorted = sortCond2(currentList, cond2);
         }
-        display(currentList);
+
+        // var show = setPrice(currentList);
+        display(sorted);
     });
 
     $("#sort").on("change", function () {
         currentList = sortFirst(currentList);
+        // var show = setPrice(currentList);
         display(currentList);
     });
 
@@ -388,12 +369,18 @@ $(document).ready(function () {
         if (cond != "") searchList = sortSearch(searchList, cond);
         else searchList = currentList;
         display(searchList);
+    }); 
+    $(".btn-moreinfo").on('click', function() {
+        // Lấy giá trị của nút được nhấn
+        var buttonValue = $(this).val();
+        localStorage.setItem("get", JSON.stringify(currentList[buttonValue]));
     });
 
-    $(".priceck").on("blur", function () {
-        display(currentList);
-    });
+//     $(".priceck").on("blur", function () {
+//         display(currentList);
+//     });
 });
+
 function showPage(collapseId) {
     var collapses = document.querySelectorAll(".collapse");
     collapses.forEach(function (collapse) {
