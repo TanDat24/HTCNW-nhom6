@@ -5,76 +5,81 @@ var list = [
         name: "Hanoi Golden Sail",
         star: 5,
         location: ["Quận Hoàn Kiếm", "Hà Nội"],
-        type: '0',
+        type: "0",
         rating: 9.3,
         avgPrice: 453.253,
         price1: 178412.125,
         price2: 193214.752,
         img: "../../img/hanoigolden.png",
-        describe: "Tọa lạc ở trung tâm Hà Nội, Hanoi Golden Hotel And Travel nằm cách Ô Quan Chưởng 6 phút đi bộ và Nhà hát múa rối Thăng Long chưa đến 1 km. Khách sạn 4 sao này có các phòng được trang bị điều hòa.",
+        describe:
+            "Tọa lạc ở trung tâm Hà Nội, Hanoi Golden Hotel And Travel nằm cách Ô Quan Chưởng 6 phút đi bộ và Nhà hát múa rối Thăng Long chưa đến 1 km. Khách sạn 4 sao này có các phòng được trang bị điều hòa.",
     },
     {
         id: 1,
         name: "Landmark Apartment",
         star: 5,
         location: ["Quận Bình Thạnh", "Hồ Chí Minh"],
-        type: '0',
+        type: "0",
         rating: 9.1,
         avgPrice: 1153.253,
         price1: 178412.125,
         price2: 193214.752,
         img: "../../img/landmark.png",
-        describe: "LANDMARK APARTMENTS in Vinhomes Central Park Binh Thanh cách Trung Tâm Thương Mại Diamond Plaza 4.7 km và Nhà thờ Đức Bà 4.7 km. Sân bay gần nhất là Sân bay Quốc tế Tân Sơn Nhất, cách căn hộ 8 km, đồng thời chỗ nghỉ có cung cấp dịch vụ đưa đón sân bay mất phí.",
+        describe:
+            "LANDMARK APARTMENTS in Vinhomes Central Park Binh Thanh cách Trung Tâm Thương Mại Diamond Plaza 4.7 km và Nhà thờ Đức Bà 4.7 km. Sân bay gần nhất là Sân bay Quốc tế Tân Sơn Nhất, cách căn hộ 8 km, đồng thời chỗ nghỉ có cung cấp dịch vụ đưa đón sân bay mất phí.",
     },
     {
         id: 2,
         name: "Hidden Mansions Saigon Resort",
         star: 4,
         location: ["Quận 12", "Hồ Chí Minh"],
-        type: '1',
+        type: "1",
         rating: 8.6,
         avgPrice: 903.253,
         price1: 128412.125,
         price2: 143214.752,
         img: "../../img/hiddenmansions.png",
-        describe: "Hidden Mansions Saigon Resort cách Bảo tàng lịch sử Việt Nam 12 km và Trung tâm mua sắm AEON MALL Bình Dương Canary 13 km. Sân bay gần nhất là Sân bay Quốc tế Tân Sơn Nhất, cách resort 8 km.",
+        describe:
+            "Hidden Mansions Saigon Resort cách Bảo tàng lịch sử Việt Nam 12 km và Trung tâm mua sắm AEON MALL Bình Dương Canary 13 km. Sân bay gần nhất là Sân bay Quốc tế Tân Sơn Nhất, cách resort 8 km.",
     },
     {
         id: 3,
         name: "Hidden Mansions Saigon Resort",
         star: 4,
         location: ["Quận 12", "Hồ Chí Minh"],
-        type: '1',
+        type: "1",
         rating: 8.6,
         avgPrice: 903.253,
         price1: 128412.125,
         price2: 143214.752,
         img: "../../img/hiddenmansions.png",
-        describe: "Hidden Mansions Saigon Resort cách Bảo tàng lịch sử Việt Nam 12 km và Trung tâm mua sắm AEON MALL Bình Dương Canary 13 km. Sân bay gần nhất là Sân bay Quốc tế Tân Sơn Nhất, cách resort 8 km.",
+        describe:
+            "Hidden Mansions Saigon Resort cách Bảo tàng lịch sử Việt Nam 12 km và Trung tâm mua sắm AEON MALL Bình Dương Canary 13 km. Sân bay gần nhất là Sân bay Quốc tế Tân Sơn Nhất, cách resort 8 km.",
     },
     {
         id: 4,
         name: "Hidden Mansions Saigon Resort",
         star: 4,
         location: ["Quận 12", "Hồ Chí Minh"],
-        type: '1',
+        type: "1",
         rating: 8.6,
         avgPrice: 903253,
         price1: 128412125,
         price2: 143214752,
         img: "../../img/hiddenmansions.png",
-        describe: "Hidden Mansions Saigon Resort cách Bảo tàng lịch sử Việt Nam 12 km và Trung tâm mua sắm AEON MALL Bình Dương Canary 13 km. Sân bay gần nhất là Sân bay Quốc tế Tân Sơn Nhất, cách resort 8 km.",
+        describe:
+            "Hidden Mansions Saigon Resort cách Bảo tàng lịch sử Việt Nam 12 km và Trung tâm mua sắm AEON MALL Bình Dương Canary 13 km. Sân bay gần nhất là Sân bay Quốc tế Tân Sơn Nhất, cách resort 8 km.",
     },
 ];
 
-function refesh(){
-    $('#list-items').empty();
+function refesh() {
+    $("#list-items").empty();
 }
 
-function starDisplay(n){
-    var s ="";
-    for (var i=0; i<n; i++){
-        s+="★"
+function starDisplay(n) {
+    var s = "";
+    for (var i = 0; i < n; i++) {
+        s += "★";
     }
     return s;
 }
@@ -83,15 +88,14 @@ function addCommas(number) {
     return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
-function toString(a){
-    return a[0]+", "+a[1];
+function toString(a) {
+    return a[0] + ", " + a[1];
 }
 
-function display(list){
+function display(list) {
     refesh();
-    for (var i=0; i<list.length; i++){
-        var item =
-        `<div class="card mb-3">
+    for (var i = 0; i < list.length; i++) {
+        var item = `   <div class="card mb-3">
             <div class="row">
                 <div class="col-md-4 custom-img">
                     <img
@@ -114,7 +118,9 @@ function display(list){
                         </h5>
                         <div class="row">
                             <div class="col-md-3">
-                                <p class="card-text">${starDisplay(list[i].star)}</p>
+                                <p class="card-text">${starDisplay(
+                                    list[i].star
+                                )}</p>
                             </div>
                             <div
                                 class="col-md-9"
@@ -159,13 +165,12 @@ function display(list){
                         </div>
                         <div class="checkbox-wrapper">
                             <input
-                                id="terms-checkbox-37"
-                                name="checkbox"
+                                id="terms-checkbox-${list[i].id}"
                                 type="checkbox"
                             />
                             <label
                                 class="terms-label"
-                                for="terms-checkbox-37"
+                                for="terms-checkbox-${list[i].id}"
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -175,7 +180,7 @@ function display(list){
                                 >
                                     <mask
                                         fill="white"
-                                        id="path-1-inside-1_476_5-37"
+                                        id="path-1-inside-1_476_5-${list[i].id}"
                                     >
                                         <rect
                                             height="200"
@@ -183,7 +188,9 @@ function display(list){
                                         ></rect>
                                     </mask>
                                     <rect
-                                        mask="url(#path-1-inside-1_476_5-37)"
+                                        mask="url(#path-1-inside-1_476_5-${
+                                            list[i].id
+                                        })"
                                         stroke-width="40"
                                         class="checkbox-box"
                                         height="200"
@@ -204,38 +211,77 @@ function display(list){
                 </div>
             </div>
         </div>`;
-        $('#list-items').append(item);
+        $("#list-items").append(item);
     }
 }
 
-
 window.addEventListener("DOMContentLoaded", (event) => {
     display(list);
-    // Lấy tất cả các nút xóa
-    const deleteButtons = document.querySelectorAll(".btn-delete");
-    // Lấy thẻ chứa số lượng khách sạn trong giỏ hàng
     const cartTitle = document.getElementById("cartTitle");
 
-    // Hàm cập nhật số lượng sản phẩm trong tiêu đề "Giỏ hàng của quý khách"
     function updateCartItemCount() {
         const cartItemCount = document.querySelectorAll(".card").length - 2;
         cartTitle.textContent = `Giỏ hàng của quý khách (${cartItemCount})`;
     }
 
-    // Lặp qua từng nút xóa và gán sự kiện click
-    deleteButtons.forEach((button) => {
+    // Function to update the total price
+    function updateTotalPrice() {
+        var totalPriceElement = document.querySelector(".total-price");
+        var totalPrice = 0;
+
+        // Loop through all checked checkboxes and sum up their prices
+        document
+            .querySelectorAll('input[type="checkbox"]:checked')
+            .forEach(function (checkbox) {
+                var price = parseFloat(
+                    checkbox
+                        .closest(".card")
+                        .querySelector(".original-price")
+                        .textContent.replace(/[^\d.]/g, "")
+                );
+                totalPrice += price;
+            });
+
+        // Update the total price
+        totalPriceElement.textContent = totalPrice.toLocaleString("en-US", {
+            style: "currency",
+            currency: "USD",
+        });
+    }
+
+    // Function to handle checkbox change event
+    function handleCheckboxChange(checkbox) {
+        checkbox.addEventListener("change", function () {
+            updateTotalPrice(); // Update total price when checkbox changes
+            updateCartItemCount(); // Update item count
+        });
+    }
+
+    // Lấy ra tất cả các checkbox và gắn sự kiện cho mỗi checkbox
+    var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    checkboxes.forEach(handleCheckboxChange);
+
+    // Function to handle delete button click event
+    function handleDeleteButtonClick(button) {
         button.addEventListener("click", (event) => {
             const card = event.target.closest(".card");
             showConfirmationDialog(card);
         });
-    });
+    }
 
-    // Hàm hiển thị hộp thoại xác nhận
+    // Lấy tất cả các nút xóa và gắn sự kiện cho mỗi nút
+    const deleteButtons = document.querySelectorAll(".btn-delete");
+    deleteButtons.forEach(handleDeleteButtonClick);
+
+    // Function to show confirmation dialog when deleting an item
     function showConfirmationDialog(card) {
-        const confirmation = confirm("Bạn có chắc chắn muốn xóa sản phẩm này không?");
+        const confirmation = confirm(
+            "Bạn có chắc chắn muốn xóa sản phẩm này không?"
+        );
         if (confirmation) {
             card.remove();
-            updateCartItemCount();
+            updateTotalPrice(); // Update total price when an item is deleted
+            updateCartItemCount(); // Update item count
         }
     }
 
@@ -243,20 +289,26 @@ window.addEventListener("DOMContentLoaded", (event) => {
     updateCartItemCount();
 });
 
-
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener("DOMContentLoaded", function () {
     // Lấy ra tất cả các checkbox
     var checkboxes = document.querySelectorAll('input[type="checkbox"]');
 
     // Gắn sự kiện change cho mỗi checkbox
     checkboxes.forEach(function (checkbox) {
-        checkbox.addEventListener('change', function () {
+        checkbox.addEventListener("change", function () {
             // Lấy giá tiền của khách sạn
-            var price = parseFloat(checkbox.closest('.card').querySelector('.original-price').textContent.replace(/[^\d.]/g, ''));
+            var price = parseFloat(
+                checkbox
+                    .closest(".card")
+                    .querySelector(".original-price")
+                    .textContent.replace(/[^\d.]/g, "")
+            );
 
             // Lấy tổng giá hiện tại
-            var totalPriceElement = document.querySelector('.total-price');
-            var totalPrice = parseFloat(totalPriceElement.textContent.replace(/[^\d.]/g, ''));
+            var totalPriceElement = document.querySelector(".total-price");
+            var totalPrice = parseFloat(
+                totalPriceElement.textContent.replace(/[^\d.]/g, "")
+            );
 
             // Cộng hoặc trừ giá tiền vào tổng giá tùy thuộc vào trạng thái của checkbox
             if (checkbox.checked) {
@@ -266,7 +318,10 @@ document.addEventListener('DOMContentLoaded', function () {
             }
 
             // Cập nhật tổng giá
-            totalPriceElement.textContent = totalPrice.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
+            totalPriceElement.textContent = totalPrice.toLocaleString("en-US", {
+                style: "currency",
+                currency: "USD",
+            });
         });
     });
 });
